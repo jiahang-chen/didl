@@ -16,15 +16,16 @@ node [shape = rectangle, color="orange"]; "didl:Identity" "sec:Proof" "didl:Iden
 	"didl:CompositeIdentifier" -> "xsd:string" [ label = "didl:namespace" ];
 	"didl:CompositeAssertion" -> "didl:Assertion" [ label = "didl:subAssertion" ];
 	"didl:Attribute" -> "didl:Key" [ label = "didl:key" ];
+	"didl:CompositeIdentifier" -> "didl:Identifier" [ label = "didl:subIdentifier" ];
 	"didl:Assertion" -> "didl:Attribute" [ label = "didl:assertedAttribute" ];
 	"didl:Identity" -> "xsd:anyURI" [ label = "didl:issuer" ];
 	"didl:Identity" -> "xsd:dateTime" [ label = "didl:validFrom" ];
-	"didl:Assertion" -> "didl:Attribute" [ label = "didl:attribute" ];
 	"didl:Identity" -> "xsd:anyURI" [ label = "didl:profile" ];
 	"didl:IdentitySubject" -> "didl:Identity" [ label = "didl:controlls" ];
 	"didl:Credential" -> "didl:Identifier" [ label = "didl:relatesTo" ];
 	"didl:IdentitySubject" -> "didl:Credential" [ label = "didl:credential" ];
 	"didl:IdentitySubject" -> "didl:Assertion" [ label = "didl:assertion" ];
 	"didl:Identity" -> "xsd:dateTime" [ label = "didl:validTo" ];
+	"didl:Assertion" -> "sec:Proof" [ label = "didl:proof" ];
 
 }

@@ -90,16 +90,6 @@
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute -->
-
-
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy -->
 
 
@@ -190,6 +180,16 @@
     
 
 
+    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof -->
+
+
+    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof">
+        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+        <rdfs:range rdf:resource="https://w3id.org/security#Proof"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo -->
 
 
@@ -216,6 +216,16 @@
     <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subAssertion">
         <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeAssertion"/>
         <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier -->
+
+
+    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier">
+        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier"/>
+        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier"/>
     </owl:ObjectProperty>
     
 
