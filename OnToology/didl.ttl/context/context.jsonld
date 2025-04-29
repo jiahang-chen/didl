@@ -1,174 +1,173 @@
 {
   "@context" : {
+    "abstract" : {
+      "@id" : "http://purl.org/dc/terms/abstract"
+    },
     "relatesTo" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo",
+      "@id" : "https://w3id.org/def/didl#relatesTo",
       "@type" : "@id"
     },
     "Proof" : {
-      "@id" : "https://w3id.org/security#Proof"
+      "@id" : "https://w3id.org/def/didl#Proof"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
     "IdentitySubject" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject"
+      "@id" : "https://w3id.org/def/didl#IdentitySubject"
     },
     "validFrom" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validFrom",
+      "@id" : "https://w3id.org/def/didl#validFrom",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
     },
     "CompositeIdentifier" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier"
+      "@id" : "https://w3id.org/def/didl#CompositeIdentifier"
     },
     "credential" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#credential",
+      "@id" : "https://w3id.org/def/didl#credential",
       "@type" : "@id"
-    },
-    "CryptographicSignature" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CryptographicSignature"
     },
     "topDataProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
     },
     "Credential" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential"
+      "@id" : "https://w3id.org/def/didl#Credential"
     },
-    "subIdentifier" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier",
-      "@type" : "@id"
+    "PossessionBasedCredential" : {
+      "@id" : "https://w3id.org/def/didl#PossessionBasedCredential"
     },
     "subAssertion" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subAssertion",
+      "@id" : "https://w3id.org/def/didl#subAssertion",
       "@type" : "@id"
     },
     "localPart" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#localPart",
+      "@id" : "https://w3id.org/def/didl#localPart",
       "@type" : "@id"
     },
     "issuer" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issuer",
+      "@id" : "https://w3id.org/def/didl#issuer",
       "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "CompositeAssertion" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeAssertion"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "key" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#key",
+      "@id" : "https://w3id.org/def/didl#key",
       "@type" : "@id"
     },
     "assertedAttribute" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertedAttribute",
+      "@id" : "https://w3id.org/def/didl#assertedAttribute",
       "@type" : "@id"
     },
     "issueDate" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issueDate",
+      "@id" : "https://w3id.org/def/didl#issueDate",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "profile" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#profile",
+      "@id" : "https://w3id.org/def/didl#profile",
       "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "IdentifierFormat" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"
+      "@id" : "https://w3id.org/def/didl#IdentifierFormat"
     },
     "Status" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Status"
+      "@id" : "https://w3id.org/def/didl#Status"
     },
     "uid" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#uid",
+      "@id" : "https://w3id.org/def/didl#uid",
       "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
+    "AssertionCollection" : {
+      "@id" : "https://w3id.org/def/didl#AssertionCollection"
+    },
     "controlls" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlls",
+      "@id" : "https://w3id.org/def/didl#controlls",
       "@type" : "@id"
     },
     "Attribute" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute"
+      "@id" : "https://w3id.org/def/didl#Attribute"
     },
     "Key" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key"
+      "@id" : "https://w3id.org/def/didl#Key"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
     "value" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#value",
+      "@id" : "https://w3id.org/def/didl#value",
       "@type" : "@id"
     },
     "proof" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof",
+      "@id" : "https://w3id.org/def/didl#proof",
       "@type" : "@id"
     },
     "status" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#status",
+      "@id" : "https://w3id.org/def/didl#status",
       "@type" : "@id"
     },
     "Value" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Value"
+      "@id" : "https://w3id.org/def/didl#Value"
     },
     "identifier" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#identifier",
+      "@id" : "https://w3id.org/def/didl#identifier",
       "@type" : "@id"
     },
     "KnowledgeBasedCredential" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#KnowledgeBasedCredential"
+      "@id" : "https://w3id.org/def/didl#KnowledgeBasedCredential"
     },
     "Assertion" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"
+      "@id" : "https://w3id.org/def/didl#Assertion"
     },
     "InherenceBasedCredential" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#InherenceBasedCredential"
+      "@id" : "https://w3id.org/def/didl#InherenceBasedCredential"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
     "validTo" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validTo",
+      "@id" : "https://w3id.org/def/didl#validTo",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "Identity" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"
-    },
-    "OwnershipBasedCredential" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#OwnershipBasedCredential"
+      "@id" : "https://w3id.org/def/didl#Identity"
     },
     "controlledBy" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy",
+      "@id" : "https://w3id.org/def/didl#controlledBy",
       "@type" : "@id"
     },
     "functional" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#functional",
+      "@id" : "https://w3id.org/def/didl#functional",
       "@type" : "@id"
     },
     "assertion" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertion",
+      "@id" : "https://w3id.org/def/didl#assertion",
       "@type" : "@id"
     },
     "namespace" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#namespace",
+      "@id" : "https://w3id.org/def/didl#namespace",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "Identifier" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier"
+      "@id" : "https://w3id.org/def/didl#Identifier"
     },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
     },
     "format" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#format",
+      "@id" : "https://w3id.org/def/didl#format",
       "@type" : "@id"
     },
     "Functional" : {
-      "@id" : "https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Functional"
+      "@id" : "https://w3id.org/def/didl#Functional"
     }
   }
 }
