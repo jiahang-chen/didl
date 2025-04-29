@@ -1,0 +1,493 @@
+@prefix : <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sec: <https://w3id.org/security#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cred: <https://www.w3.org/2018/credentials#> .
+@prefix didl: <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#> .
+
+<https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl> rdf:type owl:Ontology ;
+                                                                     dc:creator "Jiahang Chen"@en ;
+                                                                     dc:description "This is a vocabulary for DIDL Version 0.1"@en ;
+                                                                     dc:title "Digital Identity Description Language Vocabulary" ;
+                                                                     dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+                                                                     owl:versionInfo 0.1 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertedAttribute
+didl:assertedAttribute rdf:type owl:ObjectProperty ;
+                       rdfs:domain didl:Assertion ;
+                       rdfs:range didl:Attribute .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertion
+didl:assertion rdf:type owl:ObjectProperty ;
+               rdfs:domain didl:IdentitySubject ;
+               rdfs:range didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute
+didl:attribute rdf:type owl:ObjectProperty ;
+               rdfs:domain didl:Assertion ;
+               rdfs:range didl:Attribute .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy
+didl:controlledBy rdf:type owl:ObjectProperty ;
+                  owl:inverseOf didl:controlls ;
+                  rdfs:domain didl:Identity ;
+                  rdfs:range didl:IdentitySubject .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlls
+didl:controlls rdf:type owl:ObjectProperty ;
+               rdfs:domain didl:IdentitySubject ;
+               rdfs:range didl:Identity .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#credential
+didl:credential rdf:type owl:ObjectProperty ;
+                rdfs:domain didl:IdentitySubject ;
+                rdfs:range didl:Credential .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#format
+didl:format rdf:type owl:ObjectProperty ;
+            rdfs:domain didl:Identifier ;
+            rdfs:range didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#functional
+didl:functional rdf:type owl:ObjectProperty ;
+                rdfs:domain didl:Identifier ;
+                rdfs:range didl:Functional .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#identifier
+didl:identifier rdf:type owl:ObjectProperty ;
+                rdfs:domain didl:IdentitySubject ;
+                rdfs:range didl:Identifier .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issuer
+didl:issuer rdf:type owl:ObjectProperty ;
+            rdfs:domain didl:Identity .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#key
+didl:key rdf:type owl:ObjectProperty ;
+         rdfs:domain didl:Attribute ;
+         rdfs:range didl:Key .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#localPart
+didl:localPart rdf:type owl:ObjectProperty ;
+               rdfs:domain didl:CompositeIdentifier ;
+               rdfs:range didl:Identifier .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo
+didl:relatesTo rdf:type owl:ObjectProperty ;
+               rdfs:domain didl:Credential ;
+               rdfs:range didl:Identifier .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#status
+didl:status rdf:type owl:ObjectProperty ;
+            rdfs:domain didl:Identity ;
+            rdfs:range didl:Status .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subAssertion
+didl:subAssertion rdf:type owl:ObjectProperty ;
+                  rdfs:domain didl:CompositeAssertion ;
+                  rdfs:range didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#value
+didl:value rdf:type owl:ObjectProperty ;
+           rdfs:domain didl:Attribute ;
+           rdfs:range didl:Value .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issueDate
+didl:issueDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain didl:Identity ;
+               rdfs:range xsd:dateTime .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issuer
+didl:issuer rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:anyURI .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#namespace
+didl:namespace rdf:type owl:DatatypeProperty ;
+               rdfs:domain didl:CompositeIdentifier ;
+               rdfs:range xsd:string .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#profile
+didl:profile rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain didl:Identity ;
+             rdfs:range xsd:anyURI .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#uid
+didl:uid rdf:type owl:DatatypeProperty ;
+         rdfs:domain didl:Identity ;
+         rdfs:range xsd:anyURI .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validFrom
+didl:validFrom rdf:type owl:DatatypeProperty ;
+               rdfs:domain didl:Identity ;
+               rdfs:range xsd:dateTime .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validTo
+didl:validTo rdf:type owl:DatatypeProperty ;
+             rdfs:domain didl:Identity ;
+             rdfs:range xsd:dateTime .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion
+didl:Assertion rdf:type owl:Class ;
+               rdfs:subClassOf didl:Credential ;
+               rdfs:comment "A collection of identity-related attributes asserted by a trusted party"@en ;
+               rdfs:label "Assertion"@en .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute
+didl:Attribute rdf:type owl:Class ;
+               rdfs:comment "an identity-related attribute consists of a key-value pair"@en ;
+               rdfs:label "Attribute"@en .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeAssertion
+didl:CompositeAssertion rdf:type owl:Class ;
+                        rdfs:subClassOf didl:Assertion ;
+                        rdfs:comment "A specialized assertion consists of multiple assertions"@en .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier
+didl:CompositeIdentifier rdf:type owl:Class ;
+                         rdfs:subClassOf didl:Identifier ;
+                         rdfs:label "A specialized identifier consists of multiple identifiers"@en ,
+                                    "CompositeIdentifier"@en .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential
+didl:Credential rdf:type owl:Class ;
+                rdfs:subClassOf didl:Identity ;
+                rdfs:label "Credential"@en ,
+                           "Proof of an entity's identity"@en .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CryptographicSignature
+didl:CryptographicSignature rdf:type owl:Class ;
+                            owl:equivalentClass sec:Proof ;
+                            rdfs:subClassOf didl:OwnershipBasedCredential .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Functional
+didl:Functional rdf:type owl:Class ;
+                rdfs:comment "A concept that represents the use of  an identifier"@en ;
+                rdfs:label "Functional"@en .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier
+didl:Identifier rdf:type owl:Class ;
+                rdfs:subClassOf didl:Identity ;
+                rdfs:comment "A unique reference to distinguish one entity from another"@en ;
+                rdfs:label "Identifier" .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat
+didl:IdentifierFormat rdf:type owl:Class ;
+                      rdfs:label "An identifier format that is specified by a standard or a protocol"@en ,
+                                 "IdentifierFormat"@en .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity
+didl:Identity rdf:type owl:Class ;
+              rdfs:comment "An abstract concept of digital identity, which can be specialized to identifiers, credentials, or assertions."@en ;
+              rdfs:label "Identity"@en .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject
+didl:IdentitySubject rdf:type owl:Class ;
+                     rdfs:comment "An entity that is identified by an identity"@en .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#InherenceBasedCredential
+didl:InherenceBasedCredential rdf:type owl:Class ;
+                              rdfs:subClassOf didl:Credential .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key
+didl:Key rdf:type owl:Class ;
+         rdfs:comment "Relates to the key of an attribute's key-value pair"@en .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#KnowledgeBasedCredential
+didl:KnowledgeBasedCredential rdf:type owl:Class ;
+                              rdfs:subClassOf didl:Credential .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#OwnershipBasedCredential
+didl:OwnershipBasedCredential rdf:type owl:Class ;
+                              rdfs:subClassOf didl:Credential .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Status
+didl:Status rdf:type owl:Class ;
+            rdfs:comment "Relates to the status of an identity, including active, inactive, or revoked"@en .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Value
+didl:Value rdf:type owl:Class ;
+           rdfs:comment "Related to the value of an attribute's key-value pair"@en .
+
+
+###  https://w3id.org/security#Proof
+sec:Proof rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#AccessToken
+didl:AccessToken rdf:type owl:NamedIndividual ,
+                          didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Active
+didl:Active rdf:type owl:NamedIndividual ,
+                     didl:Status .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#ApplicationToken
+didl:ApplicationToken rdf:type owl:NamedIndividual ,
+                               didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#BearerToken
+didl:BearerToken rdf:type owl:NamedIndividual ,
+                          didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#DID
+didl:DID rdf:type owl:NamedIndividual ,
+                  didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#DN
+didl:DN rdf:type owl:NamedIndividual ,
+                 didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#E.164
+didl:E.164 rdf:type owl:NamedIndividual ,
+                    didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EDI
+didl:EDI rdf:type owl:NamedIndividual ,
+                  didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EUI-48
+didl:EUI-48 rdf:type owl:NamedIndividual ,
+                     didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EUI-64
+didl:EUI-64 rdf:type owl:NamedIndividual ,
+                     didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Email
+didl:Email rdf:type owl:NamedIndividual ,
+                    didl:Key .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#FirstName
+didl:FirstName rdf:type owl:NamedIndividual ,
+                        didl:Key .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#GUID
+didl:GUID rdf:type owl:NamedIndividual ,
+                   didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IDToken
+didl:IDToken rdf:type owl:NamedIndividual ,
+                      didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IRI
+didl:IRI rdf:type owl:NamedIndividual ,
+                  didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Inactive
+didl:Inactive rdf:type owl:NamedIndividual ,
+                       didl:Status .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#JsonWebToken
+didl:JsonWebToken rdf:type owl:NamedIndividual ,
+                           didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#KerberosTicket
+didl:KerberosTicket rdf:type owl:NamedIndividual ,
+                             didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#LastName
+didl:LastName rdf:type owl:NamedIndividual ,
+                       didl:Key .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Organization
+didl:Organization rdf:type owl:NamedIndividual ,
+                           didl:Key .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC1035
+didl:RFC1035 rdf:type owl:NamedIndividual ,
+                      didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC5322
+didl:RFC5322 rdf:type owl:NamedIndividual ,
+                      didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC7613
+didl:RFC7613 rdf:type owl:NamedIndividual ,
+                      didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RefreshToken
+didl:RefreshToken rdf:type owl:NamedIndividual ,
+                           didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Revoked
+didl:Revoked rdf:type owl:NamedIndividual ,
+                      didl:Status .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Role
+didl:Role rdf:type owl:NamedIndividual ,
+                   didl:Key .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#SAML2.0Assertion
+didl:SAML2.0Assertion rdf:type owl:NamedIndividual ,
+                               didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#SessionIndex
+didl:SessionIndex rdf:type owl:NamedIndividual ,
+                           didl:Key .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URI
+didl:URI rdf:type owl:NamedIndividual ,
+                  didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URL
+didl:URL rdf:type owl:NamedIndividual ,
+                  didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URN
+didl:URN rdf:type owl:NamedIndividual ,
+                  didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv1
+didl:UUIDv1 rdf:type owl:NamedIndividual ,
+                     didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv2
+didl:UUIDv2 rdf:type owl:NamedIndividual ,
+                     didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv3
+didl:UUIDv3 rdf:type owl:NamedIndividual ,
+                     didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv4
+didl:UUIDv4 rdf:type owl:NamedIndividual ,
+                     didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv5
+didl:UUIDv5 rdf:type owl:NamedIndividual ,
+                     didl:IdentifierFormat .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#VC
+didl:VC rdf:type owl:NamedIndividual ,
+                 didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#VP
+didl:VP rdf:type owl:NamedIndividual ,
+                 didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#X.509Certificate
+didl:X.509Certificate rdf:type owl:NamedIndividual ,
+                               didl:Assertion .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
