@@ -1,0 +1,477 @@
+<h2 id="overv" class="list">Digital Identity Description Language Vocabulary: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#CompositeIdentifier"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier">A specialized identifier consists of multiple identifiers</a>
+   </li>
+   <li>
+      <a href="#IdentifierFormat"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat">An identifier format that is specified by a standard or a protocol</a>
+   </li>
+   <li>
+      <a href="#Assertion"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion">Assertion</a>
+   </li>
+   <li>
+      <a href="#Attribute"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute">Attribute</a>
+   </li>
+   <li>
+      <a href="#CompositeAssertion"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeAssertion">
+         <span>composite assertion</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Credential"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential">Credential</a>
+   </li>
+   <li>
+      <a href="#CryptographicSignature"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CryptographicSignature">
+         <span>cryptographic signature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Functional"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Functional">Functional</a>
+   </li>
+   <li>
+      <a href="#Identifier"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier">Identifier</a>
+   </li>
+   <li>
+      <a href="#Identity"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity">Identity</a>
+   </li>
+   <li>
+      <a href="#IdentitySubject"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject">
+         <span>identity subject</span>
+      </a>
+   </li>
+   <li>
+      <a href="#InherenceBasedCredential"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#InherenceBasedCredential">
+         <span>inherence based credential</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Key"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key">
+         <span>key</span>
+      </a>
+   </li>
+   <li>
+      <a href="#KnowledgeBasedCredential"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#KnowledgeBasedCredential">
+         <span>knowledge based credential</span>
+      </a>
+   </li>
+   <li>
+      <a href="#OwnershipBasedCredential"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#OwnershipBasedCredential">
+         <span>ownership based credential</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Status"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Status">
+         <span>status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Value"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Value">
+         <span>value</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#assertedAttribute"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertedAttribute">
+         <span>asserted attribute</span>
+      </a>
+   </li>
+   <li>
+      <a href="#assertion"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertion">
+         <span>assertion</span>
+      </a>
+   </li>
+   <li>
+      <a href="#attribute"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute">
+         <span>attribute</span>
+      </a>
+   </li>
+   <li>
+      <a href="#controlledBy"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy">
+         <span>controlled by</span>
+      </a>
+   </li>
+   <li>
+      <a href="#controlls"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlls">
+         <span>controlls</span>
+      </a>
+   </li>
+   <li>
+      <a href="#credential"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#credential">
+         <span>credential</span>
+      </a>
+   </li>
+   <li>
+      <a href="#format"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#format">
+         <span>format</span>
+      </a>
+   </li>
+   <li>
+      <a href="#functional"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#functional">
+         <span>functional</span>
+      </a>
+   </li>
+   <li>
+      <a href="#identifier"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#identifier">
+         <span>identifier</span>
+      </a>
+   </li>
+   <li>
+      <a href="#issuer"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issuer">
+         <span>issuer</span>
+      </a>
+   </li>
+   <li>
+      <a href="#key"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#key">
+         <span>key</span>
+      </a>
+   </li>
+   <li>
+      <a href="#localPart"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#localPart">
+         <span>local part</span>
+      </a>
+   </li>
+   <li>
+      <a href="#relatesTo"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo">
+         <span>relates to</span>
+      </a>
+   </li>
+   <li>
+      <a href="#status"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#status">
+         <span>status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#subAssertion"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subAssertion">
+         <span>sub assertion</span>
+      </a>
+   </li>
+   <li>
+      <a href="#value"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#value">
+         <span>value</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#issueDate"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issueDate">
+         <span>issue date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#issuer"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issuer">
+         <span>issuer</span>
+      </a>
+   </li>
+   <li>
+      <a href="#namespace"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#namespace">
+         <span>namespace</span>
+      </a>
+   </li>
+   <li>
+      <a href="#profile"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#profile">
+         <span>profile</span>
+      </a>
+   </li>
+   <li>
+      <a href="#uid"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#uid">
+         <span>uid</span>
+      </a>
+   </li>
+   <li>
+      <a href="#validFrom"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validFrom">
+         <span>valid from</span>
+      </a>
+   </li>
+   <li>
+      <a href="#validTo"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validTo">
+         <span>valid to</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AccessToken"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#AccessToken">
+         <span>access token</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Active"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Active">
+         <span>active</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ApplicationToken"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#ApplicationToken">
+         <span>application token</span>
+      </a>
+   </li>
+   <li>
+      <a href="#BearerToken"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#BearerToken">
+         <span>bearer token</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DID"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#DID">
+         <span>d i d</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DN"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#DN">
+         <span>d n</span>
+      </a>
+   </li>
+   <li>
+      <a href="#EDI"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EDI">
+         <span>e d i</span>
+      </a>
+   </li>
+   <li>
+      <a href="#EUI-48"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EUI-48">
+         <span>e u i 48</span>
+      </a>
+   </li>
+   <li>
+      <a href="#EUI-64"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EUI-64">
+         <span>e u i 64</span>
+      </a>
+   </li>
+   <li>
+      <a href="#E.164"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#E.164">
+         <span>e.164</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Email"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Email">
+         <span>email</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FirstName"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#FirstName">
+         <span>first name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GUID"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#GUID">
+         <span>g u i d</span>
+      </a>
+   </li>
+   <li>
+      <a href="#IDToken"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IDToken">
+         <span>i d token</span>
+      </a>
+   </li>
+   <li>
+      <a href="#IRI"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IRI">
+         <span>i r i</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Inactive"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Inactive">
+         <span>inactive</span>
+      </a>
+   </li>
+   <li>
+      <a href="#JsonWebToken"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#JsonWebToken">
+         <span>json web token</span>
+      </a>
+   </li>
+   <li>
+      <a href="#KerberosTicket"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#KerberosTicket">
+         <span>kerberos ticket</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LastName"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#LastName">
+         <span>last name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Organization"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Organization">
+         <span>organization</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RFC1035"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC1035">
+         <span>r f c1035</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RFC5322"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC5322">
+         <span>r f c5322</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RFC7613"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC7613">
+         <span>r f c7613</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RefreshToken"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RefreshToken">
+         <span>refresh token</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Revoked"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Revoked">
+         <span>revoked</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Role"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Role">
+         <span>role</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SAML2.0Assertion"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#SAML2.0Assertion">
+         <span>s a m l2.0 assertion</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SessionIndex"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#SessionIndex">
+         <span>session index</span>
+      </a>
+   </li>
+   <li>
+      <a href="#URI"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URI">
+         <span>u r i</span>
+      </a>
+   </li>
+   <li>
+      <a href="#URL"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URL">
+         <span>u r l</span>
+      </a>
+   </li>
+   <li>
+      <a href="#URN"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URN">
+         <span>u r n</span>
+      </a>
+   </li>
+   <li>
+      <a href="#UUIDv1"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv1">
+         <span>u u i dv1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#UUIDv2"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv2">
+         <span>u u i dv2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#UUIDv3"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv3">
+         <span>u u i dv3</span>
+      </a>
+   </li>
+   <li>
+      <a href="#UUIDv4"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv4">
+         <span>u u i dv4</span>
+      </a>
+   </li>
+   <li>
+      <a href="#UUIDv5"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv5">
+         <span>u u i dv5</span>
+      </a>
+   </li>
+   <li>
+      <a href="#VC"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#VC">
+         <span>v c</span>
+      </a>
+   </li>
+   <li>
+      <a href="#VP"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#VP">
+         <span>v p</span>
+      </a>
+   </li>
+   <li>
+      <a href="#X.509Certificate"
+         title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#X.509Certificate">
+         <span>x.509 certificate</span>
+      </a>
+   </li>
+</ul><h4> Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist"/>

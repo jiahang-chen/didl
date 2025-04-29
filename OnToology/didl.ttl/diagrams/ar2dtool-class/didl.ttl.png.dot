@@ -1,0 +1,30 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "didl:Identity" "sec:Proof" "didl:Identifier" "didl:CompositeAssertion" "didl:Functional" "didl:CompositeIdentifier" "didl:Key" "didl:IdentitySubject" "didl:Status" "didl:Assertion" "didl:Attribute" "didl:CryptographicSignature" "didl:Credential" "didl:IdentifierFormat" "didl:Value" ; /*classes style*/
+	"didl:CryptographicSignature" -> "sec:Proof" [ label = "owl:equivalentClass" ];
+	"didl:profile" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"didl:Identity" -> "xsd:anyURI" [ label = "didl:uid" ];
+	"didl:IdentitySubject" -> "didl:Identifier" [ label = "didl:identifier" ];
+	"didl:Identity" -> "xsd:dateTime" [ label = "didl:issueDate" ];
+	"didl:Attribute" -> "didl:Value" [ label = "didl:value" ];
+	"didl:Identifier" -> "didl:Functional" [ label = "didl:functional" ];
+	"didl:Identity" -> "didl:IdentitySubject" [ label = "didl:controlledBy" ];
+	"didl:Identifier" -> "didl:IdentifierFormat" [ label = "didl:format" ];
+	"didl:Identity" -> "didl:Status" [ label = "didl:status" ];
+	"didl:CompositeIdentifier" -> "didl:Identifier" [ label = "didl:localPart" ];
+	"didl:CompositeIdentifier" -> "xsd:string" [ label = "didl:namespace" ];
+	"didl:CompositeAssertion" -> "didl:Assertion" [ label = "didl:subAssertion" ];
+	"didl:Attribute" -> "didl:Key" [ label = "didl:key" ];
+	"didl:Assertion" -> "didl:Attribute" [ label = "didl:assertedAttribute" ];
+	"didl:Identity" -> "xsd:anyURI" [ label = "didl:issuer" ];
+	"didl:Identity" -> "xsd:dateTime" [ label = "didl:validFrom" ];
+	"didl:Assertion" -> "didl:Attribute" [ label = "didl:attribute" ];
+	"didl:Identity" -> "xsd:anyURI" [ label = "didl:profile" ];
+	"didl:IdentitySubject" -> "didl:Identity" [ label = "didl:controlls" ];
+	"didl:Credential" -> "didl:Identifier" [ label = "didl:relatesTo" ];
+	"didl:IdentitySubject" -> "didl:Credential" [ label = "didl:credential" ];
+	"didl:IdentitySubject" -> "didl:Assertion" [ label = "didl:assertion" ];
+	"didl:Identity" -> "xsd:dateTime" [ label = "didl:validTo" ];
+
+}
