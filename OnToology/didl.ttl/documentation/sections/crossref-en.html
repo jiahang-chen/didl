@@ -112,7 +112,9 @@ This section provides details for each class and property defined by Digital Ide
                title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#localPart">local part</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#namespace"
                title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#namespace">namespace</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#subIdentifier"
+               title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier">sub identifier</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -201,8 +203,8 @@ This section provides details for each class and property defined by Digital Ide
          <dd>
             <a href="#assertedAttribute"
                title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertedAttribute">asserted attribute</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#attribute"
-               title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute">attribute</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#proof"
+               title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof">proof</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -264,8 +266,6 @@ This section provides details for each class and property defined by Digital Ide
          <dd>
             <a href="#assertedAttribute"
                title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertedAttribute">asserted attribute</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#attribute"
-               title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute">attribute</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -416,6 +416,8 @@ This section provides details for each class and property defined by Digital Ide
                title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#localPart">local part</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#relatesTo"
                title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo">relates to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#subIdentifier"
+               title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier">sub identifier</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -653,12 +655,6 @@ This section provides details for each class and property defined by Digital Ide
          </a>
       </li>
       <li>
-         <a href="#attribute"
-            title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute">
-            <span>attribute</span>
-         </a>
-      </li>
-      <li>
          <a href="#controlledBy"
             title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy">
             <span>controlled by</span>
@@ -713,6 +709,12 @@ This section provides details for each class and property defined by Digital Ide
          </a>
       </li>
       <li>
+         <a href="#proof"
+            title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof">
+            <span>proof</span>
+         </a>
+      </li>
+      <li>
          <a href="#relatesTo"
             title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo">
             <span>relates to</span>
@@ -728,6 +730,12 @@ This section provides details for each class and property defined by Digital Ide
          <a href="#subAssertion"
             title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subAssertion">
             <span>sub assertion</span>
+         </a>
+      </li>
+      <li>
+         <a href="#subIdentifier"
+            title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier">
+            <span>sub identifier</span>
          </a>
       </li>
       <li>
@@ -780,30 +788,6 @@ This section provides details for each class and property defined by Digital Ide
             <dd>
                <a href="#Assertion"
                   title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion">Assertion</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="attribute">
-      <h3>attribute<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Assertion"
-                  title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion">Assertion</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Attribute"
-                  title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute">Attribute</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1035,6 +1019,31 @@ This section provides details for each class and property defined by Digital Ide
          </dl>
       </div>
    </div>
+   <div class="entity" id="proof">
+      <h3>proof<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Assertion"
+                  title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion">Assertion</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/security#Proof"
+                  target="_blank"
+                  title="https://w3id.org/security#Proof">proof</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="relatesTo">
       <h3>relates to<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1102,6 +1111,30 @@ This section provides details for each class and property defined by Digital Ide
             <dd>
                <a href="#Assertion"
                   title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion">Assertion</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="subIdentifier">
+      <h3>sub identifier<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CompositeIdentifier"
+                  title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier">A specialized identifier consists of multiple identifiers</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Identifier"
+                  title="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier">Identifier</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

@@ -44,11 +44,6 @@
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject> .
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertion> <http://www.w3.org/2000/01/rdf-schema#range> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion> .
 # 
-# https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute
-<https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute> <http://www.w3.org/2000/01/rdf-schema#domain> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion> .
-<https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute> <http://www.w3.org/2000/01/rdf-schema#range> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute> .
-# 
 # https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlls> .
@@ -94,6 +89,11 @@
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#localPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier> .
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#localPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier> .
 # 
+# https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof
+<https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof> <http://www.w3.org/2000/01/rdf-schema#domain> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion> .
+<https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/security#Proof> .
+# 
 # https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential> .
@@ -108,6 +108,11 @@
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subAssertion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeAssertion> .
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subAssertion> <http://www.w3.org/2000/01/rdf-schema#range> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion> .
+# 
+# https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier
+<https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier> .
+<https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier> .
 # 
 # https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#value
 <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
