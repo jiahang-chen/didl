@@ -54,12 +54,6 @@ didl:assertion rdf:type owl:ObjectProperty ;
                rdfs:range didl:Assertion .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#attribute
-didl:attribute rdf:type owl:ObjectProperty ;
-               rdfs:domain didl:Assertion ;
-               rdfs:range didl:Attribute .
-
-
 ###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy
 didl:controlledBy rdf:type owl:ObjectProperty ;
                   owl:inverseOf didl:controlls ;
@@ -114,6 +108,12 @@ didl:localPart rdf:type owl:ObjectProperty ;
                rdfs:range didl:Identifier .
 
 
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof
+didl:proof rdf:type owl:ObjectProperty ;
+           rdfs:domain didl:Assertion ;
+           rdfs:range sec:Proof .
+
+
 ###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo
 didl:relatesTo rdf:type owl:ObjectProperty ;
                rdfs:domain didl:Credential ;
@@ -130,6 +130,12 @@ didl:status rdf:type owl:ObjectProperty ;
 didl:subAssertion rdf:type owl:ObjectProperty ;
                   rdfs:domain didl:CompositeAssertion ;
                   rdfs:range didl:Assertion .
+
+
+###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier
+didl:subIdentifier rdf:type owl:ObjectProperty ;
+                   rdfs:domain didl:CompositeIdentifier ;
+                   rdfs:range didl:Identifier .
 
 
 ###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#value
