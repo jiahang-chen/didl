@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#"
-     xml:base="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl"
+<rdf:RDF xmlns="https://w3id.org/def/didl#"
+     xml:base="https://w3id.org/def/didl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,11 +8,15 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl">
+    <owl:Ontology rdf:about="https://w3id.org/def/didl">
         <dc:creator xml:lang="en">Jiahang Chen</dc:creator>
-        <dc:description xml:lang="en">This is a vocabulary for DIDL Version 0.1</dc:description>
-        <dc:title>Digital Identity Description Language Vocabulary</dc:title>
+        <dc:title xml:lang="en">DIDL Vocabulary &amp; Expression 0.1</dc:title>
+        <terms:abstract xml:lang="en">The DIDL is a description language to represent diverse identity con-
+cepts, ensuring technical and semantic compatibility across different data ecosystems.</terms:abstract>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-29T00:00:00</terms:created>
         <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+        <rdfs:comment xml:lang="en">This is a vocabulary for DIDL Version 0.1</rdfs:comment>
+        <rdfs:label>didl</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
     </owl:Ontology>
     
@@ -40,7 +44,10 @@
     <!-- http://purl.org/dc/elements/1.1/description -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:comment>This individual represents description.</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -48,6 +55,20 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
     
 
 
@@ -70,172 +91,183 @@
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertedAttribute -->
+    <!-- https://w3id.org/def/didl#assertedAttribute -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertedAttribute">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#assertedAttribute">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Attribute"/>
+        <rdfs:comment xml:lang="en">Indicates that an assertion has asserted attribute(s)</rdfs:comment>
+        <rdfs:label xml:lang="en">assertedAttribute</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertion -->
+    <!-- https://w3id.org/def/didl#assertion -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertion">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#assertion">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#IdentitySubject"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>Indicates that an identity subject (i.e., entity) has assertion(s)</rdfs:comment>
+        <rdfs:label>assertion</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy -->
+    <!-- https://w3id.org/def/didl#controlledBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy">
-        <owl:inverseOf rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlls"/>
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#controlledBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/didl#controlls"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identity"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#IdentitySubject"/>
+        <rdfs:comment xml:lang="en">Indicates an identity is controlled by an identity subject (i.e., entity)</rdfs:comment>
+        <rdfs:label xml:lang="en">controlledBy</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlls -->
+    <!-- https://w3id.org/def/didl#controlls -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlls">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#controlls">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#IdentitySubject"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Identity"/>
+        <rdfs:comment xml:lang="en">Indicates that an identity subject (i.e., entity) controlls an identity</rdfs:comment>
+        <rdfs:label>controlls</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#credential -->
+    <!-- https://w3id.org/def/didl#credential -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#credential">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#credential">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#IdentitySubject"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Credential"/>
+        <rdfs:comment xml:lang="en">Indicates that an identity subject (i.e., entity) has credential(s).</rdfs:comment>
+        <rdfs:label>credential</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#format -->
+    <!-- https://w3id.org/def/didl#format -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#format">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#format">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment xml:lang="en">Indicates that an identifier has its specific format</rdfs:comment>
+        <rdfs:label>format</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#functional -->
+    <!-- https://w3id.org/def/didl#functional -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#functional">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Functional"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#functional">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Functional"/>
+        <rdfs:comment xml:lang="en">Indicates that an identifier has its own application-specific use</rdfs:comment>
+        <rdfs:label>functional</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#identifier -->
+    <!-- https://w3id.org/def/didl#identifier -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#identifier">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#identifier">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#IdentitySubject"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Identifier"/>
+        <rdfs:comment xml:lang="en">Indicates that an identity subject (i.e., entity) has identifier(s)</rdfs:comment>
+        <rdfs:label>identifier</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issuer -->
+    <!-- https://w3id.org/def/didl#key -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issuer">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#key">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Attribute"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Key"/>
+        <rdfs:comment xml:lang="en">Represents a key of an attribute</rdfs:comment>
+        <rdfs:label>key</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#key -->
+    <!-- https://w3id.org/def/didl#localPart -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#key">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#localPart">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#CompositeIdentifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Identifier"/>
+        <rdfs:comment xml:lang="en">Indicates the local part of a composite identifier</rdfs:comment>
+        <rdfs:label>localPart</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#localPart -->
+    <!-- https://w3id.org/def/didl#proof -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#localPart">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#proof">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment xml:lang="en">Indicates a proof of an assertion, which ensures the integrity and authenticy of the assertion</rdfs:comment>
+        <rdfs:label>proof</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof -->
+    <!-- https://w3id.org/def/didl#relatesTo -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
-        <rdfs:range rdf:resource="https://w3id.org/security#Proof"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#relatesTo">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Credential"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Identifier"/>
+        <rdfs:comment xml:lang="en">Indicates that an assertion or a credential relates to an identifier of an entity</rdfs:comment>
+        <rdfs:label xml:lang="en">relatesTo</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo -->
+    <!-- https://w3id.org/def/didl#status -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#status">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identity"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Status"/>
+        <rdfs:comment xml:lang="en">Indicates the current status of an identity</rdfs:comment>
+        <rdfs:label>status</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#status -->
+    <!-- https://w3id.org/def/didl#subAssertion -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#status">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Status"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#subAssertion">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#AssertionCollection"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment xml:lang="en">Indicates the consisting assertion of an assertion collection</rdfs:comment>
+        <rdfs:label>sub assertion</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subAssertion -->
+    <!-- https://w3id.org/def/didl#value -->
 
 
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subAssertion">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeAssertion"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier -->
-
-
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#value -->
-
-
-    <owl:ObjectProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#value">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute"/>
-        <rdfs:range rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Value"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#value">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Attribute"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Value"/>
+        <rdfs:comment xml:lang="en">Represents a value of an attribute</rdfs:comment>
+        <rdfs:label>value</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -252,72 +284,86 @@
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issueDate -->
+    <!-- https://w3id.org/def/didl#issueDate -->
 
 
-    <owl:DatatypeProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issueDate">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/didl#issueDate">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Indicates the issue date of an identity.</rdfs:comment>
+        <rdfs:label xml:lang="en">issueDate</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issuer -->
+    <!-- https://w3id.org/def/didl#issuer -->
 
 
-    <owl:DatatypeProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issuer">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/didl#issuer">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Indicates an issuer of an identity</rdfs:comment>
+        <rdfs:label xml:lang="en">issuer</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#namespace -->
+    <!-- https://w3id.org/def/didl#namespace -->
 
 
-    <owl:DatatypeProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#namespace">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/didl#namespace">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#CompositeIdentifier"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Indicates a namespace of a composite identifier, representing its functional scope</rdfs:comment>
+        <rdfs:label>namespace</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#profile -->
+    <!-- https://w3id.org/def/didl#profile -->
 
 
-    <owl:DatatypeProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#profile">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/didl#profile">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Indicates an identifier of an DIDL Profile that the identity conforms to.</rdfs:comment>
+        <rdfs:label>profile</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#uid -->
+    <!-- https://w3id.org/def/didl#uid -->
 
 
-    <owl:DatatypeProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#uid">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/didl#uid">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Indicates the id of an identity itself, e.g., an ID of a verifiable credential</rdfs:comment>
+        <rdfs:label>uid</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validFrom -->
+    <!-- https://w3id.org/def/didl#validFrom -->
 
 
-    <owl:DatatypeProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validFrom">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/didl#validFrom">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Indicates the data from which an identity is valid</rdfs:comment>
+        <rdfs:label>valid from</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validTo -->
+    <!-- https://w3id.org/def/didl#validTo -->
 
 
-    <owl:DatatypeProperty rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validTo">
-        <rdfs:domain rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/didl#validTo">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Indicates the data until which an identity is valid</rdfs:comment>
+        <rdfs:label>valid to</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -334,169 +380,181 @@
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion -->
+    <!-- https://w3id.org/def/didl#Assertion -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion">
-        <rdfs:subClassOf rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential"/>
+    <owl:Class rdf:about="https://w3id.org/def/didl#Assertion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/didl#Identity"/>
         <rdfs:comment xml:lang="en">A collection of identity-related attributes asserted by a trusted party</rdfs:comment>
         <rdfs:label xml:lang="en">Assertion</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute -->
+    <!-- https://w3id.org/def/didl#AssertionCollection -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute">
-        <rdfs:comment xml:lang="en">an identity-related attribute consists of a key-value pair</rdfs:comment>
+    <owl:Class rdf:about="https://w3id.org/def/didl#AssertionCollection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment xml:lang="en">A specialized assertion consists of multiple assertions</rdfs:comment>
+        <rdfs:label xml:lang="en">AssertionCollection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/didl#Attribute -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/didl#Attribute">
+        <rdfs:comment xml:lang="en">An identity-related attribute consists of a key-value pair</rdfs:comment>
         <rdfs:label xml:lang="en">Attribute</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeAssertion -->
+    <!-- https://w3id.org/def/didl#CompositeIdentifier -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeAssertion">
-        <rdfs:subClassOf rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
-        <rdfs:comment xml:lang="en">A specialized assertion consists of multiple assertions</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier -->
-
-
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier">
-        <rdfs:subClassOf rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier"/>
-        <rdfs:label xml:lang="en">A specialized identifier consists of multiple identifiers</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/def/didl#CompositeIdentifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/didl#Identifier"/>
+        <rdfs:comment xml:lang="en">A composite identifier that a hierarchical structure</rdfs:comment>
         <rdfs:label xml:lang="en">CompositeIdentifier</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential -->
+    <!-- https://w3id.org/def/didl#Credential -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential">
-        <rdfs:subClassOf rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"/>
+    <owl:Class rdf:about="https://w3id.org/def/didl#Credential">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/didl#Identity"/>
+        <rdfs:comment xml:lang="en">A proof of an entity&apos;s identity</rdfs:comment>
         <rdfs:label xml:lang="en">Credential</rdfs:label>
-        <rdfs:label xml:lang="en">Proof of an entity&apos;s identity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CryptographicSignature -->
+    <!-- https://w3id.org/def/didl#Functional -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CryptographicSignature">
-        <owl:equivalentClass rdf:resource="https://w3id.org/security#Proof"/>
-        <rdfs:subClassOf rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#OwnershipBasedCredential"/>
-    </owl:Class>
-    
-
-
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Functional -->
-
-
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Functional">
+    <owl:Class rdf:about="https://w3id.org/def/didl#Functional">
         <rdfs:comment xml:lang="en">A concept that represents the use of  an identifier</rdfs:comment>
         <rdfs:label xml:lang="en">Functional</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier -->
+    <!-- https://w3id.org/def/didl#Identifier -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier">
-        <rdfs:subClassOf rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity"/>
+    <owl:Class rdf:about="https://w3id.org/def/didl#Identifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/didl#Identity"/>
         <rdfs:comment xml:lang="en">A unique reference to distinguish one entity from another</rdfs:comment>
         <rdfs:label>Identifier</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat -->
+    <!-- https://w3id.org/def/didl#IdentifierFormat -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat">
-        <rdfs:label xml:lang="en">An identifier format that is specified by a standard or a protocol</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/def/didl#IdentifierFormat">
+        <rdfs:comment xml:lang="en">An identifier format that is specified by a standard or a protocol</rdfs:comment>
         <rdfs:label xml:lang="en">IdentifierFormat</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity -->
+    <!-- https://w3id.org/def/didl#Identity -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity">
-        <rdfs:comment xml:lang="en">An abstract concept of digital identity, which can be specialized to identifiers, credentials, or assertions.</rdfs:comment>
+    <owl:Class rdf:about="https://w3id.org/def/didl#Identity">
+        <rdfs:comment xml:lang="en">A digital identity that can be specialized to identifiers, credentials, or assertions</rdfs:comment>
         <rdfs:label xml:lang="en">Identity</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject -->
+    <!-- https://w3id.org/def/didl#IdentitySubject -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject">
+    <owl:Class rdf:about="https://w3id.org/def/didl#IdentitySubject">
         <rdfs:comment xml:lang="en">An entity that is identified by an identity</rdfs:comment>
+        <rdfs:label xml:lang="en">IdentitySubject</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#InherenceBasedCredential -->
+    <!-- https://w3id.org/def/didl#InherenceBasedCredential -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#InherenceBasedCredential">
-        <rdfs:subClassOf rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential"/>
+    <owl:Class rdf:about="https://w3id.org/def/didl#InherenceBasedCredential">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/didl#Credential"/>
+        <rdfs:comment xml:lang="en">A credential that indicates something you inherently has</rdfs:comment>
+        <rdfs:label xml:lang="en">InherenceBasedCredential</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key -->
+    <!-- https://w3id.org/def/didl#Key -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key">
+    <owl:Class rdf:about="https://w3id.org/def/didl#Key">
         <rdfs:comment xml:lang="en">Relates to the key of an attribute&apos;s key-value pair</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#KnowledgeBasedCredential -->
+    <!-- https://w3id.org/def/didl#KnowledgeBasedCredential -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#KnowledgeBasedCredential">
-        <rdfs:subClassOf rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential"/>
+    <owl:Class rdf:about="https://w3id.org/def/didl#KnowledgeBasedCredential">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/didl#Credential"/>
+        <rdfs:comment xml:lang="en">A credential that indicates something you know</rdfs:comment>
+        <rdfs:label xml:lang="en">KnowledgeBasedCredential</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#OwnershipBasedCredential -->
+    <!-- https://w3id.org/def/didl#PossessionBasedCredential -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#OwnershipBasedCredential">
-        <rdfs:subClassOf rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential"/>
+    <owl:Class rdf:about="https://w3id.org/def/didl#PossessionBasedCredential">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/didl#Credential"/>
+        <rdfs:comment xml:lang="en">A credential that indicates something you has</rdfs:comment>
+        <rdfs:label xml:lang="en">PossesionBasedCredential</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Status -->
+    <!-- https://w3id.org/def/didl#Proof -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Status">
+    <owl:Class rdf:about="https://w3id.org/def/didl#Proof">
+        <owl:equivalentClass rdf:resource="https://w3id.org/security#Proof"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/didl#PossessionBasedCredential"/>
+        <rdfs:comment xml:lang="en">A possession-based credential that uses cryptograhpic method</rdfs:comment>
+        <rdfs:label xml:lang="en">Proof</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/didl#Status -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/didl#Status">
         <rdfs:comment xml:lang="en">Relates to the status of an identity, including active, inactive, or revoked</rdfs:comment>
+        <rdfs:label xml:lang="en">Status</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Value -->
+    <!-- https://w3id.org/def/didl#Value -->
 
 
-    <owl:Class rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Value">
-        <rdfs:comment xml:lang="en">Related to the value of an attribute&apos;s key-value pair</rdfs:comment>
+    <owl:Class rdf:about="https://w3id.org/def/didl#Value">
+        <rdfs:comment xml:lang="en">Relates to the value of an attribute&apos;s key-value pair</rdfs:comment>
+        <rdfs:label xml:lang="en">Value</rdfs:label>
     </owl:Class>
     
 
@@ -520,354 +578,460 @@
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#AccessToken -->
+    <!-- https://w3id.org/def/didl#AccessToken -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#AccessToken">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#AccessToken">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>This individual represents access token.</rdfs:comment>
+        <rdfs:label>access token</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Active -->
+    <!-- https://w3id.org/def/didl#Active -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Active">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Status"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Active">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Status"/>
+        <rdfs:comment xml:lang="en">Active status of an identity</rdfs:comment>
+        <rdfs:label>active</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#ApplicationToken -->
+    <!-- https://w3id.org/def/didl#ApplicationToken -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#ApplicationToken">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#ApplicationToken">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>This individual represents application token.</rdfs:comment>
+        <rdfs:label>application token</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#BearerToken -->
+    <!-- https://w3id.org/def/didl#BearerToken -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#BearerToken">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#BearerToken">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>This individual represents bearer token.</rdfs:comment>
+        <rdfs:label>bearer token</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#DID -->
+    <!-- https://w3id.org/def/didl#DID -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#DID">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#DID">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents did.</rdfs:comment>
+        <rdfs:label>did</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#DN -->
+    <!-- https://w3id.org/def/didl#DN -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#DN">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#DN">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents dn.</rdfs:comment>
+        <rdfs:label>dn</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#E.164 -->
+    <!-- https://w3id.org/def/didl#E.164 -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#E.164">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#E.164">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents e.164.</rdfs:comment>
+        <rdfs:label>e.164</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EDI -->
+    <!-- https://w3id.org/def/didl#EDI -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EDI">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#EDI">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents edi.</rdfs:comment>
+        <rdfs:label>edi</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EUI-48 -->
+    <!-- https://w3id.org/def/didl#EUI-48 -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EUI-48">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#EUI-48">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents eui-48.</rdfs:comment>
+        <rdfs:label>eui-48</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EUI-64 -->
+    <!-- https://w3id.org/def/didl#EUI-64 -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EUI-64">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#EUI-64">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents eui-64.</rdfs:comment>
+        <rdfs:label>eui-64</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Email -->
+    <!-- https://w3id.org/def/didl#Email -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Email">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Email">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
+        <rdfs:comment>This individual represents email.</rdfs:comment>
+        <rdfs:label>email</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#FirstName -->
+    <!-- https://w3id.org/def/didl#FirstName -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#FirstName">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#FirstName">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
+        <rdfs:comment>This individual represents first name.</rdfs:comment>
+        <rdfs:label>first name</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#GUID -->
+    <!-- https://w3id.org/def/didl#GUID -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#GUID">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#GUID">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents guid.</rdfs:comment>
+        <rdfs:label>guid</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IDToken -->
+    <!-- https://w3id.org/def/didl#IDToken -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IDToken">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#IDToken">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>This individual represents idtoken.</rdfs:comment>
+        <rdfs:label>idtoken</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IRI -->
+    <!-- https://w3id.org/def/didl#IRI -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IRI">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#IRI">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents iri.</rdfs:comment>
+        <rdfs:label>iri</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Inactive -->
+    <!-- https://w3id.org/def/didl#Inactive -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Inactive">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Status"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Inactive">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Status"/>
+        <rdfs:comment>This individual represents inactive.</rdfs:comment>
+        <rdfs:label>inactive</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#JsonWebToken -->
+    <!-- https://w3id.org/def/didl#JsonWebToken -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#JsonWebToken">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#JsonWebToken">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>This individual represents json web token.</rdfs:comment>
+        <rdfs:label>json web token</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#KerberosTicket -->
+    <!-- https://w3id.org/def/didl#KerberosTicket -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#KerberosTicket">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#KerberosTicket">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>This individual represents kerberos ticket.</rdfs:comment>
+        <rdfs:label>kerberos ticket</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#LastName -->
+    <!-- https://w3id.org/def/didl#LastName -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#LastName">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#LastName">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
+        <rdfs:comment>This individual represents last name.</rdfs:comment>
+        <rdfs:label>last name</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Organization -->
+    <!-- https://w3id.org/def/didl#Organization -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Organization">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Organization">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
+        <rdfs:comment>This individual represents organization.</rdfs:comment>
+        <rdfs:label>organization</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC1035 -->
+    <!-- https://w3id.org/def/didl#RFC1035 -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC1035">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#RFC1035">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents rfc1035.</rdfs:comment>
+        <rdfs:label>rfc1035</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC5322 -->
+    <!-- https://w3id.org/def/didl#RFC5322 -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC5322">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#RFC5322">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents rfc5322.</rdfs:comment>
+        <rdfs:label>rfc5322</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC7613 -->
+    <!-- https://w3id.org/def/didl#RFC7613 -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC7613">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#RFC7613">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents rfc7613.</rdfs:comment>
+        <rdfs:label>rfc7613</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RefreshToken -->
+    <!-- https://w3id.org/def/didl#RefreshToken -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RefreshToken">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#RefreshToken">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>This individual represents refresh token.</rdfs:comment>
+        <rdfs:label>refresh token</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Revoked -->
+    <!-- https://w3id.org/def/didl#Revoked -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Revoked">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Status"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Revoked">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Status"/>
+        <rdfs:comment>This individual represents revoked.</rdfs:comment>
+        <rdfs:label>revoked</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Role -->
+    <!-- https://w3id.org/def/didl#Role -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Role">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Role">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
+        <rdfs:comment>This individual represents role.</rdfs:comment>
+        <rdfs:label>role</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#SAML2.0Assertion -->
+    <!-- https://w3id.org/def/didl#SAML2.0Assertion -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#SAML2.0Assertion">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#SAML2.0Assertion">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>This individual represents saml2.0assertion.</rdfs:comment>
+        <rdfs:label>saml2.0assertion</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#SessionIndex -->
+    <!-- https://w3id.org/def/didl#SessionIndex -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#SessionIndex">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#SessionIndex">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
+        <rdfs:comment>This individual represents session index.</rdfs:comment>
+        <rdfs:label>session index</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URI -->
+    <!-- https://w3id.org/def/didl#URI -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URI">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#URI">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents uri.</rdfs:comment>
+        <rdfs:label>uri</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URL -->
+    <!-- https://w3id.org/def/didl#URL -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URL">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#URL">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents url.</rdfs:comment>
+        <rdfs:label>url</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URN -->
+    <!-- https://w3id.org/def/didl#URN -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URN">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#URN">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents urn.</rdfs:comment>
+        <rdfs:label>urn</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv1 -->
+    <!-- https://w3id.org/def/didl#UUIDv1 -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv1">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#UUIDv1">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents uuidv1.</rdfs:comment>
+        <rdfs:label>uuidv1</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv2 -->
+    <!-- https://w3id.org/def/didl#UUIDv2 -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv2">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#UUIDv2">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents uuidv2.</rdfs:comment>
+        <rdfs:label>uuidv2</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv3 -->
+    <!-- https://w3id.org/def/didl#UUIDv3 -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv3">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#UUIDv3">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents uuidv3.</rdfs:comment>
+        <rdfs:label>uuidv3</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv4 -->
+    <!-- https://w3id.org/def/didl#UUIDv4 -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv4">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#UUIDv4">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents uuidv4.</rdfs:comment>
+        <rdfs:label>uuidv4</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv5 -->
+    <!-- https://w3id.org/def/didl#UUIDv5 -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv5">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#UUIDv5">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
+        <rdfs:comment>This individual represents uuidv5.</rdfs:comment>
+        <rdfs:label>uuidv5</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#VC -->
+    <!-- https://w3id.org/def/didl#VC -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#VC">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#VC">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>This individual represents vc.</rdfs:comment>
+        <rdfs:label>vc</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#VP -->
+    <!-- https://w3id.org/def/didl#VP -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#VP">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#VP">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>This individual represents vp.</rdfs:comment>
+        <rdfs:label>vp</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#X.509Certificate -->
+    <!-- https://w3id.org/def/didl#X.509Certificate -->
 
 
-    <owl:NamedIndividual rdf:about="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#X.509Certificate">
-        <rdf:type rdf:resource="https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#X.509Certificate">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Assertion"/>
+        <rdfs:comment>This individual represents x.509certificate.</rdfs:comment>
+        <rdfs:label>x.509certificate</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:comment>This individual represents creator.</rdfs:comment>
+        <rdfs:label>creator</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:comment>This individual represents title.</rdfs:comment>
+        <rdfs:label>title</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:comment>This individual represents created.</rdfs:comment>
+        <rdfs:label>created</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:comment>This individual represents license.</rdfs:comment>
+        <rdfs:label>license</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
