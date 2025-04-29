@@ -1,296 +1,357 @@
-@prefix : <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#> .
+@prefix : <https://w3id.org/def/didl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sec: <https://w3id.org/security#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix cred: <https://www.w3.org/2018/credentials#> .
-@prefix didl: <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#> .
+@prefix didl: <https://w3id.org/def/didl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#> .
+@base <https://w3id.org/def/didl> .
 
-<https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl> rdf:type owl:Ontology ;
-                                                                     dc:creator "Jiahang Chen"@en ;
-                                                                     dc:description "This is a vocabulary for DIDL Version 0.1"@en ;
-                                                                     dc:title "Digital Identity Description Language Vocabulary" ;
-                                                                     dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
-                                                                     owl:versionInfo 0.1 .
+<https://w3id.org/def/didl> rdf:type owl:Ontology ;
+                             dc:creator "Jiahang Chen"@en ;
+                             dc:title "DIDL Vocabulary & Expression 0.1"@en ;
+                             dcterms:created "2025-04-29T00:00:00"^^xsd:dateTime ;
+                             dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+                             rdfs:comment "This is a vocabulary for DIDL Version 0.1"@en ,
+                                          "This individual represents didl." ;
+                             rdfs:label "didl" ;
+                             owl:versionInfo 0.1 .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
 ###  http://purl.org/dc/elements/1.1/creator
-dc:creator rdf:type owl:AnnotationProperty .
+dc:creator rdf:type owl:AnnotationProperty ;
+           rdfs:comment "This individual represents creator." ;
+           rdfs:label "creator" .
 
 
 ###  http://purl.org/dc/elements/1.1/description
-dc:description rdf:type owl:AnnotationProperty .
+dc:description rdf:type owl:AnnotationProperty ;
+               rdfs:comment "This individual represents description." ;
+               rdfs:label "description" .
 
 
 ###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
+dc:title rdf:type owl:AnnotationProperty ;
+         rdfs:comment "This individual represents title." ;
+         rdfs:label "title" .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty ;
+                rdfs:comment "This individual represents created." ;
+                rdfs:label "created" .
 
 
 ###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:AnnotationProperty .
+dcterms:license rdf:type owl:AnnotationProperty ;
+                rdfs:comment "This individual represents license." ;
+                rdfs:label "license" .
 
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertedAttribute
+###  https://w3id.org/def/didl#assertedAttribute
 didl:assertedAttribute rdf:type owl:ObjectProperty ;
                        rdfs:domain didl:Assertion ;
-                       rdfs:range didl:Attribute .
+                       rdfs:range didl:Attribute ;
+                       rdfs:comment "Indicates that an assertion has asserted attribute(s)"@en ;
+                       rdfs:label "assertedAttribute"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#assertion
+###  https://w3id.org/def/didl#assertion
 didl:assertion rdf:type owl:ObjectProperty ;
                rdfs:domain didl:IdentitySubject ;
-               rdfs:range didl:Assertion .
+               rdfs:range didl:Assertion ;
+               rdfs:comment "Indicates that an identity subject (i.e., entity) has assertion(s)" ;
+               rdfs:label "assertion" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlledBy
+###  https://w3id.org/def/didl#controlledBy
 didl:controlledBy rdf:type owl:ObjectProperty ;
                   owl:inverseOf didl:controlls ;
                   rdfs:domain didl:Identity ;
-                  rdfs:range didl:IdentitySubject .
+                  rdfs:range didl:IdentitySubject ;
+                  rdfs:comment "Indicates an identity is controlled by an identity subject (i.e., entity)"@en ;
+                  rdfs:label "controlledBy"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#controlls
+###  https://w3id.org/def/didl#controlls
 didl:controlls rdf:type owl:ObjectProperty ;
                rdfs:domain didl:IdentitySubject ;
-               rdfs:range didl:Identity .
+               rdfs:range didl:Identity ;
+               rdfs:comment "Indicates that an identity subject (i.e., entity) controlls an identity"@en ;
+               rdfs:label "controlls" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#credential
+###  https://w3id.org/def/didl#credential
 didl:credential rdf:type owl:ObjectProperty ;
                 rdfs:domain didl:IdentitySubject ;
-                rdfs:range didl:Credential .
+                rdfs:range didl:Credential ;
+                rdfs:comment "Indicates that an identity subject (i.e., entity) has credential(s)."@en ;
+                rdfs:label "credential" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#format
+###  https://w3id.org/def/didl#format
 didl:format rdf:type owl:ObjectProperty ;
             rdfs:domain didl:Identifier ;
-            rdfs:range didl:IdentifierFormat .
+            rdfs:range didl:IdentifierFormat ;
+            rdfs:comment "Indicates that an identifier has its specific format"@en ;
+            rdfs:label "format" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#functional
+###  https://w3id.org/def/didl#functional
 didl:functional rdf:type owl:ObjectProperty ;
                 rdfs:domain didl:Identifier ;
-                rdfs:range didl:Functional .
+                rdfs:range didl:Functional ;
+                rdfs:comment "Indicates that an identifier has its own application-specific use"@en ;
+                rdfs:label "functional" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#identifier
+###  https://w3id.org/def/didl#identifier
 didl:identifier rdf:type owl:ObjectProperty ;
                 rdfs:domain didl:IdentitySubject ;
-                rdfs:range didl:Identifier .
+                rdfs:range didl:Identifier ;
+                rdfs:comment "Indicates that an identity subject (i.e., entity) has identifier(s)"@en ;
+                rdfs:label "identifier" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issuer
-didl:issuer rdf:type owl:ObjectProperty ;
-            rdfs:domain didl:Identity .
-
-
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#key
+###  https://w3id.org/def/didl#key
 didl:key rdf:type owl:ObjectProperty ;
          rdfs:domain didl:Attribute ;
-         rdfs:range didl:Key .
+         rdfs:range didl:Key ;
+         rdfs:comment "Represents a key of an attribute"@en ;
+         rdfs:label "key" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#localPart
+###  https://w3id.org/def/didl#localPart
 didl:localPart rdf:type owl:ObjectProperty ;
                rdfs:domain didl:CompositeIdentifier ;
-               rdfs:range didl:Identifier .
+               rdfs:range didl:Identifier ;
+               rdfs:comment "Indicates the local part of a composite identifier"@en ;
+               rdfs:label "localPart" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#proof
+###  https://w3id.org/def/didl#proof
 didl:proof rdf:type owl:ObjectProperty ;
            rdfs:domain didl:Assertion ;
-           rdfs:range sec:Proof .
+           rdfs:comment "Indicates a proof of an assertion, which ensures the integrity and authenticy of the assertion"@en ;
+           rdfs:label "proof" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#relatesTo
+###  https://w3id.org/def/didl#relatesTo
 didl:relatesTo rdf:type owl:ObjectProperty ;
-               rdfs:domain didl:Credential ;
-               rdfs:range didl:Identifier .
+               rdfs:domain didl:Assertion ,
+                           didl:Credential ;
+               rdfs:range didl:Identifier ;
+               rdfs:comment "Indicates that an assertion or a credential relates to an identifier of an entity"@en ;
+               rdfs:label "relatesTo"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#status
+###  https://w3id.org/def/didl#status
 didl:status rdf:type owl:ObjectProperty ;
             rdfs:domain didl:Identity ;
-            rdfs:range didl:Status .
+            rdfs:range didl:Status ;
+            rdfs:comment "Indicates the current status of an identity"@en ;
+            rdfs:label "status" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subAssertion
+###  https://w3id.org/def/didl#subAssertion
 didl:subAssertion rdf:type owl:ObjectProperty ;
-                  rdfs:domain didl:CompositeAssertion ;
-                  rdfs:range didl:Assertion .
+                  rdfs:domain didl:AssertionCollection ;
+                  rdfs:range didl:Assertion ;
+                  rdfs:comment "Indicates the consisting assertion of an assertion collection"@en ;
+                  rdfs:label "sub assertion" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#subIdentifier
-didl:subIdentifier rdf:type owl:ObjectProperty ;
-                   rdfs:domain didl:CompositeIdentifier ;
-                   rdfs:range didl:Identifier .
-
-
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#value
+###  https://w3id.org/def/didl#value
 didl:value rdf:type owl:ObjectProperty ;
            rdfs:domain didl:Attribute ;
-           rdfs:range didl:Value .
+           rdfs:range didl:Value ;
+           rdfs:comment "Represents a value of an attribute"@en ;
+           rdfs:label "value" .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issueDate
+###  https://w3id.org/def/didl#issueDate
 didl:issueDate rdf:type owl:DatatypeProperty ;
                rdfs:domain didl:Identity ;
-               rdfs:range xsd:dateTime .
+               rdfs:range xsd:dateTime ;
+               rdfs:comment "Indicates the issue date of an identity."@en ;
+               rdfs:label "issueDate"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#issuer
+###  https://w3id.org/def/didl#issuer
 didl:issuer rdf:type owl:DatatypeProperty ;
-            rdfs:range xsd:anyURI .
+            rdfs:range xsd:anyURI ;
+            rdfs:comment "Indicates an issuer of an identity"@en ;
+            rdfs:label "issuer"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#namespace
+###  https://w3id.org/def/didl#namespace
 didl:namespace rdf:type owl:DatatypeProperty ;
                rdfs:domain didl:CompositeIdentifier ;
-               rdfs:range xsd:string .
+               rdfs:range xsd:string ;
+               rdfs:comment "Indicates a namespace of a composite identifier, representing its functional scope"@en ;
+               rdfs:label "namespace" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#profile
+###  https://w3id.org/def/didl#profile
 didl:profile rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:domain didl:Identity ;
-             rdfs:range xsd:anyURI .
+             rdfs:range xsd:anyURI ;
+             rdfs:comment "Indicates an identifier of an DIDL Profile that the identity conforms to."@en ;
+             rdfs:label "profile" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#uid
+###  https://w3id.org/def/didl#uid
 didl:uid rdf:type owl:DatatypeProperty ;
          rdfs:domain didl:Identity ;
-         rdfs:range xsd:anyURI .
+         rdfs:range xsd:anyURI ;
+         rdfs:comment "Indicates the id of an identity itself, e.g., an ID of a verifiable credential"@en ;
+         rdfs:label "uid" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validFrom
+###  https://w3id.org/def/didl#validFrom
 didl:validFrom rdf:type owl:DatatypeProperty ;
                rdfs:domain didl:Identity ;
-               rdfs:range xsd:dateTime .
+               rdfs:range xsd:dateTime ;
+               rdfs:comment "Indicates the data from which an identity is valid"@en ;
+               rdfs:label "valid from" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#validTo
+###  https://w3id.org/def/didl#validTo
 didl:validTo rdf:type owl:DatatypeProperty ;
              rdfs:domain didl:Identity ;
-             rdfs:range xsd:dateTime .
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "Indicates the data until which an identity is valid"@en ;
+             rdfs:label "valid to" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Assertion
+###  https://w3id.org/def/didl#Assertion
 didl:Assertion rdf:type owl:Class ;
-               rdfs:subClassOf didl:Credential ;
+               rdfs:subClassOf didl:Identity ;
                rdfs:comment "A collection of identity-related attributes asserted by a trusted party"@en ;
                rdfs:label "Assertion"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Attribute
+###  https://w3id.org/def/didl#AssertionCollection
+didl:AssertionCollection rdf:type owl:Class ;
+                         rdfs:subClassOf didl:Assertion ;
+                         rdfs:comment "A specialized assertion consists of multiple assertions"@en ;
+                         rdfs:label "AssertionCollection"@en .
+
+
+###  https://w3id.org/def/didl#Attribute
 didl:Attribute rdf:type owl:Class ;
-               rdfs:comment "an identity-related attribute consists of a key-value pair"@en ;
+               rdfs:comment "An identity-related attribute consists of a key-value pair"@en ;
                rdfs:label "Attribute"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeAssertion
-didl:CompositeAssertion rdf:type owl:Class ;
-                        rdfs:subClassOf didl:Assertion ;
-                        rdfs:comment "A specialized assertion consists of multiple assertions"@en .
-
-
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CompositeIdentifier
+###  https://w3id.org/def/didl#CompositeIdentifier
 didl:CompositeIdentifier rdf:type owl:Class ;
                          rdfs:subClassOf didl:Identifier ;
-                         rdfs:label "A specialized identifier consists of multiple identifiers"@en ,
-                                    "CompositeIdentifier"@en .
+                         rdfs:comment "A composite identifier that a hierarchical structure"@en ;
+                         rdfs:label "CompositeIdentifier"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Credential
+###  https://w3id.org/def/didl#Credential
 didl:Credential rdf:type owl:Class ;
                 rdfs:subClassOf didl:Identity ;
-                rdfs:label "Credential"@en ,
-                           "Proof of an entity's identity"@en .
+                rdfs:comment "A proof of an entity's identity"@en ;
+                rdfs:label "Credential"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#CryptographicSignature
-didl:CryptographicSignature rdf:type owl:Class ;
-                            owl:equivalentClass sec:Proof ;
-                            rdfs:subClassOf didl:OwnershipBasedCredential .
-
-
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Functional
+###  https://w3id.org/def/didl#Functional
 didl:Functional rdf:type owl:Class ;
                 rdfs:comment "A concept that represents the use of  an identifier"@en ;
                 rdfs:label "Functional"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identifier
+###  https://w3id.org/def/didl#Identifier
 didl:Identifier rdf:type owl:Class ;
                 rdfs:subClassOf didl:Identity ;
                 rdfs:comment "A unique reference to distinguish one entity from another"@en ;
                 rdfs:label "Identifier" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentifierFormat
+###  https://w3id.org/def/didl#IdentifierFormat
 didl:IdentifierFormat rdf:type owl:Class ;
-                      rdfs:label "An identifier format that is specified by a standard or a protocol"@en ,
-                                 "IdentifierFormat"@en .
+                      rdfs:comment "An identifier format that is specified by a standard or a protocol"@en ;
+                      rdfs:label "IdentifierFormat"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Identity
+###  https://w3id.org/def/didl#Identity
 didl:Identity rdf:type owl:Class ;
-              rdfs:comment "An abstract concept of digital identity, which can be specialized to identifiers, credentials, or assertions."@en ;
+              rdfs:comment "A digital identity that can be specialized to identifiers, credentials, or assertions"@en ;
               rdfs:label "Identity"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IdentitySubject
+###  https://w3id.org/def/didl#IdentitySubject
 didl:IdentitySubject rdf:type owl:Class ;
-                     rdfs:comment "An entity that is identified by an identity"@en .
+                     rdfs:comment "An entity that is identified by an identity"@en ;
+                     rdfs:label "IdentitySubject"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#InherenceBasedCredential
+###  https://w3id.org/def/didl#InherenceBasedCredential
 didl:InherenceBasedCredential rdf:type owl:Class ;
-                              rdfs:subClassOf didl:Credential .
+                              rdfs:subClassOf didl:Credential ;
+                              rdfs:comment "A credential that indicates something you inherently has"@en ;
+                              rdfs:label "InherenceBasedCredential"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Key
+###  https://w3id.org/def/didl#Key
 didl:Key rdf:type owl:Class ;
          rdfs:comment "Relates to the key of an attribute's key-value pair"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#KnowledgeBasedCredential
+###  https://w3id.org/def/didl#KnowledgeBasedCredential
 didl:KnowledgeBasedCredential rdf:type owl:Class ;
-                              rdfs:subClassOf didl:Credential .
+                              rdfs:subClassOf didl:Credential ;
+                              rdfs:comment "A credential that indicates something you know"@en ;
+                              rdfs:label "KnowledgeBasedCredential"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#OwnershipBasedCredential
-didl:OwnershipBasedCredential rdf:type owl:Class ;
-                              rdfs:subClassOf didl:Credential .
+###  https://w3id.org/def/didl#PossessionBasedCredential
+didl:PossessionBasedCredential rdf:type owl:Class ;
+                               rdfs:subClassOf didl:Credential ;
+                               rdfs:comment "A credential that indicates something you has"@en ;
+                               rdfs:label "PossesionBasedCredential"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Status
+###  https://w3id.org/def/didl#Proof
+didl:Proof rdf:type owl:Class ;
+           owl:equivalentClass sec:Proof ;
+           rdfs:subClassOf didl:PossessionBasedCredential ;
+           rdfs:comment "A possession-based credential that uses cryptograhpic method"@en ;
+           rdfs:label "Proof"@en .
+
+
+###  https://w3id.org/def/didl#Status
 didl:Status rdf:type owl:Class ;
-            rdfs:comment "Relates to the status of an identity, including active, inactive, or revoked"@en .
+            rdfs:comment "Relates to the status of an identity, including active, inactive, or revoked"@en ;
+            rdfs:label "Status"@en .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Value
+###  https://w3id.org/def/didl#Value
 didl:Value rdf:type owl:Class ;
-           rdfs:comment "Related to the value of an attribute's key-value pair"@en .
+           rdfs:comment "Relates to the value of an attribute's key-value pair"@en ;
+           rdfs:label "Value"@en .
 
 
 ###  https://w3id.org/security#Proof
@@ -301,199 +362,277 @@ sec:Proof rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#AccessToken
+###  https://w3id.org/def/didl#AccessToken
 didl:AccessToken rdf:type owl:NamedIndividual ,
-                          didl:Assertion .
+                          didl:Assertion ;
+                 rdfs:comment "This individual represents access token." ;
+                 rdfs:label "access token" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Active
+###  https://w3id.org/def/didl#Active
 didl:Active rdf:type owl:NamedIndividual ,
-                     didl:Status .
+                     didl:Status ;
+            rdfs:comment "Active status of an identity"@en ;
+            rdfs:label "active" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#ApplicationToken
+###  https://w3id.org/def/didl#ApplicationToken
 didl:ApplicationToken rdf:type owl:NamedIndividual ,
-                               didl:Assertion .
+                               didl:Assertion ;
+                      rdfs:comment "This individual represents application token." ;
+                      rdfs:label "application token" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#BearerToken
+###  https://w3id.org/def/didl#BearerToken
 didl:BearerToken rdf:type owl:NamedIndividual ,
-                          didl:Assertion .
+                          didl:Assertion ;
+                 rdfs:comment "This individual represents bearer token." ;
+                 rdfs:label "bearer token" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#DID
+###  https://w3id.org/def/didl#DID
 didl:DID rdf:type owl:NamedIndividual ,
-                  didl:IdentifierFormat .
+                  didl:IdentifierFormat ;
+         rdfs:comment "This individual represents did." ;
+         rdfs:label "did" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#DN
+###  https://w3id.org/def/didl#DN
 didl:DN rdf:type owl:NamedIndividual ,
-                 didl:IdentifierFormat .
+                 didl:IdentifierFormat ;
+        rdfs:comment "This individual represents dn." ;
+        rdfs:label "dn" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#E.164
+###  https://w3id.org/def/didl#E.164
 didl:E.164 rdf:type owl:NamedIndividual ,
-                    didl:IdentifierFormat .
+                    didl:IdentifierFormat ;
+           rdfs:comment "This individual represents e.164." ;
+           rdfs:label "e.164" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EDI
+###  https://w3id.org/def/didl#EDI
 didl:EDI rdf:type owl:NamedIndividual ,
-                  didl:IdentifierFormat .
+                  didl:IdentifierFormat ;
+         rdfs:comment "This individual represents edi." ;
+         rdfs:label "edi" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EUI-48
+###  https://w3id.org/def/didl#EUI-48
 didl:EUI-48 rdf:type owl:NamedIndividual ,
-                     didl:IdentifierFormat .
+                     didl:IdentifierFormat ;
+            rdfs:comment "This individual represents eui-48." ;
+            rdfs:label "eui-48" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#EUI-64
+###  https://w3id.org/def/didl#EUI-64
 didl:EUI-64 rdf:type owl:NamedIndividual ,
-                     didl:IdentifierFormat .
+                     didl:IdentifierFormat ;
+            rdfs:comment "This individual represents eui-64." ;
+            rdfs:label "eui-64" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Email
+###  https://w3id.org/def/didl#Email
 didl:Email rdf:type owl:NamedIndividual ,
-                    didl:Key .
+                    didl:Key ;
+           rdfs:comment "This individual represents email." ;
+           rdfs:label "email" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#FirstName
+###  https://w3id.org/def/didl#FirstName
 didl:FirstName rdf:type owl:NamedIndividual ,
-                        didl:Key .
+                        didl:Key ;
+               rdfs:comment "This individual represents first name." ;
+               rdfs:label "first name" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#GUID
+###  https://w3id.org/def/didl#GUID
 didl:GUID rdf:type owl:NamedIndividual ,
-                   didl:IdentifierFormat .
+                   didl:IdentifierFormat ;
+          rdfs:comment "This individual represents guid." ;
+          rdfs:label "guid" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IDToken
+###  https://w3id.org/def/didl#IDToken
 didl:IDToken rdf:type owl:NamedIndividual ,
-                      didl:Assertion .
+                      didl:Assertion ;
+             rdfs:comment "This individual represents idtoken." ;
+             rdfs:label "idtoken" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#IRI
+###  https://w3id.org/def/didl#IRI
 didl:IRI rdf:type owl:NamedIndividual ,
-                  didl:IdentifierFormat .
+                  didl:IdentifierFormat ;
+         rdfs:comment "This individual represents iri." ;
+         rdfs:label "iri" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Inactive
+###  https://w3id.org/def/didl#Inactive
 didl:Inactive rdf:type owl:NamedIndividual ,
-                       didl:Status .
+                       didl:Status ;
+              rdfs:comment "This individual represents inactive." ;
+              rdfs:label "inactive" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#JsonWebToken
+###  https://w3id.org/def/didl#JsonWebToken
 didl:JsonWebToken rdf:type owl:NamedIndividual ,
-                           didl:Assertion .
+                           didl:Assertion ;
+                  rdfs:comment "This individual represents json web token." ;
+                  rdfs:label "json web token" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#KerberosTicket
+###  https://w3id.org/def/didl#KerberosTicket
 didl:KerberosTicket rdf:type owl:NamedIndividual ,
-                             didl:Assertion .
+                             didl:Assertion ;
+                    rdfs:comment "This individual represents kerberos ticket." ;
+                    rdfs:label "kerberos ticket" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#LastName
+###  https://w3id.org/def/didl#LastName
 didl:LastName rdf:type owl:NamedIndividual ,
-                       didl:Key .
+                       didl:Key ;
+              rdfs:comment "This individual represents last name." ;
+              rdfs:label "last name" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Organization
+###  https://w3id.org/def/didl#Organization
 didl:Organization rdf:type owl:NamedIndividual ,
-                           didl:Key .
+                           didl:Key ;
+                  rdfs:comment "This individual represents organization." ;
+                  rdfs:label "organization" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC1035
+###  https://w3id.org/def/didl#RFC1035
 didl:RFC1035 rdf:type owl:NamedIndividual ,
-                      didl:IdentifierFormat .
+                      didl:IdentifierFormat ;
+             rdfs:comment "This individual represents rfc1035." ;
+             rdfs:label "rfc1035" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC5322
+###  https://w3id.org/def/didl#RFC5322
 didl:RFC5322 rdf:type owl:NamedIndividual ,
-                      didl:IdentifierFormat .
+                      didl:IdentifierFormat ;
+             rdfs:comment "This individual represents rfc5322." ;
+             rdfs:label "rfc5322" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RFC7613
+###  https://w3id.org/def/didl#RFC7613
 didl:RFC7613 rdf:type owl:NamedIndividual ,
-                      didl:IdentifierFormat .
+                      didl:IdentifierFormat ;
+             rdfs:comment "This individual represents rfc7613." ;
+             rdfs:label "rfc7613" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#RefreshToken
+###  https://w3id.org/def/didl#RefreshToken
 didl:RefreshToken rdf:type owl:NamedIndividual ,
-                           didl:Assertion .
+                           didl:Assertion ;
+                  rdfs:comment "This individual represents refresh token." ;
+                  rdfs:label "refresh token" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Revoked
+###  https://w3id.org/def/didl#Revoked
 didl:Revoked rdf:type owl:NamedIndividual ,
-                      didl:Status .
+                      didl:Status ;
+             rdfs:comment "This individual represents revoked." ;
+             rdfs:label "revoked" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#Role
+###  https://w3id.org/def/didl#Role
 didl:Role rdf:type owl:NamedIndividual ,
-                   didl:Key .
+                   didl:Key ;
+          rdfs:comment "This individual represents role." ;
+          rdfs:label "role" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#SAML2.0Assertion
+###  https://w3id.org/def/didl#SAML2.0Assertion
 didl:SAML2.0Assertion rdf:type owl:NamedIndividual ,
-                               didl:Assertion .
+                               didl:Assertion ;
+                      rdfs:comment "This individual represents saml2.0assertion." ;
+                      rdfs:label "saml2.0assertion" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#SessionIndex
+###  https://w3id.org/def/didl#SessionIndex
 didl:SessionIndex rdf:type owl:NamedIndividual ,
-                           didl:Key .
+                           didl:Key ;
+                  rdfs:comment "This individual represents session index." ;
+                  rdfs:label "session index" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URI
+###  https://w3id.org/def/didl#URI
 didl:URI rdf:type owl:NamedIndividual ,
-                  didl:IdentifierFormat .
+                  didl:IdentifierFormat ;
+         rdfs:comment "This individual represents uri." ;
+         rdfs:label "uri" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URL
+###  https://w3id.org/def/didl#URL
 didl:URL rdf:type owl:NamedIndividual ,
-                  didl:IdentifierFormat .
+                  didl:IdentifierFormat ;
+         rdfs:comment "This individual represents url." ;
+         rdfs:label "url" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#URN
+###  https://w3id.org/def/didl#URN
 didl:URN rdf:type owl:NamedIndividual ,
-                  didl:IdentifierFormat .
+                  didl:IdentifierFormat ;
+         rdfs:comment "This individual represents urn." ;
+         rdfs:label "urn" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv1
+###  https://w3id.org/def/didl#UUIDv1
 didl:UUIDv1 rdf:type owl:NamedIndividual ,
-                     didl:IdentifierFormat .
+                     didl:IdentifierFormat ;
+            rdfs:comment "This individual represents uuidv1." ;
+            rdfs:label "uuidv1" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv2
+###  https://w3id.org/def/didl#UUIDv2
 didl:UUIDv2 rdf:type owl:NamedIndividual ,
-                     didl:IdentifierFormat .
+                     didl:IdentifierFormat ;
+            rdfs:comment "This individual represents uuidv2." ;
+            rdfs:label "uuidv2" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv3
+###  https://w3id.org/def/didl#UUIDv3
 didl:UUIDv3 rdf:type owl:NamedIndividual ,
-                     didl:IdentifierFormat .
+                     didl:IdentifierFormat ;
+            rdfs:comment "This individual represents uuidv3." ;
+            rdfs:label "uuidv3" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv4
+###  https://w3id.org/def/didl#UUIDv4
 didl:UUIDv4 rdf:type owl:NamedIndividual ,
-                     didl:IdentifierFormat .
+                     didl:IdentifierFormat ;
+            rdfs:comment "This individual represents uuidv4." ;
+            rdfs:label "uuidv4" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#UUIDv5
+###  https://w3id.org/def/didl#UUIDv5
 didl:UUIDv5 rdf:type owl:NamedIndividual ,
-                     didl:IdentifierFormat .
+                     didl:IdentifierFormat ;
+            rdfs:comment "This individual represents uuidv5." ;
+            rdfs:label "uuidv5" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#VC
+###  https://w3id.org/def/didl#VC
 didl:VC rdf:type owl:NamedIndividual ,
-                 didl:Assertion .
+                 didl:Assertion ;
+        rdfs:comment "This individual represents vc." ;
+        rdfs:label "vc" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#VP
+###  https://w3id.org/def/didl#VP
 didl:VP rdf:type owl:NamedIndividual ,
-                 didl:Assertion .
+                 didl:Assertion ;
+        rdfs:comment "This individual represents vp." ;
+        rdfs:label "vp" .
 
 
-###  https://git.vcs.mmi.rwth-aachen.de/-/snippets/3/raw/main/didl.ttl#X.509Certificate
+###  https://w3id.org/def/didl#X.509Certificate
 didl:X.509Certificate rdf:type owl:NamedIndividual ,
-                               didl:Assertion .
+                               didl:Assertion ;
+                      rdfs:comment "This individual represents x.509certificate." ;
+                      rdfs:label "x.509certificate" .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
