@@ -63,6 +63,9 @@ This section provides details for each class and property defined by Digital Ide
          <a href="#https://w3id.org/def/didl#Status" title="https://w3id.org/def/didl#Status">Status</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/didl#Uniqueness" title="https://w3id.org/def/didl#Uniqueness">Uniqueness</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/didl#Value" title="https://w3id.org/def/didl#Value">Value</a>
       </li>
    </ul>
@@ -325,6 +328,7 @@ This section provides details for each class and property defined by Digital Ide
          <dd>
             <a href="#https://w3id.org/def/didl#identifierFormat" title="https://w3id.org/def/didl#identifierFormat">format</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#functional" title="https://w3id.org/def/didl#functional">functional</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#identifierUniqueness" title="https://w3id.org/def/didl#identifierUniqueness">identifierUniqueness</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -590,6 +594,30 @@ This section provides details for each class and property defined by Digital Ide
          </dd>
       </dl>
    </div>
+   <div class="entity" id="https://w3id.org/def/didl#Uniqueness">
+      <h3>Uniqueness<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#Uniqueness</p>
+      <div class="comment">
+         <span class="markdown">Relates to wheter an identifier is (only) organizationally unique or not</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#identifierUniqueness" title="https://w3id.org/def/didl#identifierUniqueness">identifierUniqueness</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#DataEcosystemUnique" title="https://w3id.org/def/didl#DataEcosystemUnique">data ecosystem unique</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#OrganizationUnique" title="https://w3id.org/def/didl#OrganizationUnique">organization unique</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/def/didl#Value">
       <h3>Value<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -642,6 +670,9 @@ This section provides details for each class and property defined by Digital Ide
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#identifier" title="https://w3id.org/def/didl#identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#identifierUniqueness" title="https://w3id.org/def/didl#identifierUniqueness">identifierUniqueness</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#key" title="https://w3id.org/def/didl#key">key</a>
@@ -926,6 +957,37 @@ This section provides details for each class and property defined by Digital Ide
             <dt>has range</dt>
             <dd>
                <a href="#https://w3id.org/def/didl#Identifier" title="https://w3id.org/def/didl#Identifier">Identifier</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#identifierUniqueness">
+      <h3>identifierUniqueness<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#identifierUniqueness</p>
+      <div class="comment">
+         <span class="markdown">indicates whether an identifier is (only) organizationally unique or not</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/def/didl#Identifier" title="https://w3id.org/def/didl#Identifier">Identifier</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/def/didl#Uniqueness" title="https://w3id.org/def/didl#Uniqueness">Uniqueness</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1343,6 +1405,11 @@ This section provides details for each class and property defined by Digital Ide
          </a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/didl#DataEcosystemUnique" title="https://w3id.org/def/didl#DataEcosystemUnique">
+            <span>data ecosystem unique</span>
+         </a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/didl#DeviceID" title="https://w3id.org/def/didl#DeviceID">
             <span>device i d</span>
          </a>
@@ -1418,6 +1485,11 @@ This section provides details for each class and property defined by Digital Ide
       <li>
          <a href="#https://w3id.org/def/didl#OrganizationID" title="https://w3id.org/def/didl#OrganizationID">
             <span>organization i d</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#OrganizationUnique" title="https://w3id.org/def/didl#OrganizationUnique">
+            <span>organization unique</span>
          </a>
       </li>
       <li>
@@ -1601,6 +1673,21 @@ This section provides details for each class and property defined by Digital Ide
          <dt>belongs to</dt>
          <dd>
             <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#DataEcosystemUnique">
+      <h3>data ecosystem unique<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#DataEcosystemUnique</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#Uniqueness" title="https://w3id.org/def/didl#Uniqueness">Uniqueness</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1981,6 +2068,21 @@ This section provides details for each class and property defined by Digital Ide
          <dt>belongs to</dt>
          <dd>
             <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#OrganizationUnique">
+      <h3>organization unique<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#OrganizationUnique</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#Uniqueness" title="https://w3id.org/def/didl#Uniqueness">Uniqueness</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
