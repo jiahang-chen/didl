@@ -486,13 +486,14 @@
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Key",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#PossessionBasedCredential"
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Relates to the key of an attribute's key-value pair"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Key"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#KnowledgeBasedCredential",
@@ -700,6 +701,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "session index"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#Signature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#PossessionBasedCredential"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates to the key of an attribute's key-value pair"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#SmartCard",
