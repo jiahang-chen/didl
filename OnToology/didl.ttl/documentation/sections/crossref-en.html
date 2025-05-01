@@ -12,6 +12,9 @@ This section provides details for each class and property defined by Digital Ide
          <a href="#https://w3id.org/def/didl#AssertionCollection" title="https://w3id.org/def/didl#AssertionCollection">AssertionCollection</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/didl#Attribute" title="https://w3id.org/def/didl#Attribute">Attribute</a>
       </li>
       <li>
@@ -19,6 +22,9 @@ This section provides details for each class and property defined by Digital Ide
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#Credential" title="https://w3id.org/def/didl#Credential">Credential</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#CredentialFormat" title="https://w3id.org/def/didl#CredentialFormat">CredentialFormat</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
@@ -38,11 +44,6 @@ This section provides details for each class and property defined by Digital Ide
       <li>
          <a href="#https://w3id.org/def/didl#InherenceBasedCredential"
             title="https://w3id.org/def/didl#InherenceBasedCredential">InherenceBasedCredential</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/def/didl#Key" title="https://w3id.org/def/didl#Key">
-            <span>key</span>
-         </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#KnowledgeBasedCredential"
@@ -86,6 +87,7 @@ This section provides details for each class and property defined by Digital Ide
          <dt>is in domain of</dt>
          <dd>
             <a href="#https://w3id.org/def/didl#assertedAttribute" title="https://w3id.org/def/didl#assertedAttribute">assertedAttribute</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#assertionFormat" title="https://w3id.org/def/didl#assertionFormat">assertionFormat</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#proof" title="https://w3id.org/def/didl#proof">proof</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#relatesTo" title="https://w3id.org/def/didl#relatesTo">relatesTo</a>
             <sup class="type-op" title="object property">op</sup>
@@ -95,21 +97,6 @@ This section provides details for each class and property defined by Digital Ide
             <a href="#https://w3id.org/def/didl#assertion" title="https://w3id.org/def/didl#assertion">assertion</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#subAssertion" title="https://w3id.org/def/didl#subAssertion">sub assertion</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#https://w3id.org/def/didl#AccessToken" title="https://w3id.org/def/didl#AccessToken">access token</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#ApplicationToken" title="https://w3id.org/def/didl#ApplicationToken">application token</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#BearerToken" title="https://w3id.org/def/didl#BearerToken">bearer token</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#IDToken" title="https://w3id.org/def/didl#IDToken">idtoken</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#JsonWebToken" title="https://w3id.org/def/didl#JsonWebToken">json web token</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#KerberosTicket" title="https://w3id.org/def/didl#KerberosTicket">kerberos ticket</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#RefreshToken" title="https://w3id.org/def/didl#RefreshToken">refresh token</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#SAML2.0Assertion" title="https://w3id.org/def/didl#SAML2.0Assertion">saml2.0assertion</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#VC" title="https://w3id.org/def/didl#VC">vc</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#VP" title="https://w3id.org/def/didl#VP">vp</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#X.509Certificate" title="https://w3id.org/def/didl#X.509Certificate">x.509certificate</a>
-            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -133,6 +120,39 @@ This section provides details for each class and property defined by Digital Ide
          <dd>
             <a href="#https://w3id.org/def/didl#subAssertion" title="https://w3id.org/def/didl#subAssertion">sub assertion</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#AssertionFormat">
+      <h3>AssertionFormat<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#AssertionFormat</p>
+      <div class="comment">
+         <span class="markdown">An assertion format that is specified by a standard or a protocol</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#assertionFormat" title="https://w3id.org/def/didl#assertionFormat">assertionFormat</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#AccessToken" title="https://w3id.org/def/didl#AccessToken">access token</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#ApplicationToken" title="https://w3id.org/def/didl#ApplicationToken">application token</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#BearerToken" title="https://w3id.org/def/didl#BearerToken">bearer token</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#IDToken" title="https://w3id.org/def/didl#IDToken">idtoken</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#JsonWebToken" title="https://w3id.org/def/didl#JsonWebToken">json web token</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#KerberosTicket" title="https://w3id.org/def/didl#KerberosTicket">kerberos ticket</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#RefreshToken" title="https://w3id.org/def/didl#RefreshToken">refresh token</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#SAML2.0Assertion" title="https://w3id.org/def/didl#SAML2.0Assertion">saml2.0assertion</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#VC" title="https://w3id.org/def/didl#VC">vc</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#VP" title="https://w3id.org/def/didl#VP">vp</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#X.509Certificate" title="https://w3id.org/def/didl#X.509Certificate">x.509certificate</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -202,6 +222,35 @@ This section provides details for each class and property defined by Digital Ide
          </dd>
          <dt>has sub-classes</dt>
          <dd>
+            <a href="#https://w3id.org/def/didl#Proof" title="https://w3id.org/def/didl#Proof">Proof</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#credentialFormat" title="https://w3id.org/def/didl#credentialFormat">credentialFormat</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#relatesTo" title="https://w3id.org/def/didl#relatesTo">relatesTo</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#credential" title="https://w3id.org/def/didl#credential">credential</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#CredentialFormat">
+      <h3>CredentialFormat<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#CredentialFormat</p>
+      <div class="comment">
+         <span class="markdown">A credential format that is specified by a standard or a protocol</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
             <a href="#https://w3id.org/def/didl#InherenceBasedCredential"
                title="https://w3id.org/def/didl#InherenceBasedCredential">InherenceBasedCredential</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/didl#KnowledgeBasedCredential"
@@ -210,14 +259,9 @@ This section provides details for each class and property defined by Digital Ide
                title="https://w3id.org/def/didl#PossessionBasedCredential">PossesionBasedCredential</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#https://w3id.org/def/didl#relatesTo" title="https://w3id.org/def/didl#relatesTo">relatesTo</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#credential" title="https://w3id.org/def/didl#credential">credential</a>
+            <a href="#https://w3id.org/def/didl#credentialFormat" title="https://w3id.org/def/didl#credentialFormat">credentialFormat</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -237,6 +281,19 @@ This section provides details for each class and property defined by Digital Ide
          <dd>
             <a href="#https://w3id.org/def/didl#functional" title="https://w3id.org/def/didl#functional">functional</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#CertificateID" title="https://w3id.org/def/didl#CertificateID">certificate i d</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#DeviceID" title="https://w3id.org/def/didl#DeviceID">device i d</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#DocumentID" title="https://w3id.org/def/didl#DocumentID">document i d</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#MachineID" title="https://w3id.org/def/didl#MachineID">machine i d</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#OrganizationID" title="https://w3id.org/def/didl#OrganizationID">organization i d</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#ProcessID" title="https://w3id.org/def/didl#ProcessID">process i d</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#ProductID" title="https://w3id.org/def/didl#ProductID">product i d</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#ResourceID" title="https://w3id.org/def/didl#ResourceID">resource i d</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#UserID" title="https://w3id.org/def/didl#UserID">user i d</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -263,7 +320,7 @@ This section provides details for each class and property defined by Digital Ide
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#format" title="https://w3id.org/def/didl#format">format</a>
+            <a href="#https://w3id.org/def/didl#identifierFormat" title="https://w3id.org/def/didl#identifierFormat">format</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#functional" title="https://w3id.org/def/didl#functional">functional</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -289,7 +346,7 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#format" title="https://w3id.org/def/didl#format">format</a>
+            <a href="#https://w3id.org/def/didl#identifierFormat" title="https://w3id.org/def/didl#identifierFormat">format</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>has members</dt>
@@ -393,35 +450,13 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Credential" title="https://w3id.org/def/didl#Credential">Credential</a>
+            <a href="#https://w3id.org/def/didl#CredentialFormat" title="https://w3id.org/def/didl#CredentialFormat">CredentialFormat</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="https://w3id.org/def/didl#Key">
-      <h3>key<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/didl#Key</p>
-      <div class="comment">
-         <span class="markdown">Relates to the key of an attribute's key-value pair</span>
-      </div>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#https://w3id.org/def/didl#key" title="https://w3id.org/def/didl#key">key</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Email" title="https://w3id.org/def/didl#Email">email</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#FirstName" title="https://w3id.org/def/didl#FirstName">first name</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#LastName" title="https://w3id.org/def/didl#LastName">last name</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#Organization" title="https://w3id.org/def/didl#Organization">organization</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#Role" title="https://w3id.org/def/didl#Role">role</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#SessionIndex" title="https://w3id.org/def/didl#SessionIndex">session index</a>
+            <a href="#https://w3id.org/def/didl#Fingerprint" title="https://w3id.org/def/didl#Fingerprint">fingerprint</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#Voice" title="https://w3id.org/def/didl#Voice">voice</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -439,8 +474,14 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Credential" title="https://w3id.org/def/didl#Credential">Credential</a>
+            <a href="#https://w3id.org/def/didl#CredentialFormat" title="https://w3id.org/def/didl#CredentialFormat">CredentialFormat</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#OTP" title="https://w3id.org/def/didl#OTP">o t p</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#Password" title="https://w3id.org/def/didl#Password">password</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -457,13 +498,14 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Credential" title="https://w3id.org/def/didl#Credential">Credential</a>
+            <a href="#https://w3id.org/def/didl#CredentialFormat" title="https://w3id.org/def/didl#CredentialFormat">CredentialFormat</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has sub-classes</dt>
+         <dt>has members</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Proof" title="https://w3id.org/def/didl#Proof">Proof</a>
-            <sup class="type-c" title="class">c</sup>
+            <a href="#https://w3id.org/def/didl#Key" title="https://w3id.org/def/didl#Key">key</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#SmartCard" title="https://w3id.org/def/didl#SmartCard">smart card</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -487,8 +529,7 @@ This section provides details for each class and property defined by Digital Ide
          </dd>
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#PossessionBasedCredential"
-               title="https://w3id.org/def/didl#PossessionBasedCredential">PossesionBasedCredential</a>
+            <a href="#https://w3id.org/def/didl#Credential" title="https://w3id.org/def/didl#Credential">Credential</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -548,6 +589,9 @@ This section provides details for each class and property defined by Digital Ide
          <a href="#https://w3id.org/def/didl#assertion" title="https://w3id.org/def/didl#assertion">assertion</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/didl#assertionFormat" title="https://w3id.org/def/didl#assertionFormat">assertionFormat</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/didl#controlledBy" title="https://w3id.org/def/didl#controlledBy">controlledBy</a>
       </li>
       <li>
@@ -557,7 +601,10 @@ This section provides details for each class and property defined by Digital Ide
          <a href="#https://w3id.org/def/didl#credential" title="https://w3id.org/def/didl#credential">credential</a>
       </li>
       <li>
-         <a href="#https://w3id.org/def/didl#format" title="https://w3id.org/def/didl#format">format</a>
+         <a href="#https://w3id.org/def/didl#credentialFormat" title="https://w3id.org/def/didl#credentialFormat">credentialFormat</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#identifierFormat" title="https://w3id.org/def/didl#identifierFormat">format</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#functional" title="https://w3id.org/def/didl#functional">functional</a>
@@ -632,6 +679,31 @@ This section provides details for each class and property defined by Digital Ide
             <dt>has range</dt>
             <dd>
                <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#assertionFormat">
+      <h3>assertionFormat<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#assertionFormat</p>
+      <div class="comment">
+         <span class="markdown">Indicates that an assertion has its specific format</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -722,13 +794,44 @@ This section provides details for each class and property defined by Digital Ide
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://w3id.org/def/didl#format">
+   <div class="entity" id="https://w3id.org/def/didl#credentialFormat">
+      <h3>credentialFormat<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#credentialFormat</p>
+      <div class="comment">
+         <span class="markdown">Indicates that a credential has its specific format</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/def/didl#Credential" title="https://w3id.org/def/didl#Credential">Credential</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/def/didl#CredentialFormat" title="https://w3id.org/def/didl#CredentialFormat">CredentialFormat</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#identifierFormat">
       <h3>format<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/didl#format</p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#identifierFormat</p>
       <div class="comment">
          <span class="markdown">Indicates that an identifier has its specific format</span>
       </div>
@@ -816,7 +919,9 @@ This section provides details for each class and property defined by Digital Ide
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://w3id.org/def/didl#Key" title="https://w3id.org/def/didl#Key">key</a>
+               <a href="https://w3id.org/def/didl#Key"
+                  target="_blank"
+                  title="https://w3id.org/def/didl#Key">key</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1204,10 +1309,25 @@ This section provides details for each class and property defined by Digital Ide
          <a href="#https://w3id.org/def/didl#BearerToken" title="https://w3id.org/def/didl#BearerToken">bearer token</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/didl#CertificateID" title="https://w3id.org/def/didl#CertificateID">
+            <span>certificate i d</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#DeviceID" title="https://w3id.org/def/didl#DeviceID">
+            <span>device i d</span>
+         </a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/didl#DID" title="https://w3id.org/def/didl#DID">did</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#DN" title="https://w3id.org/def/didl#DN">dn</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#DocumentID" title="https://w3id.org/def/didl#DocumentID">
+            <span>document i d</span>
+         </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#E.164" title="https://w3id.org/def/didl#E.164">e.164</a>
@@ -1223,6 +1343,11 @@ This section provides details for each class and property defined by Digital Ide
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#EUI-64" title="https://w3id.org/def/didl#EUI-64">eui-64</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#Fingerprint" title="https://w3id.org/def/didl#Fingerprint">
+            <span>fingerprint</span>
+         </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#FirstName" title="https://w3id.org/def/didl#FirstName">first name</a>
@@ -1246,13 +1371,53 @@ This section provides details for each class and property defined by Digital Ide
          <a href="#https://w3id.org/def/didl#KerberosTicket" title="https://w3id.org/def/didl#KerberosTicket">kerberos ticket</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/didl#Key" title="https://w3id.org/def/didl#Key">
+            <span>key</span>
+         </a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/didl#LastName" title="https://w3id.org/def/didl#LastName">last name</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#MachineID" title="https://w3id.org/def/didl#MachineID">
+            <span>machine i d</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#OTP" title="https://w3id.org/def/didl#OTP">
+            <span>o t p</span>
+         </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#Organization" title="https://w3id.org/def/didl#Organization">organization</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/didl#OrganizationID" title="https://w3id.org/def/didl#OrganizationID">
+            <span>organization i d</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#Password" title="https://w3id.org/def/didl#Password">
+            <span>password</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#ProcessID" title="https://w3id.org/def/didl#ProcessID">
+            <span>process i d</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#ProductID" title="https://w3id.org/def/didl#ProductID">
+            <span>product i d</span>
+         </a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/didl#RefreshToken" title="https://w3id.org/def/didl#RefreshToken">refresh token</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#ResourceID" title="https://w3id.org/def/didl#ResourceID">
+            <span>resource i d</span>
+         </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#Revoked" title="https://w3id.org/def/didl#Revoked">revoked</a>
@@ -1276,6 +1441,11 @@ This section provides details for each class and property defined by Digital Ide
          <a href="#https://w3id.org/def/didl#SessionIndex" title="https://w3id.org/def/didl#SessionIndex">session index</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/didl#SmartCard" title="https://w3id.org/def/didl#SmartCard">
+            <span>smart card</span>
+         </a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/didl#URI" title="https://w3id.org/def/didl#URI">uri</a>
       </li>
       <li>
@@ -1283,6 +1453,11 @@ This section provides details for each class and property defined by Digital Ide
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#URN" title="https://w3id.org/def/didl#URN">urn</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#UserID" title="https://w3id.org/def/didl#UserID">
+            <span>user i d</span>
+         </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#UUIDv1" title="https://w3id.org/def/didl#UUIDv1">uuidv1</a>
@@ -1301,6 +1476,11 @@ This section provides details for each class and property defined by Digital Ide
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#VC" title="https://w3id.org/def/didl#VC">vc</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#Voice" title="https://w3id.org/def/didl#Voice">
+            <span>voice</span>
+         </a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#VP" title="https://w3id.org/def/didl#VP">vp</a>
@@ -1322,7 +1502,7 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+            <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1358,7 +1538,7 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+            <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1376,7 +1556,37 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+            <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#CertificateID">
+      <h3>certificate i d<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#CertificateID</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#DeviceID">
+      <h3>device i d<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#DeviceID</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1413,6 +1623,21 @@ This section provides details for each class and property defined by Digital Ide
          <dt>belongs to</dt>
          <dd>
             <a href="#https://w3id.org/def/didl#IdentifierFormat" title="https://w3id.org/def/didl#IdentifierFormat">IdentifierFormat</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#DocumentID">
+      <h3>document i d<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#DocumentID</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1466,7 +1691,9 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Key" title="https://w3id.org/def/didl#Key">key</a>
+            <a href="https://w3id.org/def/didl#Key"
+               target="_blank"
+               title="https://w3id.org/def/didl#Key">key</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1507,6 +1734,22 @@ This section provides details for each class and property defined by Digital Ide
          </dd>
       </dl>
    </div>
+   <div class="entity" id="https://w3id.org/def/didl#Fingerprint">
+      <h3>fingerprint<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#Fingerprint</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#InherenceBasedCredential"
+               title="https://w3id.org/def/didl#InherenceBasedCredential">InherenceBasedCredential</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/def/didl#FirstName">
       <h3>first name<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -1520,7 +1763,9 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Key" title="https://w3id.org/def/didl#Key">key</a>
+            <a href="https://w3id.org/def/didl#Key"
+               target="_blank"
+               title="https://w3id.org/def/didl#Key">key</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1556,7 +1801,7 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+            <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1610,7 +1855,7 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+            <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1628,9 +1873,27 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+            <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#Key">
+      <h3>key<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#Key</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#PossessionBasedCredential"
+               title="https://w3id.org/def/didl#PossessionBasedCredential">PossesionBasedCredential</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is also defined as</dt>
+         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/def/didl#LastName">
@@ -1646,7 +1909,40 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Key" title="https://w3id.org/def/didl#Key">key</a>
+            <a href="https://w3id.org/def/didl#Key"
+               target="_blank"
+               title="https://w3id.org/def/didl#Key">key</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#MachineID">
+      <h3>machine i d<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#MachineID</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#OTP">
+      <h3>o t p<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#OTP</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#KnowledgeBasedCredential"
+               title="https://w3id.org/def/didl#KnowledgeBasedCredential">KnowledgeBasedCredential</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1664,7 +1960,70 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Key" title="https://w3id.org/def/didl#Key">key</a>
+            <a href="https://w3id.org/def/didl#Key"
+               target="_blank"
+               title="https://w3id.org/def/didl#Key">key</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#OrganizationID">
+      <h3>organization i d<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#OrganizationID</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#Password">
+      <h3>password<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#Password</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#KnowledgeBasedCredential"
+               title="https://w3id.org/def/didl#KnowledgeBasedCredential">KnowledgeBasedCredential</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#ProcessID">
+      <h3>process i d<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#ProcessID</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#ProductID">
+      <h3>product i d<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#ProductID</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1682,7 +2041,22 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+            <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#ResourceID">
+      <h3>resource i d<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#ResourceID</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1772,7 +2146,9 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Key" title="https://w3id.org/def/didl#Key">key</a>
+            <a href="https://w3id.org/def/didl#Key"
+               target="_blank"
+               title="https://w3id.org/def/didl#Key">key</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1790,7 +2166,7 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+            <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1808,7 +2184,25 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Key" title="https://w3id.org/def/didl#Key">key</a>
+            <a href="https://w3id.org/def/didl#Key"
+               target="_blank"
+               title="https://w3id.org/def/didl#Key">key</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#SmartCard">
+      <h3>smart card<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#SmartCard</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#PossessionBasedCredential"
+               title="https://w3id.org/def/didl#PossessionBasedCredential">PossesionBasedCredential</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1863,6 +2257,21 @@ This section provides details for each class and property defined by Digital Ide
          <dt>belongs to</dt>
          <dd>
             <a href="#https://w3id.org/def/didl#IdentifierFormat" title="https://w3id.org/def/didl#IdentifierFormat">IdentifierFormat</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#UserID">
+      <h3>user i d<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#UserID</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#Functional" title="https://w3id.org/def/didl#Functional">Functional</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1970,7 +2379,23 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+            <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#Voice">
+      <h3>voice<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#Voice</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#InherenceBasedCredential"
+               title="https://w3id.org/def/didl#InherenceBasedCredential">InherenceBasedCredential</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1988,7 +2413,7 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+            <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2006,7 +2431,7 @@ This section provides details for each class and property defined by Digital Ide
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
+            <a href="#https://w3id.org/def/didl#AssertionFormat" title="https://w3id.org/def/didl#AssertionFormat">AssertionFormat</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
