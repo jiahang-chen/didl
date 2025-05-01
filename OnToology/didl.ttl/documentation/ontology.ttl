@@ -8,13 +8,14 @@
 
 <https://w3id.org/def/didl> rdf:type owl:Ontology ;
                              <http://purl.org/dc/elements/1.1/creator> "Jiahang Chen"@en ;
+                             <http://purl.org/dc/elements/1.1/description> "The Digital Identity Description Language (DIDL) is an abstract language to describe identity concepts used in data ecosystems. The core component, identity, is specialized into identifiers, credentials, and assertions in this language, contributing to authentication and authorization."@en ;
                              <http://purl.org/dc/elements/1.1/title> "DIDL Vocabulary & Expression 0.1"@en ;
                              <http://purl.org/dc/terms/abstract> """The DIDL is a description language to represent diverse identity con-
 cepts, ensuring technical and semantic compatibility across different data ecosystems."""@en ;
                              <http://purl.org/dc/terms/created> "2025-04-29T00:00:00"^^xsd:dateTime ;
                              <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/4.0/" ;
                              rdfs:comment "This is a vocabulary for DIDL Version 0.1"@en ;
-                             rdfs:label "didl" ;
+                             rdfs:label "DIDL" ;
                              owl:versionInfo 0.1 .
 
 #################################################################
@@ -26,9 +27,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
 
 ###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
-                                              rdfs:comment "This individual represents description." ;
-                                              rdfs:label "description" .
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title
@@ -186,6 +185,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
 ###  https://w3id.org/def/didl#issuer
 :issuer rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Identity ;
         rdfs:range xsd:anyURI ;
         rdfs:comment "Indicates an issuer of an identity"@en ;
         rdfs:label "issuer"@en .
@@ -634,6 +634,10 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
 <http://purl.org/dc/elements/1.1/creator> rdfs:comment "This individual represents creator." ;
                                           rdfs:label "creator" .
+
+
+<http://purl.org/dc/elements/1.1/description> rdfs:comment "This individual represents description." ;
+                                              rdfs:label "description" .
 
 
 <http://purl.org/dc/elements/1.1/title> rdfs:comment "This individual represents title." ;

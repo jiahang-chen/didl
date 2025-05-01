@@ -53,6 +53,10 @@
     "@language" : "en",
     "@value" : "Jiahang Chen"
   } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "The Digital Identity Description Language (DIDL) is an abstract language to describe identity concepts used in data ecosystems. The core component, identity, is specialized into identifiers, credentials, and assertions in this language, contributing to authentication and authorization."
+  } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@language" : "en",
     "@value" : "DIDL Vocabulary & Expression 0.1"
@@ -73,7 +77,7 @@
     "@value" : "This is a vocabulary for DIDL Version 0.1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "didl"
+    "@value" : "DIDL"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -915,6 +919,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Indicates an issuer of an identity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/didl#Identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
