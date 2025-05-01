@@ -69,12 +69,18 @@
       "@id" : "https://w3id.org/def/didl#issueDate",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
+    "CredentialFormat" : {
+      "@id" : "https://w3id.org/def/didl#CredentialFormat"
+    },
     "profile" : {
       "@id" : "https://w3id.org/def/didl#profile",
       "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "IdentifierFormat" : {
       "@id" : "https://w3id.org/def/didl#IdentifierFormat"
+    },
+    "AssertionFormat" : {
+      "@id" : "https://w3id.org/def/didl#AssertionFormat"
     },
     "Status" : {
       "@id" : "https://w3id.org/def/didl#Status"
@@ -85,6 +91,10 @@
     },
     "AssertionCollection" : {
       "@id" : "https://w3id.org/def/didl#AssertionCollection"
+    },
+    "credentialFormat" : {
+      "@id" : "https://w3id.org/def/didl#credentialFormat",
+      "@type" : "@id"
     },
     "controlls" : {
       "@id" : "https://w3id.org/def/didl#controlls",
@@ -99,8 +109,16 @@
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
     "value" : {
       "@id" : "https://w3id.org/def/didl#value",
+      "@type" : "@id"
+    },
+    "assertionFormat" : {
+      "@id" : "https://w3id.org/def/didl#assertionFormat",
       "@type" : "@id"
     },
     "proof" : {
@@ -145,6 +163,10 @@
       "@id" : "https://w3id.org/def/didl#functional",
       "@type" : "@id"
     },
+    "identifierFormat" : {
+      "@id" : "https://w3id.org/def/didl#identifierFormat",
+      "@type" : "@id"
+    },
     "assertion" : {
       "@id" : "https://w3id.org/def/didl#assertion",
       "@type" : "@id"
@@ -161,10 +183,6 @@
     },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
-    },
-    "format" : {
-      "@id" : "https://w3id.org/def/didl#format",
-      "@type" : "@id"
     },
     "Functional" : {
       "@id" : "https://w3id.org/def/didl#Functional"

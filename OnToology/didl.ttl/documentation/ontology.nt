@@ -58,6 +58,13 @@
 <https://w3id.org/def/didl#assertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identity subject (i.e., entity) has assertion(s)" .
 <https://w3id.org/def/didl#assertion> <http://www.w3.org/2000/01/rdf-schema#label> "assertion" .
 # 
+# https://w3id.org/def/didl#assertionFormat
+<https://w3id.org/def/didl#assertionFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/didl#assertionFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#assertionFormat> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#AssertionFormat> .
+<https://w3id.org/def/didl#assertionFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an assertion has its specific format"@en .
+<https://w3id.org/def/didl#assertionFormat> <http://www.w3.org/2000/01/rdf-schema#label> "assertionFormat"@en .
+# 
 # https://w3id.org/def/didl#controlledBy
 <https://w3id.org/def/didl#controlledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#controlledBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/didl#controlls> .
@@ -80,12 +87,13 @@
 <https://w3id.org/def/didl#credential> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identity subject (i.e., entity) has credential(s)."@en .
 <https://w3id.org/def/didl#credential> <http://www.w3.org/2000/01/rdf-schema#label> "credential" .
 # 
-# https://w3id.org/def/didl#format
-<https://w3id.org/def/didl#format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/didl#format> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identifier> .
-<https://w3id.org/def/didl#format> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#format> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identifier has its specific format"@en .
-<https://w3id.org/def/didl#format> <http://www.w3.org/2000/01/rdf-schema#label> "format" .
+# https://w3id.org/def/didl#credentialFormat
+<https://w3id.org/def/didl#credentialFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/didl#credentialFormat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/def/didl#credentialFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Credential> .
+<https://w3id.org/def/didl#credentialFormat> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#CredentialFormat> .
+<https://w3id.org/def/didl#credentialFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a credential has its specific format"@en .
+<https://w3id.org/def/didl#credentialFormat> <http://www.w3.org/2000/01/rdf-schema#label> "credentialFormat"@en .
 # 
 # https://w3id.org/def/didl#functional
 <https://w3id.org/def/didl#functional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -100,6 +108,13 @@
 <https://w3id.org/def/didl#identifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Identifier> .
 <https://w3id.org/def/didl#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identity subject (i.e., entity) has identifier(s)"@en .
 <https://w3id.org/def/didl#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+# 
+# https://w3id.org/def/didl#identifierFormat
+<https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identifier> .
+<https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#IdentifierFormat> .
+<https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identifier has its specific format"@en .
+<https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/2000/01/rdf-schema#label> "format" .
 # 
 # https://w3id.org/def/didl#key
 <https://w3id.org/def/didl#key> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -230,6 +245,11 @@
 <https://w3id.org/def/didl#AssertionCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "A specialized assertion consists of multiple assertions"@en .
 <https://w3id.org/def/didl#AssertionCollection> <http://www.w3.org/2000/01/rdf-schema#label> "AssertionCollection"@en .
 # 
+# https://w3id.org/def/didl#AssertionFormat
+<https://w3id.org/def/didl#AssertionFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/didl#AssertionFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "An assertion format that is specified by a standard or a protocol"@en .
+<https://w3id.org/def/didl#AssertionFormat> <http://www.w3.org/2000/01/rdf-schema#label> "AssertionFormat"@en .
+# 
 # https://w3id.org/def/didl#Attribute
 <https://w3id.org/def/didl#Attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/didl#Attribute> <http://www.w3.org/2000/01/rdf-schema#comment> "An identity-related attribute consists of a key-value pair"@en .
@@ -246,6 +266,11 @@
 <https://w3id.org/def/didl#Credential> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#Identity> .
 <https://w3id.org/def/didl#Credential> <http://www.w3.org/2000/01/rdf-schema#comment> "A proof of an entity's identity"@en .
 <https://w3id.org/def/didl#Credential> <http://www.w3.org/2000/01/rdf-schema#label> "Credential"@en .
+# 
+# https://w3id.org/def/didl#CredentialFormat
+<https://w3id.org/def/didl#CredentialFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/didl#CredentialFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "A credential format that is specified by a standard or a protocol"@en .
+<https://w3id.org/def/didl#CredentialFormat> <http://www.w3.org/2000/01/rdf-schema#label> "CredentialFormat"@en .
 # 
 # https://w3id.org/def/didl#Functional
 <https://w3id.org/def/didl#Functional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -275,30 +300,29 @@
 # 
 # https://w3id.org/def/didl#InherenceBasedCredential
 <https://w3id.org/def/didl#InherenceBasedCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/didl#InherenceBasedCredential> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#Credential> .
+<https://w3id.org/def/didl#InherenceBasedCredential> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#CredentialFormat> .
 <https://w3id.org/def/didl#InherenceBasedCredential> <http://www.w3.org/2000/01/rdf-schema#comment> "A credential that indicates something you inherently has"@en .
 <https://w3id.org/def/didl#InherenceBasedCredential> <http://www.w3.org/2000/01/rdf-schema#label> "InherenceBasedCredential"@en .
 # 
 # https://w3id.org/def/didl#Key
 <https://w3id.org/def/didl#Key> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/didl#Key> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates to the key of an attribute's key-value pair"@en .
 # 
 # https://w3id.org/def/didl#KnowledgeBasedCredential
 <https://w3id.org/def/didl#KnowledgeBasedCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/didl#KnowledgeBasedCredential> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#Credential> .
+<https://w3id.org/def/didl#KnowledgeBasedCredential> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#CredentialFormat> .
 <https://w3id.org/def/didl#KnowledgeBasedCredential> <http://www.w3.org/2000/01/rdf-schema#comment> "A credential that indicates something you know"@en .
 <https://w3id.org/def/didl#KnowledgeBasedCredential> <http://www.w3.org/2000/01/rdf-schema#label> "KnowledgeBasedCredential"@en .
 # 
 # https://w3id.org/def/didl#PossessionBasedCredential
 <https://w3id.org/def/didl#PossessionBasedCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/didl#PossessionBasedCredential> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#Credential> .
+<https://w3id.org/def/didl#PossessionBasedCredential> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#CredentialFormat> .
 <https://w3id.org/def/didl#PossessionBasedCredential> <http://www.w3.org/2000/01/rdf-schema#comment> "A credential that indicates something you has"@en .
 <https://w3id.org/def/didl#PossessionBasedCredential> <http://www.w3.org/2000/01/rdf-schema#label> "PossesionBasedCredential"@en .
 # 
 # https://w3id.org/def/didl#Proof
 <https://w3id.org/def/didl#Proof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/didl#Proof> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/security#Proof> .
-<https://w3id.org/def/didl#Proof> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#PossessionBasedCredential> .
+<https://w3id.org/def/didl#Proof> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#Credential> .
 <https://w3id.org/def/didl#Proof> <http://www.w3.org/2000/01/rdf-schema#comment> "A possession-based credential that uses cryptograhpic method"@en .
 <https://w3id.org/def/didl#Proof> <http://www.w3.org/2000/01/rdf-schema#label> "Proof"@en .
 # 
@@ -326,7 +350,7 @@
 # 
 # https://w3id.org/def/didl#AccessToken
 <https://w3id.org/def/didl#AccessToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#AccessToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#AccessToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#AccessToken> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents access token." .
 <https://w3id.org/def/didl#AccessToken> <http://www.w3.org/2000/01/rdf-schema#label> "access token" .
 # 
@@ -338,15 +362,19 @@
 # 
 # https://w3id.org/def/didl#ApplicationToken
 <https://w3id.org/def/didl#ApplicationToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#ApplicationToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#ApplicationToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#ApplicationToken> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents application token." .
 <https://w3id.org/def/didl#ApplicationToken> <http://www.w3.org/2000/01/rdf-schema#label> "application token" .
 # 
 # https://w3id.org/def/didl#BearerToken
 <https://w3id.org/def/didl#BearerToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#BearerToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#BearerToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#BearerToken> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents bearer token." .
 <https://w3id.org/def/didl#BearerToken> <http://www.w3.org/2000/01/rdf-schema#label> "bearer token" .
+# 
+# https://w3id.org/def/didl#CertificateID
+<https://w3id.org/def/didl#CertificateID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#CertificateID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
 # 
 # https://w3id.org/def/didl#DID
 <https://w3id.org/def/didl#DID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -359,6 +387,14 @@
 <https://w3id.org/def/didl#DN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
 <https://w3id.org/def/didl#DN> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents dn." .
 <https://w3id.org/def/didl#DN> <http://www.w3.org/2000/01/rdf-schema#label> "dn" .
+# 
+# https://w3id.org/def/didl#DeviceID
+<https://w3id.org/def/didl#DeviceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#DeviceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
+# 
+# https://w3id.org/def/didl#DocumentID
+<https://w3id.org/def/didl#DocumentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#DocumentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
 # 
 # https://w3id.org/def/didl#E.164
 <https://w3id.org/def/didl#E.164> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -390,6 +426,10 @@
 <https://w3id.org/def/didl#Email> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents email." .
 <https://w3id.org/def/didl#Email> <http://www.w3.org/2000/01/rdf-schema#label> "email" .
 # 
+# https://w3id.org/def/didl#Fingerprint
+<https://w3id.org/def/didl#Fingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#Fingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#InherenceBasedCredential> .
+# 
 # https://w3id.org/def/didl#FirstName
 <https://w3id.org/def/didl#FirstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#FirstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
@@ -404,7 +444,7 @@
 # 
 # https://w3id.org/def/didl#IDToken
 <https://w3id.org/def/didl#IDToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#IDToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#IDToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#IDToken> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents idtoken." .
 <https://w3id.org/def/didl#IDToken> <http://www.w3.org/2000/01/rdf-schema#label> "idtoken" .
 # 
@@ -422,15 +462,19 @@
 # 
 # https://w3id.org/def/didl#JsonWebToken
 <https://w3id.org/def/didl#JsonWebToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#JsonWebToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#JsonWebToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#JsonWebToken> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents json web token." .
 <https://w3id.org/def/didl#JsonWebToken> <http://www.w3.org/2000/01/rdf-schema#label> "json web token" .
 # 
 # https://w3id.org/def/didl#KerberosTicket
 <https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents kerberos ticket." .
 <https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/2000/01/rdf-schema#label> "kerberos ticket" .
+# 
+# https://w3id.org/def/didl#Key
+<https://w3id.org/def/didl#Key> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#Key> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#PossessionBasedCredential> .
 # 
 # https://w3id.org/def/didl#LastName
 <https://w3id.org/def/didl#LastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -438,11 +482,35 @@
 <https://w3id.org/def/didl#LastName> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents last name." .
 <https://w3id.org/def/didl#LastName> <http://www.w3.org/2000/01/rdf-schema#label> "last name" .
 # 
+# https://w3id.org/def/didl#MachineID
+<https://w3id.org/def/didl#MachineID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#MachineID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
+# 
+# https://w3id.org/def/didl#OTP
+<https://w3id.org/def/didl#OTP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#OTP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#KnowledgeBasedCredential> .
+# 
 # https://w3id.org/def/didl#Organization
 <https://w3id.org/def/didl#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
 <https://w3id.org/def/didl#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents organization." .
 <https://w3id.org/def/didl#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "organization" .
+# 
+# https://w3id.org/def/didl#OrganizationID
+<https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
+# 
+# https://w3id.org/def/didl#Password
+<https://w3id.org/def/didl#Password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#Password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#KnowledgeBasedCredential> .
+# 
+# https://w3id.org/def/didl#ProcessID
+<https://w3id.org/def/didl#ProcessID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#ProcessID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
+# 
+# https://w3id.org/def/didl#ProductID
+<https://w3id.org/def/didl#ProductID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#ProductID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
 # 
 # https://w3id.org/def/didl#RFC1035
 <https://w3id.org/def/didl#RFC1035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -464,9 +532,13 @@
 # 
 # https://w3id.org/def/didl#RefreshToken
 <https://w3id.org/def/didl#RefreshToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#RefreshToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#RefreshToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#RefreshToken> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents refresh token." .
 <https://w3id.org/def/didl#RefreshToken> <http://www.w3.org/2000/01/rdf-schema#label> "refresh token" .
+# 
+# https://w3id.org/def/didl#ResourceID
+<https://w3id.org/def/didl#ResourceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#ResourceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
 # 
 # https://w3id.org/def/didl#Revoked
 <https://w3id.org/def/didl#Revoked> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -482,7 +554,7 @@
 # 
 # https://w3id.org/def/didl#SAML2.0Assertion
 <https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents saml2.0assertion." .
 <https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/2000/01/rdf-schema#label> "saml2.0assertion" .
 # 
@@ -491,6 +563,10 @@
 <https://w3id.org/def/didl#SessionIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
 <https://w3id.org/def/didl#SessionIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents session index." .
 <https://w3id.org/def/didl#SessionIndex> <http://www.w3.org/2000/01/rdf-schema#label> "session index" .
+# 
+# https://w3id.org/def/didl#SmartCard
+<https://w3id.org/def/didl#SmartCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#SmartCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#PossessionBasedCredential> .
 # 
 # https://w3id.org/def/didl#URI
 <https://w3id.org/def/didl#URI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -540,21 +616,29 @@
 <https://w3id.org/def/didl#UUIDv5> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents uuidv5." .
 <https://w3id.org/def/didl#UUIDv5> <http://www.w3.org/2000/01/rdf-schema#label> "uuidv5" .
 # 
+# https://w3id.org/def/didl#UserID
+<https://w3id.org/def/didl#UserID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#UserID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
+# 
 # https://w3id.org/def/didl#VC
 <https://w3id.org/def/didl#VC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#VC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#VC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#VC> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents vc." .
 <https://w3id.org/def/didl#VC> <http://www.w3.org/2000/01/rdf-schema#label> "vc" .
 # 
 # https://w3id.org/def/didl#VP
 <https://w3id.org/def/didl#VP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#VP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#VP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#VP> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents vp." .
 <https://w3id.org/def/didl#VP> <http://www.w3.org/2000/01/rdf-schema#label> "vp" .
 # 
+# https://w3id.org/def/didl#Voice
+<https://w3id.org/def/didl#Voice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#Voice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#InherenceBasedCredential> .
+# 
 # https://w3id.org/def/didl#X.509Certificate
 <https://w3id.org/def/didl#X.509Certificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#X.509Certificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#X.509Certificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#X.509Certificate> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents x.509certificate." .
 <https://w3id.org/def/didl#X.509Certificate> <http://www.w3.org/2000/01/rdf-schema#label> "x.509certificate" .
 # 
@@ -581,5 +665,7 @@
 # 
 <http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents license." .
 <http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#label> "license" .
+# 
+<https://w3id.org/def/didl#Key> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates to the key of an attribute's key-value pair"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
