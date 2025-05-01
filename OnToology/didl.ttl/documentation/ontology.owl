@@ -543,7 +543,10 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <!-- https://w3id.org/def/didl#Key -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/didl#Key"/>
+    <owl:Class rdf:about="https://w3id.org/def/didl#Key">
+        <rdfs:comment xml:lang="en">Relates to the key of an attribute&apos;s key-value pair</rdfs:comment>
+        <rdfs:label xml:lang="en">Key</rdfs:label>
+    </owl:Class>
     
 
 
@@ -854,15 +857,6 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     
 
 
-    <!-- https://w3id.org/def/didl#Key -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Key">
-        <rdf:type rdf:resource="https://w3id.org/def/didl#PossessionBasedCredential"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/def/didl#LastName -->
 
 
@@ -1032,6 +1026,16 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
         <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
         <rdfs:comment>This individual represents session index.</rdfs:comment>
         <rdfs:label>session index</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/didl#Signature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Signature">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#PossessionBasedCredential"/>
+        <rdfs:comment xml:lang="en">Relates to the key of an attribute&apos;s key-value pair</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1212,9 +1216,6 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <rdf:Description rdf:about="http://purl.org/dc/terms/license">
         <rdfs:comment>This individual represents license.</rdfs:comment>
         <rdfs:label>license</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/def/didl#Key">
-        <rdfs:comment xml:lang="en">Relates to the key of an attribute&apos;s key-value pair</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
