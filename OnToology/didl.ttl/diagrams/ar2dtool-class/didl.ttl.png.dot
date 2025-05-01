@@ -1,10 +1,9 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "didl:Attribute" "didl:CompositeIdentifier" "didl:AssertionFormat" "didl:Uniqueness" "didl:Status" "sec:Proof" "didl:IdentifierFormat" "didl:Assertion" "didl:Key" "didl:Identity" "didl:Credential" "didl:CredentialFormat" "didl:IdentitySubject" "didl:Functional" "didl:Value" "didl:Proof" "didl:AssertionCollection" "didl:Identifier" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "didl:Attribute" "didl:CompositeIdentifier" "didl:AssertionFormat" "didl:Status" "sec:Proof" "didl:IdentifierFormat" "didl:Assertion" "didl:Key" "didl:Identity" "didl:Credential" "didl:CredentialFormat" "didl:IdentitySubject" "didl:Functional" "didl:Value" "didl:Proof" "didl:AssertionCollection" "didl:Identifier" ; /*classes style*/
 	"didl:credentialFormat" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
 	"didl:Proof" -> "sec:Proof" [ label = "owl:equivalentClass" ];
-	"didl:identifierUniqueness" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
 	"didl:profile" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
 	"didl:Assertion" -> "didl:Attribute" [ label = "didl:assertedAttribute" ];
 	"didl:AssertionCollection" -> "didl:Assertion" [ label = "didl:subAssertion" ];
@@ -17,6 +16,7 @@ node [shape = rectangle, color="orange"]; "didl:Attribute" "didl:CompositeIdenti
 	"didl:CompositeIdentifier" -> "xsd:string" [ label = "didl:namespace" ];
 	"didl:Identity" -> "xsd:anyURI" [ label = "didl:profile" ];
 	"didl:Identifier" -> "didl:IdentifierFormat" [ label = "didl:identifierFormat" ];
+	"didl:Credential" -> "didl:Attribute" [ label = "didl:credentialAttribute" ];
 	"didl:Identity" -> "xsd:dateTime" [ label = "didl:validFrom" ];
 	"didl:Identifier" -> "didl:Functional" [ label = "didl:functional" ];
 	"didl:Assertion" -> "didl:AssertionFormat" [ label = "didl:assertionFormat" ];
@@ -27,9 +27,8 @@ node [shape = rectangle, color="orange"]; "didl:Attribute" "didl:CompositeIdenti
 	"didl:Credential" -> "didl:CredentialFormat" [ label = "didl:credentialFormat" ];
 	"didl:Identity" -> "didl:IdentitySubject" [ label = "didl:controlledBy" ];
 	"didl:CompositeIdentifier" -> "didl:Identifier" [ label = "didl:localPart" ];
-	"didl:Identifier" -> "didl:Uniqueness" [ label = "didl:identifierUniqueness" ];
 	"didl:IdentitySubject" -> "didl:Credential" [ label = "didl:credential" ];
-	"didl:Assertion" -> "owl:Thing" [ label = "didl:proof" ];
+	"didl:Assertion" -> "didl:Proof" [ label = "didl:proof" ];
 	"didl:Identity" -> "xsd:anyURI" [ label = "didl:uid" ];
 
 }
