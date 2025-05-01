@@ -146,6 +146,15 @@ didl:identifierFormat rdf:type owl:ObjectProperty ;
                       rdfs:label "format" .
 
 
+###  https://w3id.org/def/didl#identifierUniqueness
+didl:identifierUniqueness rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdfs:domain didl:Identifier ;
+                          rdfs:range didl:Uniqueness ;
+                          rdfs:comment "indicates whether an identifier is (only) organizationally unique or not"@en ;
+                          rdfs:label "identifierUniqueness"@en .
+
+
 ###  https://w3id.org/def/didl#key
 didl:key rdf:type owl:ObjectProperty ;
          rdfs:domain didl:Attribute ;
@@ -385,6 +394,12 @@ didl:Status rdf:type owl:Class ;
             rdfs:label "Status"@en .
 
 
+###  https://w3id.org/def/didl#Uniqueness
+didl:Uniqueness rdf:type owl:Class ;
+                rdfs:comment "Relates to wheter an identifier is (only) organizationally unique or not"@en ;
+                rdfs:label "Uniqueness"@en .
+
+
 ###  https://w3id.org/def/didl#Value
 didl:Value rdf:type owl:Class ;
            rdfs:comment "Relates to the value of an attribute's key-value pair"@en ;
@@ -444,6 +459,11 @@ didl:DN rdf:type owl:NamedIndividual ,
                  didl:IdentifierFormat ;
         rdfs:comment "This individual represents dn." ;
         rdfs:label "dn" .
+
+
+###  https://w3id.org/def/didl#DataEcosystemUnique
+didl:DataEcosystemUnique rdf:type owl:NamedIndividual ,
+                                  didl:Uniqueness .
 
 
 ###  https://w3id.org/def/didl#DeviceID
@@ -572,6 +592,11 @@ didl:Organization rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/def/didl#OrganizationID
 didl:OrganizationID rdf:type owl:NamedIndividual ,
                              didl:Functional .
+
+
+###  https://w3id.org/def/didl#OrganizationUnique
+didl:OrganizationUnique rdf:type owl:NamedIndividual ,
+                                 didl:Uniqueness .
 
 
 ###  https://w3id.org/def/didl#Password
