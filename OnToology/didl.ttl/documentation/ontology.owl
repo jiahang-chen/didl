@@ -10,13 +10,14 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/def/didl">
         <dc:creator xml:lang="en">Jiahang Chen</dc:creator>
+        <dc:description xml:lang="en">The Digital Identity Description Language (DIDL) is an abstract language to describe identity concepts used in data ecosystems. The core component, identity, is specialized into identifiers, credentials, and assertions in this language, contributing to authentication and authorization.</dc:description>
         <dc:title xml:lang="en">DIDL Vocabulary &amp; Expression 0.1</dc:title>
         <terms:abstract xml:lang="en">The DIDL is a description language to represent diverse identity con-
 cepts, ensuring technical and semantic compatibility across different data ecosystems.</terms:abstract>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-29T00:00:00</terms:created>
         <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
         <rdfs:comment xml:lang="en">This is a vocabulary for DIDL Version 0.1</rdfs:comment>
-        <rdfs:label>didl</rdfs:label>
+        <rdfs:label>DIDL</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
     </owl:Ontology>
     
@@ -44,10 +45,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <!-- http://purl.org/dc/elements/1.1/description -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
-        <rdfs:comment>This individual represents description.</rdfs:comment>
-        <rdfs:label>description</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
@@ -300,6 +298,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/didl#issuer">
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="en">Indicates an issuer of an identity</rdfs:comment>
         <rdfs:label xml:lang="en">issuer</rdfs:label>
@@ -1019,6 +1018,10 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
         <rdfs:comment>This individual represents creator.</rdfs:comment>
         <rdfs:label>creator</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:comment>This individual represents description.</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
         <rdfs:comment>This individual represents title.</rdfs:comment>
