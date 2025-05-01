@@ -163,6 +163,10 @@
       "@id" : "https://w3id.org/def/didl#functional",
       "@type" : "@id"
     },
+    "identifierUniqueness" : {
+      "@id" : "https://w3id.org/def/didl#identifierUniqueness",
+      "@type" : "@id"
+    },
     "identifierFormat" : {
       "@id" : "https://w3id.org/def/didl#identifierFormat",
       "@type" : "@id"
@@ -170,6 +174,9 @@
     "assertion" : {
       "@id" : "https://w3id.org/def/didl#assertion",
       "@type" : "@id"
+    },
+    "Uniqueness" : {
+      "@id" : "https://w3id.org/def/didl#Uniqueness"
     },
     "namespace" : {
       "@id" : "https://w3id.org/def/didl#namespace",

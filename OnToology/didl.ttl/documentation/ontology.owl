@@ -211,6 +211,19 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     
 
 
+    <!-- https://w3id.org/def/didl#identifierUniqueness -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#identifierUniqueness">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/didl#Uniqueness"/>
+        <rdfs:comment xml:lang="en">indicates whether an identifier is (only) organizationally unique or not</rdfs:comment>
+        <rdfs:label xml:lang="en">identifierUniqueness</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/didl#key -->
 
 
@@ -594,6 +607,16 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     
 
 
+    <!-- https://w3id.org/def/didl#Uniqueness -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/didl#Uniqueness">
+        <rdfs:comment xml:lang="en">Relates to wheter an identifier is (only) organizationally unique or not</rdfs:comment>
+        <rdfs:label xml:lang="en">Uniqueness</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/def/didl#Value -->
 
 
@@ -694,6 +717,15 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
         <rdfs:comment>This individual represents dn.</rdfs:comment>
         <rdfs:label>dn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/didl#DataEcosystemUnique -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#DataEcosystemUnique">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Uniqueness"/>
     </owl:NamedIndividual>
     
 
@@ -902,6 +934,15 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#OrganizationID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Functional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/didl#OrganizationUnique -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#OrganizationUnique">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#Uniqueness"/>
     </owl:NamedIndividual>
     
 
