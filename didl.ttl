@@ -8,7 +8,7 @@
 @prefix didl: <https://w3id.org/def/didl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://w3id.org/def/didl> .
+@base <https://w3id.org/def/didl#> .
 
 <https://w3id.org/def/didl> rdf:type owl:Ontology ;
                              dc:creator "Jiahang Chen"@en ;
@@ -80,6 +80,14 @@ didl:assertion rdf:type owl:ObjectProperty ;
                rdfs:label "assertion" .
 
 
+###  https://w3id.org/def/didl#assertionFormat
+didl:assertionFormat rdf:type owl:ObjectProperty ;
+                     rdfs:domain didl:Assertion ;
+                     rdfs:range didl:AssertionFormat ;
+                     rdfs:comment "Indicates that an assertion has its specific format"@en ;
+                     rdfs:label "assertionFormat"@en .
+
+
 ###  https://w3id.org/def/didl#controlledBy
 didl:controlledBy rdf:type owl:ObjectProperty ;
                   owl:inverseOf didl:controlls ;
@@ -105,12 +113,13 @@ didl:credential rdf:type owl:ObjectProperty ;
                 rdfs:label "credential" .
 
 
-###  https://w3id.org/def/didl#format
-didl:format rdf:type owl:ObjectProperty ;
-            rdfs:domain didl:Identifier ;
-            rdfs:range didl:IdentifierFormat ;
-            rdfs:comment "Indicates that an identifier has its specific format"@en ;
-            rdfs:label "format" .
+###  https://w3id.org/def/didl#credentialFormat
+didl:credentialFormat rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain didl:Credential ;
+                      rdfs:range didl:CredentialFormat ;
+                      rdfs:comment "Indicates that a credential has its specific format"@en ;
+                      rdfs:label "credentialFormat"@en .
 
 
 ###  https://w3id.org/def/didl#functional
@@ -127,6 +136,14 @@ didl:identifier rdf:type owl:ObjectProperty ;
                 rdfs:range didl:Identifier ;
                 rdfs:comment "Indicates that an identity subject (i.e., entity) has identifier(s)"@en ;
                 rdfs:label "identifier" .
+
+
+###  https://w3id.org/def/didl#identifierFormat
+didl:identifierFormat rdf:type owl:ObjectProperty ;
+                      rdfs:domain didl:Identifier ;
+                      rdfs:range didl:IdentifierFormat ;
+                      rdfs:comment "Indicates that an identifier has its specific format"@en ;
+                      rdfs:label "format" .
 
 
 ###  https://w3id.org/def/didl#key
@@ -264,6 +281,12 @@ didl:AssertionCollection rdf:type owl:Class ;
                          rdfs:label "AssertionCollection"@en .
 
 
+###  https://w3id.org/def/didl#AssertionFormat
+didl:AssertionFormat rdf:type owl:Class ;
+                     rdfs:comment "An assertion format that is specified by a standard or a protocol"@en ;
+                     rdfs:label "AssertionFormat"@en .
+
+
 ###  https://w3id.org/def/didl#Attribute
 didl:Attribute rdf:type owl:Class ;
                rdfs:comment "An identity-related attribute consists of a key-value pair"@en ;
@@ -282,6 +305,12 @@ didl:Credential rdf:type owl:Class ;
                 rdfs:subClassOf didl:Identity ;
                 rdfs:comment "A proof of an entity's identity"@en ;
                 rdfs:label "Credential"@en .
+
+
+###  https://w3id.org/def/didl#CredentialFormat
+didl:CredentialFormat rdf:type owl:Class ;
+                      rdfs:comment "A credential format that is specified by a standard or a protocol"@en ;
+                      rdfs:label "CredentialFormat"@en .
 
 
 ###  https://w3id.org/def/didl#Functional
@@ -317,26 +346,25 @@ didl:IdentitySubject rdf:type owl:Class ;
 
 ###  https://w3id.org/def/didl#InherenceBasedCredential
 didl:InherenceBasedCredential rdf:type owl:Class ;
-                              rdfs:subClassOf didl:Credential ;
+                              rdfs:subClassOf didl:CredentialFormat ;
                               rdfs:comment "A credential that indicates something you inherently has"@en ;
                               rdfs:label "InherenceBasedCredential"@en .
 
 
 ###  https://w3id.org/def/didl#Key
-didl:Key rdf:type owl:Class ;
-         rdfs:comment "Relates to the key of an attribute's key-value pair"@en .
+didl:Key rdf:type owl:Class .
 
 
 ###  https://w3id.org/def/didl#KnowledgeBasedCredential
 didl:KnowledgeBasedCredential rdf:type owl:Class ;
-                              rdfs:subClassOf didl:Credential ;
+                              rdfs:subClassOf didl:CredentialFormat ;
                               rdfs:comment "A credential that indicates something you know"@en ;
                               rdfs:label "KnowledgeBasedCredential"@en .
 
 
 ###  https://w3id.org/def/didl#PossessionBasedCredential
 didl:PossessionBasedCredential rdf:type owl:Class ;
-                               rdfs:subClassOf didl:Credential ;
+                               rdfs:subClassOf didl:CredentialFormat ;
                                rdfs:comment "A credential that indicates something you has"@en ;
                                rdfs:label "PossesionBasedCredential"@en .
 
@@ -344,7 +372,7 @@ didl:PossessionBasedCredential rdf:type owl:Class ;
 ###  https://w3id.org/def/didl#Proof
 didl:Proof rdf:type owl:Class ;
            owl:equivalentClass sec:Proof ;
-           rdfs:subClassOf didl:PossessionBasedCredential ;
+           rdfs:subClassOf didl:Credential ;
            rdfs:comment "A possession-based credential that uses cryptograhpic method"@en ;
            rdfs:label "Proof"@en .
 
@@ -371,7 +399,7 @@ sec:Proof rdf:type owl:Class .
 
 ###  https://w3id.org/def/didl#AccessToken
 didl:AccessToken rdf:type owl:NamedIndividual ,
-                          didl:Assertion ;
+                          didl:AssertionFormat ;
                  rdfs:comment "This individual represents access token." ;
                  rdfs:label "access token" .
 
@@ -385,16 +413,21 @@ didl:Active rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/def/didl#ApplicationToken
 didl:ApplicationToken rdf:type owl:NamedIndividual ,
-                               didl:Assertion ;
+                               didl:AssertionFormat ;
                       rdfs:comment "This individual represents application token." ;
                       rdfs:label "application token" .
 
 
 ###  https://w3id.org/def/didl#BearerToken
 didl:BearerToken rdf:type owl:NamedIndividual ,
-                          didl:Assertion ;
+                          didl:AssertionFormat ;
                  rdfs:comment "This individual represents bearer token." ;
                  rdfs:label "bearer token" .
+
+
+###  https://w3id.org/def/didl#CertificateID
+didl:CertificateID rdf:type owl:NamedIndividual ,
+                            didl:Functional .
 
 
 ###  https://w3id.org/def/didl#DID
@@ -409,6 +442,16 @@ didl:DN rdf:type owl:NamedIndividual ,
                  didl:IdentifierFormat ;
         rdfs:comment "This individual represents dn." ;
         rdfs:label "dn" .
+
+
+###  https://w3id.org/def/didl#DeviceID
+didl:DeviceID rdf:type owl:NamedIndividual ,
+                       didl:Functional .
+
+
+###  https://w3id.org/def/didl#DocumentID
+didl:DocumentID rdf:type owl:NamedIndividual ,
+                         didl:Functional .
 
 
 ###  https://w3id.org/def/didl#E.164
@@ -446,6 +489,11 @@ didl:Email rdf:type owl:NamedIndividual ,
            rdfs:label "email" .
 
 
+###  https://w3id.org/def/didl#Fingerprint
+didl:Fingerprint rdf:type owl:NamedIndividual ,
+                          didl:InherenceBasedCredential .
+
+
 ###  https://w3id.org/def/didl#FirstName
 didl:FirstName rdf:type owl:NamedIndividual ,
                         didl:Key ;
@@ -462,7 +510,7 @@ didl:GUID rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/def/didl#IDToken
 didl:IDToken rdf:type owl:NamedIndividual ,
-                      didl:Assertion ;
+                      didl:AssertionFormat ;
              rdfs:comment "This individual represents idtoken." ;
              rdfs:label "idtoken" .
 
@@ -483,16 +531,21 @@ didl:Inactive rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/def/didl#JsonWebToken
 didl:JsonWebToken rdf:type owl:NamedIndividual ,
-                           didl:Assertion ;
+                           didl:AssertionFormat ;
                   rdfs:comment "This individual represents json web token." ;
                   rdfs:label "json web token" .
 
 
 ###  https://w3id.org/def/didl#KerberosTicket
 didl:KerberosTicket rdf:type owl:NamedIndividual ,
-                             didl:Assertion ;
+                             didl:AssertionFormat ;
                     rdfs:comment "This individual represents kerberos ticket." ;
                     rdfs:label "kerberos ticket" .
+
+
+###  https://w3id.org/def/didl#Key
+didl:Key rdf:type owl:NamedIndividual ,
+                  didl:PossessionBasedCredential .
 
 
 ###  https://w3id.org/def/didl#LastName
@@ -502,11 +555,41 @@ didl:LastName rdf:type owl:NamedIndividual ,
               rdfs:label "last name" .
 
 
+###  https://w3id.org/def/didl#MachineID
+didl:MachineID rdf:type owl:NamedIndividual ,
+                        didl:Functional .
+
+
+###  https://w3id.org/def/didl#OTP
+didl:OTP rdf:type owl:NamedIndividual ,
+                  didl:KnowledgeBasedCredential .
+
+
 ###  https://w3id.org/def/didl#Organization
 didl:Organization rdf:type owl:NamedIndividual ,
                            didl:Key ;
                   rdfs:comment "This individual represents organization." ;
                   rdfs:label "organization" .
+
+
+###  https://w3id.org/def/didl#OrganizationID
+didl:OrganizationID rdf:type owl:NamedIndividual ,
+                             didl:Functional .
+
+
+###  https://w3id.org/def/didl#Password
+didl:Password rdf:type owl:NamedIndividual ,
+                       didl:KnowledgeBasedCredential .
+
+
+###  https://w3id.org/def/didl#ProcessID
+didl:ProcessID rdf:type owl:NamedIndividual ,
+                        didl:Functional .
+
+
+###  https://w3id.org/def/didl#ProductID
+didl:ProductID rdf:type owl:NamedIndividual ,
+                        didl:Functional .
 
 
 ###  https://w3id.org/def/didl#RFC1035
@@ -532,9 +615,14 @@ didl:RFC7613 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/def/didl#RefreshToken
 didl:RefreshToken rdf:type owl:NamedIndividual ,
-                           didl:Assertion ;
+                           didl:AssertionFormat ;
                   rdfs:comment "This individual represents refresh token." ;
                   rdfs:label "refresh token" .
+
+
+###  https://w3id.org/def/didl#ResourceID
+didl:ResourceID rdf:type owl:NamedIndividual ,
+                         didl:Functional .
 
 
 ###  https://w3id.org/def/didl#Revoked
@@ -553,7 +641,7 @@ didl:Role rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/def/didl#SAML2.0Assertion
 didl:SAML2.0Assertion rdf:type owl:NamedIndividual ,
-                               didl:Assertion ;
+                               didl:AssertionFormat ;
                       rdfs:comment "This individual represents saml2.0assertion." ;
                       rdfs:label "saml2.0assertion" .
 
@@ -563,6 +651,11 @@ didl:SessionIndex rdf:type owl:NamedIndividual ,
                            didl:Key ;
                   rdfs:comment "This individual represents session index." ;
                   rdfs:label "session index" .
+
+
+###  https://w3id.org/def/didl#SmartCard
+didl:SmartCard rdf:type owl:NamedIndividual ,
+                        didl:PossessionBasedCredential .
 
 
 ###  https://w3id.org/def/didl#URI
@@ -621,25 +714,42 @@ didl:UUIDv5 rdf:type owl:NamedIndividual ,
             rdfs:label "uuidv5" .
 
 
+###  https://w3id.org/def/didl#UserID
+didl:UserID rdf:type owl:NamedIndividual ,
+                     didl:Functional .
+
+
 ###  https://w3id.org/def/didl#VC
 didl:VC rdf:type owl:NamedIndividual ,
-                 didl:Assertion ;
+                 didl:AssertionFormat ;
         rdfs:comment "This individual represents vc." ;
         rdfs:label "vc" .
 
 
 ###  https://w3id.org/def/didl#VP
 didl:VP rdf:type owl:NamedIndividual ,
-                 didl:Assertion ;
+                 didl:AssertionFormat ;
         rdfs:comment "This individual represents vp." ;
         rdfs:label "vp" .
 
 
+###  https://w3id.org/def/didl#Voice
+didl:Voice rdf:type owl:NamedIndividual ,
+                    didl:InherenceBasedCredential .
+
+
 ###  https://w3id.org/def/didl#X.509Certificate
 didl:X.509Certificate rdf:type owl:NamedIndividual ,
-                               didl:Assertion ;
+                               didl:AssertionFormat ;
                       rdfs:comment "This individual represents x.509certificate." ;
                       rdfs:label "x.509certificate" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+didl:Key rdfs:comment "Relates to the key of an attribute's key-value pair"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
