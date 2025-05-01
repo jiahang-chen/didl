@@ -87,6 +87,13 @@
 <https://w3id.org/def/didl#credential> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identity subject (i.e., entity) has credential(s)."@en .
 <https://w3id.org/def/didl#credential> <http://www.w3.org/2000/01/rdf-schema#label> "credential" .
 # 
+# https://w3id.org/def/didl#credentialAttribute
+<https://w3id.org/def/didl#credentialAttribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/didl#credentialAttribute> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Credential> .
+<https://w3id.org/def/didl#credentialAttribute> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Attribute> .
+<https://w3id.org/def/didl#credentialAttribute> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a credential has attribute(s) to describe a credential, e.g., username/password"@en .
+<https://w3id.org/def/didl#credentialAttribute> <http://www.w3.org/2000/01/rdf-schema#label> "credentialAttribute"@en .
+# 
 # https://w3id.org/def/didl#credentialFormat
 <https://w3id.org/def/didl#credentialFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#credentialFormat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
@@ -116,14 +123,6 @@
 <https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identifier has its specific format"@en .
 <https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/2000/01/rdf-schema#label> "format" .
 # 
-# https://w3id.org/def/didl#identifierUniqueness
-<https://w3id.org/def/didl#identifierUniqueness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/didl#identifierUniqueness> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<https://w3id.org/def/didl#identifierUniqueness> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identifier> .
-<https://w3id.org/def/didl#identifierUniqueness> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Uniqueness> .
-<https://w3id.org/def/didl#identifierUniqueness> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates whether an identifier is (only) organizationally unique or not"@en .
-<https://w3id.org/def/didl#identifierUniqueness> <http://www.w3.org/2000/01/rdf-schema#label> "identifierUniqueness"@en .
-# 
 # https://w3id.org/def/didl#key
 <https://w3id.org/def/didl#key> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#key> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Attribute> .
@@ -141,6 +140,7 @@
 # https://w3id.org/def/didl#proof
 <https://w3id.org/def/didl#proof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#proof> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#proof> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Proof> .
 <https://w3id.org/def/didl#proof> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a proof of an assertion, which ensures the integrity and authenticy of the assertion"@en .
 <https://w3id.org/def/didl#proof> <http://www.w3.org/2000/01/rdf-schema#label> "proof" .
 # 
@@ -341,11 +341,6 @@
 <https://w3id.org/def/didl#Status> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates to the status of an identity, including active, inactive, or revoked"@en .
 <https://w3id.org/def/didl#Status> <http://www.w3.org/2000/01/rdf-schema#label> "Status"@en .
 # 
-# https://w3id.org/def/didl#Uniqueness
-<https://w3id.org/def/didl#Uniqueness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/didl#Uniqueness> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates to wheter an identifier is (only) organizationally unique or not"@en .
-<https://w3id.org/def/didl#Uniqueness> <http://www.w3.org/2000/01/rdf-schema#label> "Uniqueness"@en .
-# 
 # https://w3id.org/def/didl#Value
 <https://w3id.org/def/didl#Value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/didl#Value> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates to the value of an attribute's key-value pair"@en .
@@ -402,10 +397,6 @@
 <https://w3id.org/def/didl#DN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
 <https://w3id.org/def/didl#DN> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents dn." .
 <https://w3id.org/def/didl#DN> <http://www.w3.org/2000/01/rdf-schema#label> "dn" .
-# 
-# https://w3id.org/def/didl#DataEcosystemUnique
-<https://w3id.org/def/didl#DataEcosystemUnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#DataEcosystemUnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Uniqueness> .
 # 
 # https://w3id.org/def/didl#DeviceID
 <https://w3id.org/def/didl#DeviceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -514,10 +505,6 @@
 # https://w3id.org/def/didl#OrganizationID
 <https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
-# 
-# https://w3id.org/def/didl#OrganizationUnique
-<https://w3id.org/def/didl#OrganizationUnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#OrganizationUnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Uniqueness> .
 # 
 # https://w3id.org/def/didl#Password
 <https://w3id.org/def/didl#Password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

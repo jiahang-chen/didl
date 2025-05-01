@@ -252,12 +252,6 @@
     "@value" : "dn"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/didl#DataEcosystemUnique",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Uniqueness"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/didl#DeviceID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -558,12 +552,6 @@
     "@id" : "https://w3id.org/def/didl#Functional"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/didl#OrganizationUnique",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Uniqueness"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/didl#Password",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -838,17 +826,6 @@
     "@value" : "uuidv5"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/didl#Uniqueness",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relates to wheter an identifier is (only) organizationally unique or not"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Uniqueness"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/didl#UserID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1009,6 +986,23 @@
     "@id" : "https://w3id.org/def/didl#Credential"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/didl#credentialAttribute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that a credential has attribute(s) to describe a credential, e.g., username/password"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/didl#Credential"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "credentialAttribute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/didl#Attribute"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/didl#credentialFormat",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1075,26 +1069,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/didl#identifierUniqueness",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "indicates whether an identifier is (only) organizationally unique or not"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/didl#Identifier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "identifierUniqueness"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/def/didl#Uniqueness"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#issueDate",
@@ -1209,6 +1183,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "proof"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/didl#Proof"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#relatesTo",
