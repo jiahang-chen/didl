@@ -99,6 +99,14 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
             rdfs:label "credential" .
 
 
+###  https://w3id.org/def/didl#credentialAttribute
+:credentialAttribute rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Credential ;
+                     rdfs:range :Attribute ;
+                     rdfs:comment "Indicates that a credential has attribute(s) to describe a credential, e.g., username/password"@en ;
+                     rdfs:label "credentialAttribute"@en .
+
+
 ###  https://w3id.org/def/didl#credentialFormat
 :credentialFormat rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
@@ -132,15 +140,6 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
                   rdfs:label "format" .
 
 
-###  https://w3id.org/def/didl#identifierUniqueness
-:identifierUniqueness rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf owl:topObjectProperty ;
-                      rdfs:domain :Identifier ;
-                      rdfs:range :Uniqueness ;
-                      rdfs:comment "indicates whether an identifier is (only) organizationally unique or not"@en ;
-                      rdfs:label "identifierUniqueness"@en .
-
-
 ###  https://w3id.org/def/didl#key
 :key rdf:type owl:ObjectProperty ;
      rdfs:domain :Attribute ;
@@ -160,6 +159,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 ###  https://w3id.org/def/didl#proof
 :proof rdf:type owl:ObjectProperty ;
        rdfs:domain :Assertion ;
+       rdfs:range :Proof ;
        rdfs:comment "Indicates a proof of an assertion, which ensures the integrity and authenticy of the assertion"@en ;
        rdfs:label "proof" .
 
@@ -380,12 +380,6 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
         rdfs:label "Status"@en .
 
 
-###  https://w3id.org/def/didl#Uniqueness
-:Uniqueness rdf:type owl:Class ;
-            rdfs:comment "Relates to wheter an identifier is (only) organizationally unique or not"@en ;
-            rdfs:label "Uniqueness"@en .
-
-
 ###  https://w3id.org/def/didl#Value
 :Value rdf:type owl:Class ;
        rdfs:comment "Relates to the value of an attribute's key-value pair"@en ;
@@ -445,11 +439,6 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
              :IdentifierFormat ;
     rdfs:comment "This individual represents dn." ;
     rdfs:label "dn" .
-
-
-###  https://w3id.org/def/didl#DataEcosystemUnique
-:DataEcosystemUnique rdf:type owl:NamedIndividual ,
-                              :Uniqueness .
 
 
 ###  https://w3id.org/def/didl#DeviceID
@@ -578,11 +567,6 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 ###  https://w3id.org/def/didl#OrganizationID
 :OrganizationID rdf:type owl:NamedIndividual ,
                          :Functional .
-
-
-###  https://w3id.org/def/didl#OrganizationUnique
-:OrganizationUnique rdf:type owl:NamedIndividual ,
-                             :Uniqueness .
 
 
 ###  https://w3id.org/def/didl#Password

@@ -19,6 +19,10 @@
     "IdentitySubject" : {
       "@id" : "https://w3id.org/def/didl#IdentitySubject"
     },
+    "credentialAttribute" : {
+      "@id" : "https://w3id.org/def/didl#credentialAttribute",
+      "@type" : "@id"
+    },
     "validFrom" : {
       "@id" : "https://w3id.org/def/didl#validFrom",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -163,10 +167,6 @@
       "@id" : "https://w3id.org/def/didl#functional",
       "@type" : "@id"
     },
-    "identifierUniqueness" : {
-      "@id" : "https://w3id.org/def/didl#identifierUniqueness",
-      "@type" : "@id"
-    },
     "identifierFormat" : {
       "@id" : "https://w3id.org/def/didl#identifierFormat",
       "@type" : "@id"
@@ -174,9 +174,6 @@
     "assertion" : {
       "@id" : "https://w3id.org/def/didl#assertion",
       "@type" : "@id"
-    },
-    "Uniqueness" : {
-      "@id" : "https://w3id.org/def/didl#Uniqueness"
     },
     "namespace" : {
       "@id" : "https://w3id.org/def/didl#namespace",
