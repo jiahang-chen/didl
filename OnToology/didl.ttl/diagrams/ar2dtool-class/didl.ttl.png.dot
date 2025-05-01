@@ -12,7 +12,7 @@ node [shape = rectangle, color="orange"]; "didl:Attribute" "didl:CompositeIdenti
 	"didl:Attribute" -> "didl:Value" [ label = "didl:value" ];
 	"didl:IdentitySubject" -> "didl:Identifier" [ label = "didl:identifier" ];
 	"didl:Assertion" -> "didl:Identifier" [ label = "didl:relatesTo" ];
-	"owl:Thing" -> "xsd:anyURI" [ label = "didl:issuer" ];
+	"didl:Identity" -> "xsd:anyURI" [ label = "didl:issuer" ];
 	"didl:IdentitySubject" -> "didl:Identity" [ label = "didl:controlls" ];
 	"didl:Attribute" -> "didl:Key" [ label = "didl:key" ];
 	"didl:IdentitySubject" -> "didl:Assertion" [ label = "didl:assertion" ];
