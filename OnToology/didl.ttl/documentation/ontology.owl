@@ -641,8 +641,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#AccessToken">
         <rdf:type rdf:resource="https://w3id.org/def/didl#AssertionFormat"/>
-        <rdfs:comment>This individual represents access token.</rdfs:comment>
-        <rdfs:label>access token</rdfs:label>
+        <rdfs:comment xml:lang="en">A time-bound token issued by an authorization server that grants a client application permission to access protected resources on behalf of a user or itself, see also RFC 6749</rdfs:comment>
+        <rdfs:label>AccessToken</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -653,7 +653,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Active">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Status"/>
         <rdfs:comment xml:lang="en">Active status of an identity</rdfs:comment>
-        <rdfs:label>active</rdfs:label>
+        <rdfs:label>Active</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -663,8 +663,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#ApplicationToken">
         <rdf:type rdf:resource="https://w3id.org/def/didl#AssertionFormat"/>
-        <rdfs:comment>This individual represents application token.</rdfs:comment>
-        <rdfs:label>application token</rdfs:label>
+        <rdfs:comment xml:lang="en">A token issued to an application (rather than a user) to authenticate itself when accessing APIs or services, often used in machine-to-machine (M2M) communication.</rdfs:comment>
+        <rdfs:label>ApplicationToken</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -674,8 +674,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#BearerToken">
         <rdf:type rdf:resource="https://w3id.org/def/didl#AssertionFormat"/>
-        <rdfs:comment>This individual represents bearer token.</rdfs:comment>
-        <rdfs:label>bearer token</rdfs:label>
+        <rdfs:comment xml:lang="en">A type of access token that allows access to a resource simply by presenting the token, without requiring additional proof of identity—&quot;whoever bears it, can use it.&quot;</rdfs:comment>
+        <rdfs:label>BearerToken</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -685,6 +685,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#CertificateID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Functional"/>
+        <rdfs:comment xml:lang="en">ID used in the functional scope of certificates</rdfs:comment>
+        <rdfs:label>CertificateID</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -694,8 +696,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#DID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents did.</rdfs:comment>
-        <rdfs:label>did</rdfs:label>
+        <rdfs:comment xml:lang="en">A globally unique, cryptographically verifiable identifier that does not require a centralized registry and is designed to enable self-sovereign digital identity, see also W3C DID https://www.w3.org/TR/did-1.0/</rdfs:comment>
+        <rdfs:label>DID</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -705,8 +707,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#DN">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents dn.</rdfs:comment>
-        <rdfs:label>dn</rdfs:label>
+        <rdfs:comment xml:lang="en">A unique hierarchical identifier used to unambiguously identify an entry in an X.500 directory, composed of attribute–value pairs</rdfs:comment>
+        <rdfs:label>DN</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -716,6 +718,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#DeviceID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Functional"/>
+        <rdfs:comment xml:lang="en">ID used in the functional scope of devices</rdfs:comment>
+        <rdfs:label>DeviceID</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -725,6 +729,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#DocumentID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Functional"/>
+        <rdfs:comment xml:lang="en">ID used in the functional scope of documents</rdfs:comment>
+        <rdfs:label>DocumentID</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -734,19 +740,19 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#E.164">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents e.164.</rdfs:comment>
-        <rdfs:label>e.164</rdfs:label>
+        <rdfs:comment xml:lang="en">An ITU-T Recommendation for public telephone systems that defines the format of phone numbers, typically up to 15 digits, including country codes (e.g., +1 650 555 1234).</rdfs:comment>
+        <rdfs:label>E.164</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/def/didl#EDI -->
+    <!-- https://w3id.org/def/didl#EPC -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#EDI">
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#EPC">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents edi.</rdfs:comment>
-        <rdfs:label>edi</rdfs:label>
+        <rdfs:comment xml:lang="en">A unique identifier designed to track individual physical objects in the supply chain using RFID technology, enabling item-level identification beyond traditional barcodes.</rdfs:comment>
+        <rdfs:label>EPC</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -756,8 +762,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#EUI-48">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents eui-48.</rdfs:comment>
-        <rdfs:label>eui-48</rdfs:label>
+        <rdfs:comment xml:lang="en">A 48-bit globally unique identifier typically used to identify network interfaces (commonly known as a MAC address), assigned by IEEE to ensure uniqueness across devices.</rdfs:comment>
+        <rdfs:label>EUI-48</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -767,8 +773,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#EUI-64">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents eui-64.</rdfs:comment>
-        <rdfs:label>eui-64</rdfs:label>
+        <rdfs:comment>A 64-bit globally unique identifier used to identify hardware or devices, often derived from a 48-bit MAC address and used in protocols like IPv6 for interface identifiers.</rdfs:comment>
+        <rdfs:label>EUI-64</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -778,8 +784,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Email">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
-        <rdfs:comment>This individual represents email.</rdfs:comment>
-        <rdfs:label>email</rdfs:label>
+        <rdfs:comment xml:lang="en">A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain, see also RFC 5322 and RFC 6531</rdfs:comment>
+        <rdfs:label>Email</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -789,6 +795,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Fingerprint">
         <rdf:type rdf:resource="https://w3id.org/def/didl#InherenceBasedCredential"/>
+        <rdfs:label xml:lang="en">A biometric credential format that captures and encodes a person&apos;s unique fingerprint features—typically minutiae points—into a standardized digital representation for authentication or identification, see also IEC 19704-2</rdfs:label>
+        <rdfs:label>Fingerprint</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -799,7 +807,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#FirstName">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
         <rdfs:comment>This individual represents first name.</rdfs:comment>
-        <rdfs:label>first name</rdfs:label>
+        <rdfs:label>FirstName</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -809,8 +817,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#GUID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents guid.</rdfs:comment>
-        <rdfs:label>guid</rdfs:label>
+        <rdfs:comment>A 128-bit value generated using specific algorithms to ensure uniqueness across time and space, commonly used to identify objects, records, or resources in software systems.</rdfs:comment>
+        <rdfs:label>GUID</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -820,8 +828,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#IDToken">
         <rdf:type rdf:resource="https://w3id.org/def/didl#AssertionFormat"/>
-        <rdfs:comment>This individual represents idtoken.</rdfs:comment>
-        <rdfs:label>idtoken</rdfs:label>
+        <rdfs:comment>A security token issued by an OpenID Connect Provider that contains claims about the authentication of an end-user and possibly their identity attributes, typically formatted as a signed JWT.</rdfs:comment>
+        <rdfs:label>IDToken</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -831,8 +839,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#IRI">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents iri.</rdfs:comment>
-        <rdfs:label>iri</rdfs:label>
+        <rdfs:comment>An extended version of a URI that allows the use of Unicode characters from the Universal Character Set (UCS), enabling identifiers in languages beyond ASCII.</rdfs:comment>
+        <rdfs:label>IRI</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -843,7 +851,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Inactive">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Status"/>
         <rdfs:comment>This individual represents inactive.</rdfs:comment>
-        <rdfs:label>inactive</rdfs:label>
+        <rdfs:label>Inactive</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -853,8 +861,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#JsonWebToken">
         <rdf:type rdf:resource="https://w3id.org/def/didl#AssertionFormat"/>
-        <rdfs:comment>This individual represents json web token.</rdfs:comment>
-        <rdfs:label>json web token</rdfs:label>
+        <rdfs:comment>A compact, URL-safe token format that represents claims between parties using a JSON object, digitally signed (and optionally encrypted) for secure transmission and verification.</rdfs:comment>
+        <rdfs:label>JsonWebToken</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -864,8 +872,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#KerberosTicket">
         <rdf:type rdf:resource="https://w3id.org/def/didl#AssertionFormat"/>
-        <rdfs:comment>This individual represents kerberos ticket.</rdfs:comment>
-        <rdfs:label>kerberos ticket</rdfs:label>
+        <rdfs:comment>A time-limited, encrypted credential issued by a Kerberos Key Distribution Center (KDC) that allows a client to authenticate to services without repeatedly sending passwords.</rdfs:comment>
+        <rdfs:label>KerberosTicket</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -876,7 +884,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#LastName">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
         <rdfs:comment>This individual represents last name.</rdfs:comment>
-        <rdfs:label>last name</rdfs:label>
+        <rdfs:label>LastName</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -886,6 +894,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#MachineID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Functional"/>
+        <rdfs:comment xml:lang="en">ID used as functional scope of machines</rdfs:comment>
+        <rdfs:label>MachineID</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -895,17 +905,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#OTP">
         <rdf:type rdf:resource="https://w3id.org/def/didl#KnowledgeBasedCredential"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/def/didl#Organization -->
-
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Organization">
-        <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
-        <rdfs:comment>This individual represents organization.</rdfs:comment>
-        <rdfs:label>organization</rdfs:label>
+        <rdfs:comment>A password that is valid for only one login session or transaction, typically generated dynamically and used to enhance security by preventing replay attacks.</rdfs:comment>
+        <rdfs:label>OTP</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -915,6 +916,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#OrganizationID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Functional"/>
+        <rdfs:comment>ID used as functional scope of organizations</rdfs:comment>
+        <rdfs:comment>OrganizationID</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -924,6 +927,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Password">
         <rdf:type rdf:resource="https://w3id.org/def/didl#KnowledgeBasedCredential"/>
+        <rdfs:comment>This refers to password credentials, always combined with a username</rdfs:comment>
+        <rdfs:label>Password</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -933,6 +938,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#ProcessID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Functional"/>
+        <rdfs:comment>ID used as functional scope of a process</rdfs:comment>
+        <rdfs:label>ProcessID</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -942,6 +949,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#ProductID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Functional"/>
+        <rdfs:comment>ID used as functional scope of a product</rdfs:comment>
+        <rdfs:label>ProductID</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -951,8 +960,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#RFC1035">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents rfc1035.</rdfs:comment>
-        <rdfs:label>rfc1035</rdfs:label>
+        <rdfs:comment xml:lang="en">A foundational standard that specifies the implementation of the Domain Name System (DNS) — detailing message formats, query/response interactions, and resource records used for translating domain names to IP addresses.</rdfs:comment>
+        <rdfs:label>RFC1035</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -962,8 +971,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#RFC5322">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents rfc5322.</rdfs:comment>
-        <rdfs:label>rfc5322</rdfs:label>
+        <rdfs:comment>A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain</rdfs:comment>
+        <rdfs:label>RFC5322</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -973,8 +982,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#RFC7613">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents rfc7613.</rdfs:comment>
-        <rdfs:label>rfc7613</rdfs:label>
+        <rdfs:comment>A standard that defines rules for the precise comparison of internationalized usernames and passwords, specifying string preparation, normalization, and case-mapping to avoid ambiguities and spoofing in authentication systems.</rdfs:comment>
+        <rdfs:label>RFC7613</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -984,8 +993,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#RefreshToken">
         <rdf:type rdf:resource="https://w3id.org/def/didl#AssertionFormat"/>
-        <rdfs:comment>This individual represents refresh token.</rdfs:comment>
-        <rdfs:label>refresh token</rdfs:label>
+        <rdfs:comment>A credential issued by an authorization server that allows a client to obtain a new access token without requiring the user to reauthenticate, typically used in long-lived sessions.</rdfs:comment>
+        <rdfs:label>RefreshToken</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -995,6 +1004,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#ResourceID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Functional"/>
+        <rdfs:comment>ID used as functional scope of resources</rdfs:comment>
+        <rdfs:label>ResourceID</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1005,7 +1016,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Revoked">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Status"/>
         <rdfs:comment>This individual represents revoked.</rdfs:comment>
-        <rdfs:label>revoked</rdfs:label>
+        <rdfs:label>Revoked</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1016,7 +1027,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Role">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
         <rdfs:comment>This individual represents role.</rdfs:comment>
-        <rdfs:label>role</rdfs:label>
+        <rdfs:label>Role</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1026,8 +1037,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#SAML2.0Assertion">
         <rdf:type rdf:resource="https://w3id.org/def/didl#AssertionFormat"/>
-        <rdfs:comment>This individual represents saml2.0assertion.</rdfs:comment>
-        <rdfs:label>saml2.0assertion</rdfs:label>
+        <rdfs:comment>A structured XML statement issued by an Identity Provider (IdP) in a SAML 2.0 authentication exchange, containing claims (such as user identity, authentication status, and attributes) that a Service Provider (SP) can trust.</rdfs:comment>
+        <rdfs:label>SAML2.0Assertion</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1038,7 +1049,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#SessionIndex">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
         <rdfs:comment>This individual represents session index.</rdfs:comment>
-        <rdfs:label>session index</rdfs:label>
+        <rdfs:label>SessionIndex</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1048,7 +1059,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Signature">
         <rdf:type rdf:resource="https://w3id.org/def/didl#PossessionBasedCredential"/>
-        <rdfs:comment xml:lang="en">Relates to the key of an attribute&apos;s key-value pair</rdfs:comment>
+        <rdfs:comment xml:lang="en">A cryptographic proof—typically a digital signature—used to validate the authenticity and integrity of a credential or assertion, often embedded in formats like JWTs, SAML assertions, or verifiable credentials.</rdfs:comment>
+        <rdfs:label>Signature</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1058,6 +1070,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#SmartCard">
         <rdf:type rdf:resource="https://w3id.org/def/didl#PossessionBasedCredential"/>
+        <rdfs:comment>A physical card with embedded integrated circuits capable of securely storing and processing data—often used for authentication, digital signatures, and secure credential storage in identity systems.</rdfs:comment>
+        <rdfs:label>SmartCard</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1067,8 +1081,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#URI">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents uri.</rdfs:comment>
-        <rdfs:label>uri</rdfs:label>
+        <rdfs:comment>A standardized string used to uniquely identify a resource on the Internet or a private network, encompassing both URLs and URNs.</rdfs:comment>
+        <rdfs:label>URI</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1078,8 +1092,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#URL">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents url.</rdfs:comment>
-        <rdfs:label>url</rdfs:label>
+        <rdfs:comment>A type of URI that not only identifies a resource but also provides a means of locating it by describing its access mechanism (e.g., https, ftp) and network location.</rdfs:comment>
+        <rdfs:label>URL</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1089,8 +1103,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#URN">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents urn.</rdfs:comment>
-        <rdfs:label>urn</rdfs:label>
+        <rdfs:comment>A type of URI intended to serve as a persistent, location-independent resource identifier, often used to name resources in a globally unique and stable way (e.g., urn:isbn:0451450523).</rdfs:comment>
+        <rdfs:label>URN</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1100,8 +1114,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#UUIDv1">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents uuidv1.</rdfs:comment>
-        <rdfs:label>uuidv1</rdfs:label>
+        <rdfs:comment>Time-based UUID</rdfs:comment>
+        <rdfs:label>UUIDv1</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1111,8 +1125,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#UUIDv2">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents uuidv2.</rdfs:comment>
-        <rdfs:label>uuidv2</rdfs:label>
+        <rdfs:comment>Distributed Computing Environment (DCE) Security UUID</rdfs:comment>
+        <rdfs:label>UUIDv2</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1122,8 +1136,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#UUIDv3">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents uuidv3.</rdfs:comment>
-        <rdfs:label>uuidv3</rdfs:label>
+        <rdfs:comment>Name-based UUIID using MD5</rdfs:comment>
+        <rdfs:label>UUIDv3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1133,8 +1147,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#UUIDv4">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents uuidv4.</rdfs:comment>
-        <rdfs:label>uuidv4</rdfs:label>
+        <rdfs:comment>Random UUID with no embedded metadata, offering a high degree of uniqueness</rdfs:comment>
+        <rdfs:label>UUIDv4</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1144,8 +1158,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#UUIDv5">
         <rdf:type rdf:resource="https://w3id.org/def/didl#IdentifierFormat"/>
-        <rdfs:comment>This individual represents uuidv5.</rdfs:comment>
-        <rdfs:label>uuidv5</rdfs:label>
+        <rdfs:comment>Name-based UUID using SHA-1</rdfs:comment>
+        <rdfs:label>UUIDv5</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1155,6 +1169,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#UserID">
         <rdf:type rdf:resource="https://w3id.org/def/didl#Functional"/>
+        <rdfs:comment xml:lang="en">ID used as functional scope of human users</rdfs:comment>
+        <rdfs:label>UserID</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1164,8 +1180,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#VC">
         <rdf:type rdf:resource="https://w3id.org/def/didl#AssertionFormat"/>
-        <rdfs:comment>This individual represents vc.</rdfs:comment>
-        <rdfs:label>vc</rdfs:label>
+        <rdfs:comment>A tamper-evident digital credential containing claims about a subject, cryptographically signed by an issuer, and compliant with a standard format for decentralized identity ecosystems.</rdfs:comment>
+        <rdfs:label>VC</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1175,8 +1191,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#VP">
         <rdf:type rdf:resource="https://w3id.org/def/didl#AssertionFormat"/>
-        <rdfs:comment>This individual represents vp.</rdfs:comment>
-        <rdfs:label>vp</rdfs:label>
+        <rdfs:comment>A packaged set of one or more Verifiable Credentials shared by a holder with a verifier, optionally including selective disclosure and proofs of authenticity.</rdfs:comment>
+        <rdfs:label>VP</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1186,6 +1202,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#Voice">
         <rdf:type rdf:resource="https://w3id.org/def/didl#InherenceBasedCredential"/>
+        <rdfs:comment>A biometric credential format that encodes the unique vocal characteristics of a person—such as pitch, tone, and rhythm—into a digital template for speaker verification or identification.</rdfs:comment>
+        <rdfs:label>Voice</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1195,8 +1213,8 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
     <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#X.509Certificate">
         <rdf:type rdf:resource="https://w3id.org/def/didl#AssertionFormat"/>
-        <rdfs:comment>This individual represents x.509certificate.</rdfs:comment>
-        <rdfs:label>x.509certificate</rdfs:label>
+        <rdfs:comment>A digital certificate that uses the X.509 public key infrastructure (PKI) standard to bind a subject&apos;s identity to a public key, and is signed by a trusted Certificate Authority (CA).</rdfs:comment>
+        <rdfs:label>X.509Certificate</rdfs:label>
     </owl:NamedIndividual>
     
 
