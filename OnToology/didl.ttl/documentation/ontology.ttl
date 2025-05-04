@@ -397,350 +397,372 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 ###  https://w3id.org/def/didl#AccessToken
 :AccessToken rdf:type owl:NamedIndividual ,
                       :AssertionFormat ;
-             rdfs:comment "This individual represents access token." ;
-             rdfs:label "access token" .
+             rdfs:comment "A time-bound token issued by an authorization server that grants a client application permission to access protected resources on behalf of a user or itself, see also RFC 6749"@en ;
+             rdfs:label "AccessToken" .
 
 
 ###  https://w3id.org/def/didl#Active
 :Active rdf:type owl:NamedIndividual ,
                  :Status ;
         rdfs:comment "Active status of an identity"@en ;
-        rdfs:label "active" .
+        rdfs:label "Active" .
 
 
 ###  https://w3id.org/def/didl#ApplicationToken
 :ApplicationToken rdf:type owl:NamedIndividual ,
                            :AssertionFormat ;
-                  rdfs:comment "This individual represents application token." ;
-                  rdfs:label "application token" .
+                  rdfs:comment "A token issued to an application (rather than a user) to authenticate itself when accessing APIs or services, often used in machine-to-machine (M2M) communication."@en ;
+                  rdfs:label "ApplicationToken" .
 
 
 ###  https://w3id.org/def/didl#BearerToken
 :BearerToken rdf:type owl:NamedIndividual ,
                       :AssertionFormat ;
-             rdfs:comment "This individual represents bearer token." ;
-             rdfs:label "bearer token" .
+             rdfs:comment "A type of access token that allows access to a resource simply by presenting the token, without requiring additional proof of identity—\"whoever bears it, can use it.\""@en ;
+             rdfs:label "BearerToken" .
 
 
 ###  https://w3id.org/def/didl#CertificateID
 :CertificateID rdf:type owl:NamedIndividual ,
-                        :Functional .
+                        :Functional ;
+               rdfs:comment "ID used in the functional scope of certificates"@en ;
+               rdfs:label "CertificateID" .
 
 
 ###  https://w3id.org/def/didl#DID
 :DID rdf:type owl:NamedIndividual ,
               :IdentifierFormat ;
-     rdfs:comment "This individual represents did." ;
-     rdfs:label "did" .
+     rdfs:comment "A globally unique, cryptographically verifiable identifier that does not require a centralized registry and is designed to enable self-sovereign digital identity, see also W3C DID https://www.w3.org/TR/did-1.0/"@en ;
+     rdfs:label "DID" .
 
 
 ###  https://w3id.org/def/didl#DN
 :DN rdf:type owl:NamedIndividual ,
              :IdentifierFormat ;
-    rdfs:comment "This individual represents dn." ;
-    rdfs:label "dn" .
+    rdfs:comment "A unique hierarchical identifier used to unambiguously identify an entry in an X.500 directory, composed of attribute–value pairs"@en ;
+    rdfs:label "DN" .
 
 
 ###  https://w3id.org/def/didl#DeviceID
 :DeviceID rdf:type owl:NamedIndividual ,
-                   :Functional .
+                   :Functional ;
+          rdfs:comment "ID used in the functional scope of devices"@en ;
+          rdfs:label "DeviceID" .
 
 
 ###  https://w3id.org/def/didl#DocumentID
 :DocumentID rdf:type owl:NamedIndividual ,
-                     :Functional .
+                     :Functional ;
+            rdfs:comment "ID used in the functional scope of documents"@en ;
+            rdfs:label "DocumentID" .
 
 
 ###  https://w3id.org/def/didl#E.164
 :E.164 rdf:type owl:NamedIndividual ,
                 :IdentifierFormat ;
-       rdfs:comment "This individual represents e.164." ;
-       rdfs:label "e.164" .
+       rdfs:comment "An ITU-T Recommendation for public telephone systems that defines the format of phone numbers, typically up to 15 digits, including country codes (e.g., +1 650 555 1234)."@en ;
+       rdfs:label "E.164" .
 
 
-###  https://w3id.org/def/didl#EDI
-:EDI rdf:type owl:NamedIndividual ,
+###  https://w3id.org/def/didl#EPC
+:EPC rdf:type owl:NamedIndividual ,
               :IdentifierFormat ;
-     rdfs:comment "This individual represents edi." ;
-     rdfs:label "edi" .
+     rdfs:comment "A unique identifier designed to track individual physical objects in the supply chain using RFID technology, enabling item-level identification beyond traditional barcodes."@en ;
+     rdfs:label "EPC" .
 
 
 ###  https://w3id.org/def/didl#EUI-48
 :EUI-48 rdf:type owl:NamedIndividual ,
                  :IdentifierFormat ;
-        rdfs:comment "This individual represents eui-48." ;
-        rdfs:label "eui-48" .
+        rdfs:comment "A 48-bit globally unique identifier typically used to identify network interfaces (commonly known as a MAC address), assigned by IEEE to ensure uniqueness across devices."@en ;
+        rdfs:label "EUI-48" .
 
 
 ###  https://w3id.org/def/didl#EUI-64
 :EUI-64 rdf:type owl:NamedIndividual ,
                  :IdentifierFormat ;
-        rdfs:comment "This individual represents eui-64." ;
-        rdfs:label "eui-64" .
+        rdfs:comment "A 64-bit globally unique identifier used to identify hardware or devices, often derived from a 48-bit MAC address and used in protocols like IPv6 for interface identifiers." ;
+        rdfs:label "EUI-64" .
 
 
 ###  https://w3id.org/def/didl#Email
 :Email rdf:type owl:NamedIndividual ,
                 :Key ;
-       rdfs:comment "This individual represents email." ;
-       rdfs:label "email" .
+       rdfs:comment "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain, see also RFC 5322 and RFC 6531"@en ;
+       rdfs:label "Email" .
 
 
 ###  https://w3id.org/def/didl#Fingerprint
 :Fingerprint rdf:type owl:NamedIndividual ,
-                      :InherenceBasedCredential .
+                      :InherenceBasedCredential ;
+             rdfs:label "A biometric credential format that captures and encodes a person's unique fingerprint features—typically minutiae points—into a standardized digital representation for authentication or identification, see also IEC 19704-2"@en ,
+                        "Fingerprint" .
 
 
 ###  https://w3id.org/def/didl#FirstName
 :FirstName rdf:type owl:NamedIndividual ,
                     :Key ;
            rdfs:comment "This individual represents first name." ;
-           rdfs:label "first name" .
+           rdfs:label "FirstName" .
 
 
 ###  https://w3id.org/def/didl#GUID
 :GUID rdf:type owl:NamedIndividual ,
                :IdentifierFormat ;
-      rdfs:comment "This individual represents guid." ;
-      rdfs:label "guid" .
+      rdfs:comment "A 128-bit value generated using specific algorithms to ensure uniqueness across time and space, commonly used to identify objects, records, or resources in software systems." ;
+      rdfs:label "GUID" .
 
 
 ###  https://w3id.org/def/didl#IDToken
 :IDToken rdf:type owl:NamedIndividual ,
                   :AssertionFormat ;
-         rdfs:comment "This individual represents idtoken." ;
-         rdfs:label "idtoken" .
+         rdfs:comment "A security token issued by an OpenID Connect Provider that contains claims about the authentication of an end-user and possibly their identity attributes, typically formatted as a signed JWT." ;
+         rdfs:label "IDToken" .
 
 
 ###  https://w3id.org/def/didl#IRI
 :IRI rdf:type owl:NamedIndividual ,
               :IdentifierFormat ;
-     rdfs:comment "This individual represents iri." ;
-     rdfs:label "iri" .
+     rdfs:comment "An extended version of a URI that allows the use of Unicode characters from the Universal Character Set (UCS), enabling identifiers in languages beyond ASCII." ;
+     rdfs:label "IRI" .
 
 
 ###  https://w3id.org/def/didl#Inactive
 :Inactive rdf:type owl:NamedIndividual ,
                    :Status ;
           rdfs:comment "This individual represents inactive." ;
-          rdfs:label "inactive" .
+          rdfs:label "Inactive" .
 
 
 ###  https://w3id.org/def/didl#JsonWebToken
 :JsonWebToken rdf:type owl:NamedIndividual ,
                        :AssertionFormat ;
-              rdfs:comment "This individual represents json web token." ;
-              rdfs:label "json web token" .
+              rdfs:comment "A compact, URL-safe token format that represents claims between parties using a JSON object, digitally signed (and optionally encrypted) for secure transmission and verification." ;
+              rdfs:label "JsonWebToken" .
 
 
 ###  https://w3id.org/def/didl#KerberosTicket
 :KerberosTicket rdf:type owl:NamedIndividual ,
                          :AssertionFormat ;
-                rdfs:comment "This individual represents kerberos ticket." ;
-                rdfs:label "kerberos ticket" .
+                rdfs:comment "A time-limited, encrypted credential issued by a Kerberos Key Distribution Center (KDC) that allows a client to authenticate to services without repeatedly sending passwords." ;
+                rdfs:label "KerberosTicket" .
 
 
 ###  https://w3id.org/def/didl#LastName
 :LastName rdf:type owl:NamedIndividual ,
                    :Key ;
           rdfs:comment "This individual represents last name." ;
-          rdfs:label "last name" .
+          rdfs:label "LastName" .
 
 
 ###  https://w3id.org/def/didl#MachineID
 :MachineID rdf:type owl:NamedIndividual ,
-                    :Functional .
+                    :Functional ;
+           rdfs:comment "ID used as functional scope of machines"@en ;
+           rdfs:label "MachineID" .
 
 
 ###  https://w3id.org/def/didl#OTP
 :OTP rdf:type owl:NamedIndividual ,
-              :KnowledgeBasedCredential .
-
-
-###  https://w3id.org/def/didl#Organization
-:Organization rdf:type owl:NamedIndividual ,
-                       :Key ;
-              rdfs:comment "This individual represents organization." ;
-              rdfs:label "organization" .
+              :KnowledgeBasedCredential ;
+     rdfs:comment "A password that is valid for only one login session or transaction, typically generated dynamically and used to enhance security by preventing replay attacks." ;
+     rdfs:label "OTP" .
 
 
 ###  https://w3id.org/def/didl#OrganizationID
 :OrganizationID rdf:type owl:NamedIndividual ,
-                         :Functional .
+                         :Functional ;
+                rdfs:comment "ID used as functional scope of organizations" ,
+                             "OrganizationID" .
 
 
 ###  https://w3id.org/def/didl#Password
 :Password rdf:type owl:NamedIndividual ,
-                   :KnowledgeBasedCredential .
+                   :KnowledgeBasedCredential ;
+          rdfs:comment "This refers to password credentials, always combined with a username" ;
+          rdfs:label "Password" .
 
 
 ###  https://w3id.org/def/didl#ProcessID
 :ProcessID rdf:type owl:NamedIndividual ,
-                    :Functional .
+                    :Functional ;
+           rdfs:comment "ID used as functional scope of a process" ;
+           rdfs:label "ProcessID" .
 
 
 ###  https://w3id.org/def/didl#ProductID
 :ProductID rdf:type owl:NamedIndividual ,
-                    :Functional .
+                    :Functional ;
+           rdfs:comment "ID used as functional scope of a product" ;
+           rdfs:label "ProductID" .
 
 
 ###  https://w3id.org/def/didl#RFC1035
 :RFC1035 rdf:type owl:NamedIndividual ,
                   :IdentifierFormat ;
-         rdfs:comment "This individual represents rfc1035." ;
-         rdfs:label "rfc1035" .
+         rdfs:comment "A foundational standard that specifies the implementation of the Domain Name System (DNS) — detailing message formats, query/response interactions, and resource records used for translating domain names to IP addresses."@en ;
+         rdfs:label "RFC1035" .
 
 
 ###  https://w3id.org/def/didl#RFC5322
 :RFC5322 rdf:type owl:NamedIndividual ,
                   :IdentifierFormat ;
-         rdfs:comment "This individual represents rfc5322." ;
-         rdfs:label "rfc5322" .
+         rdfs:comment "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain" ;
+         rdfs:label "RFC5322" .
 
 
 ###  https://w3id.org/def/didl#RFC7613
 :RFC7613 rdf:type owl:NamedIndividual ,
                   :IdentifierFormat ;
-         rdfs:comment "This individual represents rfc7613." ;
-         rdfs:label "rfc7613" .
+         rdfs:comment "A standard that defines rules for the precise comparison of internationalized usernames and passwords, specifying string preparation, normalization, and case-mapping to avoid ambiguities and spoofing in authentication systems." ;
+         rdfs:label "RFC7613" .
 
 
 ###  https://w3id.org/def/didl#RefreshToken
 :RefreshToken rdf:type owl:NamedIndividual ,
                        :AssertionFormat ;
-              rdfs:comment "This individual represents refresh token." ;
-              rdfs:label "refresh token" .
+              rdfs:comment "A credential issued by an authorization server that allows a client to obtain a new access token without requiring the user to reauthenticate, typically used in long-lived sessions." ;
+              rdfs:label "RefreshToken" .
 
 
 ###  https://w3id.org/def/didl#ResourceID
 :ResourceID rdf:type owl:NamedIndividual ,
-                     :Functional .
+                     :Functional ;
+            rdfs:comment "ID used as functional scope of resources" ;
+            rdfs:label "ResourceID" .
 
 
 ###  https://w3id.org/def/didl#Revoked
 :Revoked rdf:type owl:NamedIndividual ,
                   :Status ;
          rdfs:comment "This individual represents revoked." ;
-         rdfs:label "revoked" .
+         rdfs:label "Revoked" .
 
 
 ###  https://w3id.org/def/didl#Role
 :Role rdf:type owl:NamedIndividual ,
                :Key ;
       rdfs:comment "This individual represents role." ;
-      rdfs:label "role" .
+      rdfs:label "Role" .
 
 
 ###  https://w3id.org/def/didl#SAML2.0Assertion
 :SAML2.0Assertion rdf:type owl:NamedIndividual ,
                            :AssertionFormat ;
-                  rdfs:comment "This individual represents saml2.0assertion." ;
-                  rdfs:label "saml2.0assertion" .
+                  rdfs:comment "A structured XML statement issued by an Identity Provider (IdP) in a SAML 2.0 authentication exchange, containing claims (such as user identity, authentication status, and attributes) that a Service Provider (SP) can trust." ;
+                  rdfs:label "SAML2.0Assertion" .
 
 
 ###  https://w3id.org/def/didl#SessionIndex
 :SessionIndex rdf:type owl:NamedIndividual ,
                        :Key ;
               rdfs:comment "This individual represents session index." ;
-              rdfs:label "session index" .
+              rdfs:label "SessionIndex" .
 
 
 ###  https://w3id.org/def/didl#Signature
 :Signature rdf:type owl:NamedIndividual ,
                     :PossessionBasedCredential ;
-           rdfs:comment "Relates to the key of an attribute's key-value pair"@en .
+           rdfs:comment "A cryptographic proof—typically a digital signature—used to validate the authenticity and integrity of a credential or assertion, often embedded in formats like JWTs, SAML assertions, or verifiable credentials."@en ;
+           rdfs:label "Signature" .
 
 
 ###  https://w3id.org/def/didl#SmartCard
 :SmartCard rdf:type owl:NamedIndividual ,
-                    :PossessionBasedCredential .
+                    :PossessionBasedCredential ;
+           rdfs:comment "A physical card with embedded integrated circuits capable of securely storing and processing data—often used for authentication, digital signatures, and secure credential storage in identity systems." ;
+           rdfs:label "SmartCard" .
 
 
 ###  https://w3id.org/def/didl#URI
 :URI rdf:type owl:NamedIndividual ,
               :IdentifierFormat ;
-     rdfs:comment "This individual represents uri." ;
-     rdfs:label "uri" .
+     rdfs:comment "A standardized string used to uniquely identify a resource on the Internet or a private network, encompassing both URLs and URNs." ;
+     rdfs:label "URI" .
 
 
 ###  https://w3id.org/def/didl#URL
 :URL rdf:type owl:NamedIndividual ,
               :IdentifierFormat ;
-     rdfs:comment "This individual represents url." ;
-     rdfs:label "url" .
+     rdfs:comment "A type of URI that not only identifies a resource but also provides a means of locating it by describing its access mechanism (e.g., https, ftp) and network location." ;
+     rdfs:label "URL" .
 
 
 ###  https://w3id.org/def/didl#URN
 :URN rdf:type owl:NamedIndividual ,
               :IdentifierFormat ;
-     rdfs:comment "This individual represents urn." ;
-     rdfs:label "urn" .
+     rdfs:comment "A type of URI intended to serve as a persistent, location-independent resource identifier, often used to name resources in a globally unique and stable way (e.g., urn:isbn:0451450523)." ;
+     rdfs:label "URN" .
 
 
 ###  https://w3id.org/def/didl#UUIDv1
 :UUIDv1 rdf:type owl:NamedIndividual ,
                  :IdentifierFormat ;
-        rdfs:comment "This individual represents uuidv1." ;
-        rdfs:label "uuidv1" .
+        rdfs:comment "Time-based UUID" ;
+        rdfs:label "UUIDv1" .
 
 
 ###  https://w3id.org/def/didl#UUIDv2
 :UUIDv2 rdf:type owl:NamedIndividual ,
                  :IdentifierFormat ;
-        rdfs:comment "This individual represents uuidv2." ;
-        rdfs:label "uuidv2" .
+        rdfs:comment "Distributed Computing Environment (DCE) Security UUID" ;
+        rdfs:label "UUIDv2" .
 
 
 ###  https://w3id.org/def/didl#UUIDv3
 :UUIDv3 rdf:type owl:NamedIndividual ,
                  :IdentifierFormat ;
-        rdfs:comment "This individual represents uuidv3." ;
-        rdfs:label "uuidv3" .
+        rdfs:comment "Name-based UUIID using MD5" ;
+        rdfs:label "UUIDv3" .
 
 
 ###  https://w3id.org/def/didl#UUIDv4
 :UUIDv4 rdf:type owl:NamedIndividual ,
                  :IdentifierFormat ;
-        rdfs:comment "This individual represents uuidv4." ;
-        rdfs:label "uuidv4" .
+        rdfs:comment "Random UUID with no embedded metadata, offering a high degree of uniqueness" ;
+        rdfs:label "UUIDv4" .
 
 
 ###  https://w3id.org/def/didl#UUIDv5
 :UUIDv5 rdf:type owl:NamedIndividual ,
                  :IdentifierFormat ;
-        rdfs:comment "This individual represents uuidv5." ;
-        rdfs:label "uuidv5" .
+        rdfs:comment "Name-based UUID using SHA-1" ;
+        rdfs:label "UUIDv5" .
 
 
 ###  https://w3id.org/def/didl#UserID
 :UserID rdf:type owl:NamedIndividual ,
-                 :Functional .
+                 :Functional ;
+        rdfs:comment "ID used as functional scope of human users"@en ;
+        rdfs:label "UserID" .
 
 
 ###  https://w3id.org/def/didl#VC
 :VC rdf:type owl:NamedIndividual ,
              :AssertionFormat ;
-    rdfs:comment "This individual represents vc." ;
-    rdfs:label "vc" .
+    rdfs:comment "A tamper-evident digital credential containing claims about a subject, cryptographically signed by an issuer, and compliant with a standard format for decentralized identity ecosystems." ;
+    rdfs:label "VC" .
 
 
 ###  https://w3id.org/def/didl#VP
 :VP rdf:type owl:NamedIndividual ,
              :AssertionFormat ;
-    rdfs:comment "This individual represents vp." ;
-    rdfs:label "vp" .
+    rdfs:comment "A packaged set of one or more Verifiable Credentials shared by a holder with a verifier, optionally including selective disclosure and proofs of authenticity." ;
+    rdfs:label "VP" .
 
 
 ###  https://w3id.org/def/didl#Voice
 :Voice rdf:type owl:NamedIndividual ,
-                :InherenceBasedCredential .
+                :InherenceBasedCredential ;
+       rdfs:comment "A biometric credential format that encodes the unique vocal characteristics of a person—such as pitch, tone, and rhythm—into a digital template for speaker verification or identification." ;
+       rdfs:label "Voice" .
 
 
 ###  https://w3id.org/def/didl#X.509Certificate
 :X.509Certificate rdf:type owl:NamedIndividual ,
                            :AssertionFormat ;
-                  rdfs:comment "This individual represents x.509certificate." ;
-                  rdfs:label "x.509certificate" .
+                  rdfs:comment "A digital certificate that uses the X.509 public key infrastructure (PKI) standard to bind a subject's identity to a public key, and is signed by a trusted Certificate Authority (CA)." ;
+                  rdfs:label "X.509Certificate" .
 
 
 #################################################################
