@@ -90,10 +90,11 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents access token."
+    "@language" : "en",
+    "@value" : "A time-bound token issued by an authorization server that grants a client application permission to access protected resources on behalf of a user or itself, see also RFC 6749"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "access token"
+    "@value" : "AccessToken"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Active",
@@ -106,7 +107,7 @@
     "@value" : "Active status of an identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "active"
+    "@value" : "Active"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#ApplicationToken",
@@ -115,10 +116,11 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents application token."
+    "@language" : "en",
+    "@value" : "A token issued to an application (rather than a user) to authenticate itself when accessing APIs or services, often used in machine-to-machine (M2M) communication."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "application token"
+    "@value" : "ApplicationToken"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Assertion",
@@ -177,16 +179,24 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents bearer token."
+    "@language" : "en",
+    "@value" : "A type of access token that allows access to a resource simply by presenting the token, without requiring additional proof of identity—\"whoever bears it, can use it.\""
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "bearer token"
+    "@value" : "BearerToken"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#CertificateID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Functional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ID used in the functional scope of certificates"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CertificateID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#CompositeIdentifier",
@@ -234,10 +244,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents did."
+    "@language" : "en",
+    "@value" : "A globally unique, cryptographically verifiable identifier that does not require a centralized registry and is designed to enable self-sovereign digital identity, see also W3C DID https://www.w3.org/TR/did-1.0/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "did"
+    "@value" : "DID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#DN",
@@ -246,22 +257,37 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents dn."
+    "@language" : "en",
+    "@value" : "A unique hierarchical identifier used to unambiguously identify an entry in an X.500 directory, composed of attribute–value pairs"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "dn"
+    "@value" : "DN"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#DeviceID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Functional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ID used in the functional scope of devices"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DeviceID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#DocumentID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Functional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ID used in the functional scope of documents"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DocumentID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#E.164",
@@ -270,22 +296,24 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents e.164."
+    "@language" : "en",
+    "@value" : "An ITU-T Recommendation for public telephone systems that defines the format of phone numbers, typically up to 15 digits, including country codes (e.g., +1 650 555 1234)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "e.164"
+    "@value" : "E.164"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/didl#EDI",
+  "@id" : "https://w3id.org/def/didl#EPC",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents edi."
+    "@language" : "en",
+    "@value" : "A unique identifier designed to track individual physical objects in the supply chain using RFID technology, enabling item-level identification beyond traditional barcodes."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "edi"
+    "@value" : "EPC"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#EUI-48",
@@ -294,10 +322,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents eui-48."
+    "@language" : "en",
+    "@value" : "A 48-bit globally unique identifier typically used to identify network interfaces (commonly known as a MAC address), assigned by IEEE to ensure uniqueness across devices."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "eui-48"
+    "@value" : "EUI-48"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#EUI-64",
@@ -306,10 +335,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents eui-64."
+    "@value" : "A 64-bit globally unique identifier used to identify hardware or devices, often derived from a 48-bit MAC address and used in protocols like IPv6 for interface identifiers."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "eui-64"
+    "@value" : "EUI-64"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Email",
@@ -318,16 +347,23 @@
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents email."
+    "@language" : "en",
+    "@value" : "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain, see also RFC 5322 and RFC 6531"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "email"
+    "@value" : "Email"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Fingerprint",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#InherenceBasedCredential"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A biometric credential format that captures and encodes a person's unique fingerprint features—typically minutiae points—into a standardized digital representation for authentication or identification, see also IEC 19704-2"
+  }, {
+    "@value" : "Fingerprint"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#FirstName",
@@ -339,7 +375,7 @@
     "@value" : "This individual represents first name."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "first name"
+    "@value" : "FirstName"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Functional",
@@ -359,10 +395,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents guid."
+    "@value" : "A 128-bit value generated using specific algorithms to ensure uniqueness across time and space, commonly used to identify objects, records, or resources in software systems."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "guid"
+    "@value" : "GUID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#IDToken",
@@ -371,10 +407,10 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents idtoken."
+    "@value" : "A security token issued by an OpenID Connect Provider that contains claims about the authentication of an end-user and possibly their identity attributes, typically formatted as a signed JWT."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "idtoken"
+    "@value" : "IDToken"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#IRI",
@@ -383,10 +419,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents iri."
+    "@value" : "An extended version of a URI that allows the use of Unicode characters from the Universal Character Set (UCS), enabling identifiers in languages beyond ASCII."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "iri"
+    "@value" : "IRI"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Identifier",
@@ -444,7 +480,7 @@
     "@value" : "This individual represents inactive."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "inactive"
+    "@value" : "Inactive"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#InherenceBasedCredential",
@@ -467,10 +503,10 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents json web token."
+    "@value" : "A compact, URL-safe token format that represents claims between parties using a JSON object, digitally signed (and optionally encrypted) for secure transmission and verification."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "json web token"
+    "@value" : "JsonWebToken"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#KerberosTicket",
@@ -479,10 +515,10 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents kerberos ticket."
+    "@value" : "A time-limited, encrypted credential issued by a Kerberos Key Distribution Center (KDC) that allows a client to authenticate to services without repeatedly sending passwords."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "kerberos ticket"
+    "@value" : "KerberosTicket"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Key",
@@ -519,43 +555,55 @@
     "@value" : "This individual represents last name."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "last name"
+    "@value" : "LastName"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#MachineID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Functional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ID used as functional scope of machines"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MachineID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#OTP",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#KnowledgeBasedCredential"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/didl#Organization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Key"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents organization."
+    "@value" : "A password that is valid for only one login session or transaction, typically generated dynamically and used to enhance security by preventing replay attacks."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "organization"
+    "@value" : "OTP"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#OrganizationID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Functional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "ID used as functional scope of organizations"
+  }, {
+    "@value" : "OrganizationID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Password",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#KnowledgeBasedCredential"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This refers to password credentials, always combined with a username"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Password"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#PossessionBasedCredential",
@@ -576,12 +624,24 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Functional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "ID used as functional scope of a process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ProcessID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#ProductID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Functional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "ID used as functional scope of a product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ProductID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Proof",
@@ -607,10 +667,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents rfc1035."
+    "@language" : "en",
+    "@value" : "A foundational standard that specifies the implementation of the Domain Name System (DNS) — detailing message formats, query/response interactions, and resource records used for translating domain names to IP addresses."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "rfc1035"
+    "@value" : "RFC1035"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#RFC5322",
@@ -619,10 +680,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents rfc5322."
+    "@value" : "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "rfc5322"
+    "@value" : "RFC5322"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#RFC7613",
@@ -631,10 +692,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents rfc7613."
+    "@value" : "A standard that defines rules for the precise comparison of internationalized usernames and passwords, specifying string preparation, normalization, and case-mapping to avoid ambiguities and spoofing in authentication systems."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "rfc7613"
+    "@value" : "RFC7613"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#RefreshToken",
@@ -643,16 +704,22 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents refresh token."
+    "@value" : "A credential issued by an authorization server that allows a client to obtain a new access token without requiring the user to reauthenticate, typically used in long-lived sessions."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "refresh token"
+    "@value" : "RefreshToken"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#ResourceID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Functional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "ID used as functional scope of resources"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ResourceID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Revoked",
@@ -664,7 +731,7 @@
     "@value" : "This individual represents revoked."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "revoked"
+    "@value" : "Revoked"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Role",
@@ -676,7 +743,7 @@
     "@value" : "This individual represents role."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "role"
+    "@value" : "Role"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#SAML2.0Assertion",
@@ -685,10 +752,10 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents saml2.0assertion."
+    "@value" : "A structured XML statement issued by an Identity Provider (IdP) in a SAML 2.0 authentication exchange, containing claims (such as user identity, authentication status, and attributes) that a Service Provider (SP) can trust."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "saml2.0assertion"
+    "@value" : "SAML2.0Assertion"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#SessionIndex",
@@ -700,7 +767,7 @@
     "@value" : "This individual represents session index."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "session index"
+    "@value" : "SessionIndex"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Signature",
@@ -710,13 +777,22 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Relates to the key of an attribute's key-value pair"
+    "@value" : "A cryptographic proof—typically a digital signature—used to validate the authenticity and integrity of a credential or assertion, often embedded in formats like JWTs, SAML assertions, or verifiable credentials."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Signature"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#SmartCard",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#PossessionBasedCredential"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A physical card with embedded integrated circuits capable of securely storing and processing data—often used for authentication, digital signatures, and secure credential storage in identity systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SmartCard"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Status",
@@ -736,10 +812,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents uri."
+    "@value" : "A standardized string used to uniquely identify a resource on the Internet or a private network, encompassing both URLs and URNs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "uri"
+    "@value" : "URI"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#URL",
@@ -748,10 +824,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents url."
+    "@value" : "A type of URI that not only identifies a resource but also provides a means of locating it by describing its access mechanism (e.g., https, ftp) and network location."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "url"
+    "@value" : "URL"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#URN",
@@ -760,10 +836,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents urn."
+    "@value" : "A type of URI intended to serve as a persistent, location-independent resource identifier, often used to name resources in a globally unique and stable way (e.g., urn:isbn:0451450523)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "urn"
+    "@value" : "URN"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#UUIDv1",
@@ -772,10 +848,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents uuidv1."
+    "@value" : "Time-based UUID"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "uuidv1"
+    "@value" : "UUIDv1"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#UUIDv2",
@@ -784,10 +860,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents uuidv2."
+    "@value" : "Distributed Computing Environment (DCE) Security UUID"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "uuidv2"
+    "@value" : "UUIDv2"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#UUIDv3",
@@ -796,10 +872,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents uuidv3."
+    "@value" : "Name-based UUIID using MD5"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "uuidv3"
+    "@value" : "UUIDv3"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#UUIDv4",
@@ -808,10 +884,10 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents uuidv4."
+    "@value" : "Random UUID with no embedded metadata, offering a high degree of uniqueness"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "uuidv4"
+    "@value" : "UUIDv4"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#UUIDv5",
@@ -820,16 +896,23 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents uuidv5."
+    "@value" : "Name-based UUID using SHA-1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "uuidv5"
+    "@value" : "UUIDv5"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#UserID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Functional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ID used as functional scope of human users"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "UserID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#VC",
@@ -838,10 +921,10 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents vc."
+    "@value" : "A tamper-evident digital credential containing claims about a subject, cryptographically signed by an issuer, and compliant with a standard format for decentralized identity ecosystems."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "vc"
+    "@value" : "VC"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#VP",
@@ -850,10 +933,10 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents vp."
+    "@value" : "A packaged set of one or more Verifiable Credentials shared by a holder with a verifier, optionally including selective disclosure and proofs of authenticity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "vp"
+    "@value" : "VP"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Value",
@@ -871,6 +954,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#InherenceBasedCredential"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A biometric credential format that encodes the unique vocal characteristics of a person—such as pitch, tone, and rhythm—into a digital template for speaker verification or identification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Voice"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#X.509Certificate",
@@ -879,10 +968,10 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents x.509certificate."
+    "@value" : "A digital certificate that uses the X.509 public key infrastructure (PKI) standard to bind a subject's identity to a public key, and is signed by a trusted Certificate Authority (CA)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "x.509certificate"
+    "@value" : "X.509Certificate"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#assertedAttribute",
