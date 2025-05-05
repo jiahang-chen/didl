@@ -422,6 +422,12 @@ didl:Active rdf:type owl:NamedIndividual ,
             rdfs:label "Active" .
 
 
+###  https://w3id.org/def/didl#Address
+didl:Address rdf:type owl:NamedIndividual ,
+                      didl:Key ;
+             rdfs:label "Address" .
+
+
 ###  https://w3id.org/def/didl#ApplicationToken
 didl:ApplicationToken rdf:type owl:NamedIndividual ,
                                didl:AssertionFormat ;
@@ -434,6 +440,12 @@ didl:BearerToken rdf:type owl:NamedIndividual ,
                           didl:AssertionFormat ;
                  rdfs:comment "A type of access token that allows access to a resource simply by presenting the token, without requiring additional proof of identity—\"whoever bears it, can use it.\""@en ;
                  rdfs:label "BearerToken" .
+
+
+###  https://w3id.org/def/didl#BlockchainAddress
+didl:BlockchainAddress rdf:type owl:NamedIndividual ,
+                                didl:Key ;
+                       rdfs:label "BlockchainAddress" .
 
 
 ###  https://w3id.org/def/didl#CertificateID
@@ -455,6 +467,18 @@ didl:DN rdf:type owl:NamedIndividual ,
                  didl:IdentifierFormat ;
         rdfs:comment "A unique hierarchical identifier used to unambiguously identify an entry in an X.500 directory, composed of attribute–value pairs"@en ;
         rdfs:label "DN" .
+
+
+###  https://w3id.org/def/didl#DateOfBirth
+didl:DateOfBirth rdf:type owl:NamedIndividual ,
+                          didl:Key ;
+                 rdfs:label "DateOfBirth" .
+
+
+###  https://w3id.org/def/didl#Department
+didl:Department rdf:type owl:NamedIndividual ,
+                         didl:Key ;
+                rdfs:label "Department" .
 
 
 ###  https://w3id.org/def/didl#DeviceID
@@ -506,11 +530,17 @@ didl:Email rdf:type owl:NamedIndividual ,
            rdfs:label "Email" .
 
 
+###  https://w3id.org/def/didl#EmployeeIdNumber
+didl:EmployeeIdNumber rdf:type owl:NamedIndividual ,
+                               didl:Key ;
+                      rdfs:label "EmployeeIdNumber" .
+
+
 ###  https://w3id.org/def/didl#Fingerprint
 didl:Fingerprint rdf:type owl:NamedIndividual ,
                           didl:InherenceBasedCredential ;
-                 rdfs:label "A biometric credential format that captures and encodes a person's unique fingerprint features—typically minutiae points—into a standardized digital representation for authentication or identification, see also IEC 19704-2"@en ,
-                            "Fingerprint" .
+                 rdfs:comment "A biometric credential format that captures and encodes a person's unique fingerprint features—typically minutiae points—into a standardized digital representation for authentication or identification, see also IEC 19704-2"@en ;
+                 rdfs:label "Fingerprint" .
 
 
 ###  https://w3id.org/def/didl#FirstName
@@ -525,6 +555,12 @@ didl:GUID rdf:type owl:NamedIndividual ,
                    didl:IdentifierFormat ;
           rdfs:comment "A 128-bit value generated using specific algorithms to ensure uniqueness across time and space, commonly used to identify objects, records, or resources in software systems." ;
           rdfs:label "GUID" .
+
+
+###  https://w3id.org/def/didl#Gender
+didl:Gender rdf:type owl:NamedIndividual ,
+                     didl:Key ;
+            rdfs:label "Gender" .
 
 
 ###  https://w3id.org/def/didl#IDToken
@@ -562,6 +598,12 @@ didl:KerberosTicket rdf:type owl:NamedIndividual ,
                     rdfs:label "KerberosTicket" .
 
 
+###  https://w3id.org/def/didl#LastLogin
+didl:LastLogin rdf:type owl:NamedIndividual ,
+                        didl:Key ;
+               rdfs:label "LastLogin" .
+
+
 ###  https://w3id.org/def/didl#LastName
 didl:LastName rdf:type owl:NamedIndividual ,
                        didl:Key ;
@@ -576,11 +618,23 @@ didl:MachineID rdf:type owl:NamedIndividual ,
                rdfs:label "MachineID" .
 
 
+###  https://w3id.org/def/didl#Nationality
+didl:Nationality rdf:type owl:NamedIndividual ,
+                          didl:Key ;
+                 rdfs:label "Nationality" .
+
+
 ###  https://w3id.org/def/didl#OTP
 didl:OTP rdf:type owl:NamedIndividual ,
                   didl:KnowledgeBasedCredential ;
          rdfs:comment "A password that is valid for only one login session or transaction, typically generated dynamically and used to enhance security by preventing replay attacks." ;
          rdfs:label "OTP" .
+
+
+###  https://w3id.org/def/didl#Organization
+didl:Organization rdf:type owl:NamedIndividual ,
+                           didl:Key ;
+                  rdfs:label "Organization" .
 
 
 ###  https://w3id.org/def/didl#OrganizationID
@@ -592,9 +646,21 @@ didl:OrganizationID rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/def/didl#Password
 didl:Password rdf:type owl:NamedIndividual ,
-                       didl:KnowledgeBasedCredential ;
-              rdfs:comment "This refers to password credentials, always combined with a username" ;
+                       didl:Key ;
               rdfs:label "Password" .
+
+
+###  https://w3id.org/def/didl#PasswordCredential
+didl:PasswordCredential rdf:type owl:NamedIndividual ,
+                                 didl:KnowledgeBasedCredential ;
+                        rdfs:comment "This refers to password credentials, always combined with a username" ;
+                        rdfs:label "PasswordCredential" .
+
+
+###  https://w3id.org/def/didl#PhoneNumber
+didl:PhoneNumber rdf:type owl:NamedIndividual ,
+                          didl:Key ;
+                 rdfs:label "PhoneNumber" .
 
 
 ###  https://w3id.org/def/didl#ProcessID
@@ -609,6 +675,12 @@ didl:ProductID rdf:type owl:NamedIndividual ,
                         didl:Functional ;
                rdfs:comment "ID used as functional scope of a product" ;
                rdfs:label "ProductID" .
+
+
+###  https://w3id.org/def/didl#PublicKey
+didl:PublicKey rdf:type owl:NamedIndividual ,
+                        didl:Key ;
+               rdfs:label "PublicKey" .
 
 
 ###  https://w3id.org/def/didl#RFC1035
@@ -665,6 +737,12 @@ didl:SAML2.0Assertion rdf:type owl:NamedIndividual ,
                                didl:AssertionFormat ;
                       rdfs:comment "A structured XML statement issued by an Identity Provider (IdP) in a SAML 2.0 authentication exchange, containing claims (such as user identity, authentication status, and attributes) that a Service Provider (SP) can trust." ;
                       rdfs:label "SAML2.0Assertion" .
+
+
+###  https://w3id.org/def/didl#SerialNumber
+didl:SerialNumber rdf:type owl:NamedIndividual ,
+                           didl:Key ;
+                  rdfs:label "SerialNumber" .
 
 
 ###  https://w3id.org/def/didl#SessionIndex
@@ -749,6 +827,12 @@ didl:UserID rdf:type owl:NamedIndividual ,
                      didl:Functional ;
             rdfs:comment "ID used as functional scope of human users"@en ;
             rdfs:label "UserID" .
+
+
+###  https://w3id.org/def/didl#Username
+didl:Username rdf:type owl:NamedIndividual ,
+                       didl:Key ;
+              rdfs:label "Username" .
 
 
 ###  https://w3id.org/def/didl#VC
