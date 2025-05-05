@@ -370,6 +370,11 @@
 <https://w3id.org/def/didl#Active> <http://www.w3.org/2000/01/rdf-schema#comment> "Active status of an identity"@en .
 <https://w3id.org/def/didl#Active> <http://www.w3.org/2000/01/rdf-schema#label> "Active" .
 # 
+# https://w3id.org/def/didl#Address
+<https://w3id.org/def/didl#Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#Address> <http://www.w3.org/2000/01/rdf-schema#label> "Address" .
+# 
 # https://w3id.org/def/didl#ApplicationToken
 <https://w3id.org/def/didl#ApplicationToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#ApplicationToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
@@ -381,6 +386,11 @@
 <https://w3id.org/def/didl#BearerToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#BearerToken> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of access token that allows access to a resource simply by presenting the token, without requiring additional proof of identity—\"whoever bears it, can use it.\""@en .
 <https://w3id.org/def/didl#BearerToken> <http://www.w3.org/2000/01/rdf-schema#label> "BearerToken" .
+# 
+# https://w3id.org/def/didl#BlockchainAddress
+<https://w3id.org/def/didl#BlockchainAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#BlockchainAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#BlockchainAddress> <http://www.w3.org/2000/01/rdf-schema#label> "BlockchainAddress" .
 # 
 # https://w3id.org/def/didl#CertificateID
 <https://w3id.org/def/didl#CertificateID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -399,6 +409,16 @@
 <https://w3id.org/def/didl#DN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
 <https://w3id.org/def/didl#DN> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique hierarchical identifier used to unambiguously identify an entry in an X.500 directory, composed of attribute–value pairs"@en .
 <https://w3id.org/def/didl#DN> <http://www.w3.org/2000/01/rdf-schema#label> "DN" .
+# 
+# https://w3id.org/def/didl#DateOfBirth
+<https://w3id.org/def/didl#DateOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#DateOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#DateOfBirth> <http://www.w3.org/2000/01/rdf-schema#label> "DateOfBirth" .
+# 
+# https://w3id.org/def/didl#Department
+<https://w3id.org/def/didl#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department" .
 # 
 # https://w3id.org/def/didl#DeviceID
 <https://w3id.org/def/didl#DeviceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -442,10 +462,15 @@
 <https://w3id.org/def/didl#Email> <http://www.w3.org/2000/01/rdf-schema#comment> "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain, see also RFC 5322 and RFC 6531"@en .
 <https://w3id.org/def/didl#Email> <http://www.w3.org/2000/01/rdf-schema#label> "Email" .
 # 
+# https://w3id.org/def/didl#EmployeeIdNumber
+<https://w3id.org/def/didl#EmployeeIdNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#EmployeeIdNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#EmployeeIdNumber> <http://www.w3.org/2000/01/rdf-schema#label> "EmployeeIdNumber" .
+# 
 # https://w3id.org/def/didl#Fingerprint
 <https://w3id.org/def/didl#Fingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Fingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#InherenceBasedCredential> .
-<https://w3id.org/def/didl#Fingerprint> <http://www.w3.org/2000/01/rdf-schema#label> "A biometric credential format that captures and encodes a person's unique fingerprint features—typically minutiae points—into a standardized digital representation for authentication or identification, see also IEC 19704-2"@en .
+<https://w3id.org/def/didl#Fingerprint> <http://www.w3.org/2000/01/rdf-schema#comment> "A biometric credential format that captures and encodes a person's unique fingerprint features—typically minutiae points—into a standardized digital representation for authentication or identification, see also IEC 19704-2"@en .
 <https://w3id.org/def/didl#Fingerprint> <http://www.w3.org/2000/01/rdf-schema#label> "Fingerprint" .
 # 
 # https://w3id.org/def/didl#FirstName
@@ -459,6 +484,11 @@
 <https://w3id.org/def/didl#GUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
 <https://w3id.org/def/didl#GUID> <http://www.w3.org/2000/01/rdf-schema#comment> "A 128-bit value generated using specific algorithms to ensure uniqueness across time and space, commonly used to identify objects, records, or resources in software systems." .
 <https://w3id.org/def/didl#GUID> <http://www.w3.org/2000/01/rdf-schema#label> "GUID" .
+# 
+# https://w3id.org/def/didl#Gender
+<https://w3id.org/def/didl#Gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#Gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#Gender> <http://www.w3.org/2000/01/rdf-schema#label> "Gender" .
 # 
 # https://w3id.org/def/didl#IDToken
 <https://w3id.org/def/didl#IDToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -490,6 +520,11 @@
 <https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/2000/01/rdf-schema#comment> "A time-limited, encrypted credential issued by a Kerberos Key Distribution Center (KDC) that allows a client to authenticate to services without repeatedly sending passwords." .
 <https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/2000/01/rdf-schema#label> "KerberosTicket" .
 # 
+# https://w3id.org/def/didl#LastLogin
+<https://w3id.org/def/didl#LastLogin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#LastLogin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#LastLogin> <http://www.w3.org/2000/01/rdf-schema#label> "LastLogin" .
+# 
 # https://w3id.org/def/didl#LastName
 <https://w3id.org/def/didl#LastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#LastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
@@ -502,11 +537,21 @@
 <https://w3id.org/def/didl#MachineID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of machines"@en .
 <https://w3id.org/def/didl#MachineID> <http://www.w3.org/2000/01/rdf-schema#label> "MachineID" .
 # 
+# https://w3id.org/def/didl#Nationality
+<https://w3id.org/def/didl#Nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#Nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#Nationality> <http://www.w3.org/2000/01/rdf-schema#label> "Nationality" .
+# 
 # https://w3id.org/def/didl#OTP
 <https://w3id.org/def/didl#OTP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#OTP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#KnowledgeBasedCredential> .
 <https://w3id.org/def/didl#OTP> <http://www.w3.org/2000/01/rdf-schema#comment> "A password that is valid for only one login session or transaction, typically generated dynamically and used to enhance security by preventing replay attacks." .
 <https://w3id.org/def/didl#OTP> <http://www.w3.org/2000/01/rdf-schema#label> "OTP" .
+# 
+# https://w3id.org/def/didl#Organization
+<https://w3id.org/def/didl#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
 # 
 # https://w3id.org/def/didl#OrganizationID
 <https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -516,9 +561,19 @@
 # 
 # https://w3id.org/def/didl#Password
 <https://w3id.org/def/didl#Password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#Password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#KnowledgeBasedCredential> .
-<https://w3id.org/def/didl#Password> <http://www.w3.org/2000/01/rdf-schema#comment> "This refers to password credentials, always combined with a username" .
+<https://w3id.org/def/didl#Password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
 <https://w3id.org/def/didl#Password> <http://www.w3.org/2000/01/rdf-schema#label> "Password" .
+# 
+# https://w3id.org/def/didl#PasswordCredential
+<https://w3id.org/def/didl#PasswordCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#PasswordCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#KnowledgeBasedCredential> .
+<https://w3id.org/def/didl#PasswordCredential> <http://www.w3.org/2000/01/rdf-schema#comment> "This refers to password credentials, always combined with a username" .
+<https://w3id.org/def/didl#PasswordCredential> <http://www.w3.org/2000/01/rdf-schema#label> "PasswordCredential" .
+# 
+# https://w3id.org/def/didl#PhoneNumber
+<https://w3id.org/def/didl#PhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#PhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#PhoneNumber> <http://www.w3.org/2000/01/rdf-schema#label> "PhoneNumber" .
 # 
 # https://w3id.org/def/didl#ProcessID
 <https://w3id.org/def/didl#ProcessID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -531,6 +586,11 @@
 <https://w3id.org/def/didl#ProductID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
 <https://w3id.org/def/didl#ProductID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of a product" .
 <https://w3id.org/def/didl#ProductID> <http://www.w3.org/2000/01/rdf-schema#label> "ProductID" .
+# 
+# https://w3id.org/def/didl#PublicKey
+<https://w3id.org/def/didl#PublicKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#PublicKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#PublicKey> <http://www.w3.org/2000/01/rdf-schema#label> "PublicKey" .
 # 
 # https://w3id.org/def/didl#RFC1035
 <https://w3id.org/def/didl#RFC1035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -579,6 +639,11 @@
 <https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
 <https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured XML statement issued by an Identity Provider (IdP) in a SAML 2.0 authentication exchange, containing claims (such as user identity, authentication status, and attributes) that a Service Provider (SP) can trust." .
 <https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/2000/01/rdf-schema#label> "SAML2.0Assertion" .
+# 
+# https://w3id.org/def/didl#SerialNumber
+<https://w3id.org/def/didl#SerialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#SerialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#SerialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "SerialNumber" .
 # 
 # https://w3id.org/def/didl#SessionIndex
 <https://w3id.org/def/didl#SessionIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -651,6 +716,11 @@
 <https://w3id.org/def/didl#UserID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
 <https://w3id.org/def/didl#UserID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of human users"@en .
 <https://w3id.org/def/didl#UserID> <http://www.w3.org/2000/01/rdf-schema#label> "UserID" .
+# 
+# https://w3id.org/def/didl#Username
+<https://w3id.org/def/didl#Username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#Username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#Username> <http://www.w3.org/2000/01/rdf-schema#label> "Username" .
 # 
 # https://w3id.org/def/didl#VC
 <https://w3id.org/def/didl#VC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
