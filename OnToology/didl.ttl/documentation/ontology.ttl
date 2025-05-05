@@ -408,6 +408,12 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
         rdfs:label "Active" .
 
 
+###  https://w3id.org/def/didl#Address
+:Address rdf:type owl:NamedIndividual ,
+                  :Key ;
+         rdfs:label "Address" .
+
+
 ###  https://w3id.org/def/didl#ApplicationToken
 :ApplicationToken rdf:type owl:NamedIndividual ,
                            :AssertionFormat ;
@@ -420,6 +426,12 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
                       :AssertionFormat ;
              rdfs:comment "A type of access token that allows access to a resource simply by presenting the token, without requiring additional proof of identity—\"whoever bears it, can use it.\""@en ;
              rdfs:label "BearerToken" .
+
+
+###  https://w3id.org/def/didl#BlockchainAddress
+:BlockchainAddress rdf:type owl:NamedIndividual ,
+                            :Key ;
+                   rdfs:label "BlockchainAddress" .
 
 
 ###  https://w3id.org/def/didl#CertificateID
@@ -441,6 +453,18 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
              :IdentifierFormat ;
     rdfs:comment "A unique hierarchical identifier used to unambiguously identify an entry in an X.500 directory, composed of attribute–value pairs"@en ;
     rdfs:label "DN" .
+
+
+###  https://w3id.org/def/didl#DateOfBirth
+:DateOfBirth rdf:type owl:NamedIndividual ,
+                      :Key ;
+             rdfs:label "DateOfBirth" .
+
+
+###  https://w3id.org/def/didl#Department
+:Department rdf:type owl:NamedIndividual ,
+                     :Key ;
+            rdfs:label "Department" .
 
 
 ###  https://w3id.org/def/didl#DeviceID
@@ -492,11 +516,17 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
        rdfs:label "Email" .
 
 
+###  https://w3id.org/def/didl#EmployeeIdNumber
+:EmployeeIdNumber rdf:type owl:NamedIndividual ,
+                           :Key ;
+                  rdfs:label "EmployeeIdNumber" .
+
+
 ###  https://w3id.org/def/didl#Fingerprint
 :Fingerprint rdf:type owl:NamedIndividual ,
                       :InherenceBasedCredential ;
-             rdfs:label "A biometric credential format that captures and encodes a person's unique fingerprint features—typically minutiae points—into a standardized digital representation for authentication or identification, see also IEC 19704-2"@en ,
-                        "Fingerprint" .
+             rdfs:comment "A biometric credential format that captures and encodes a person's unique fingerprint features—typically minutiae points—into a standardized digital representation for authentication or identification, see also IEC 19704-2"@en ;
+             rdfs:label "Fingerprint" .
 
 
 ###  https://w3id.org/def/didl#FirstName
@@ -511,6 +541,12 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
                :IdentifierFormat ;
       rdfs:comment "A 128-bit value generated using specific algorithms to ensure uniqueness across time and space, commonly used to identify objects, records, or resources in software systems." ;
       rdfs:label "GUID" .
+
+
+###  https://w3id.org/def/didl#Gender
+:Gender rdf:type owl:NamedIndividual ,
+                 :Key ;
+        rdfs:label "Gender" .
 
 
 ###  https://w3id.org/def/didl#IDToken
@@ -548,6 +584,12 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
                 rdfs:label "KerberosTicket" .
 
 
+###  https://w3id.org/def/didl#LastLogin
+:LastLogin rdf:type owl:NamedIndividual ,
+                    :Key ;
+           rdfs:label "LastLogin" .
+
+
 ###  https://w3id.org/def/didl#LastName
 :LastName rdf:type owl:NamedIndividual ,
                    :Key ;
@@ -562,11 +604,23 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
            rdfs:label "MachineID" .
 
 
+###  https://w3id.org/def/didl#Nationality
+:Nationality rdf:type owl:NamedIndividual ,
+                      :Key ;
+             rdfs:label "Nationality" .
+
+
 ###  https://w3id.org/def/didl#OTP
 :OTP rdf:type owl:NamedIndividual ,
               :KnowledgeBasedCredential ;
      rdfs:comment "A password that is valid for only one login session or transaction, typically generated dynamically and used to enhance security by preventing replay attacks." ;
      rdfs:label "OTP" .
+
+
+###  https://w3id.org/def/didl#Organization
+:Organization rdf:type owl:NamedIndividual ,
+                       :Key ;
+              rdfs:label "Organization" .
 
 
 ###  https://w3id.org/def/didl#OrganizationID
@@ -578,9 +632,21 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
 ###  https://w3id.org/def/didl#Password
 :Password rdf:type owl:NamedIndividual ,
-                   :KnowledgeBasedCredential ;
-          rdfs:comment "This refers to password credentials, always combined with a username" ;
+                   :Key ;
           rdfs:label "Password" .
+
+
+###  https://w3id.org/def/didl#PasswordCredential
+:PasswordCredential rdf:type owl:NamedIndividual ,
+                             :KnowledgeBasedCredential ;
+                    rdfs:comment "This refers to password credentials, always combined with a username" ;
+                    rdfs:label "PasswordCredential" .
+
+
+###  https://w3id.org/def/didl#PhoneNumber
+:PhoneNumber rdf:type owl:NamedIndividual ,
+                      :Key ;
+             rdfs:label "PhoneNumber" .
 
 
 ###  https://w3id.org/def/didl#ProcessID
@@ -595,6 +661,12 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
                     :Functional ;
            rdfs:comment "ID used as functional scope of a product" ;
            rdfs:label "ProductID" .
+
+
+###  https://w3id.org/def/didl#PublicKey
+:PublicKey rdf:type owl:NamedIndividual ,
+                    :Key ;
+           rdfs:label "PublicKey" .
 
 
 ###  https://w3id.org/def/didl#RFC1035
@@ -651,6 +723,12 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
                            :AssertionFormat ;
                   rdfs:comment "A structured XML statement issued by an Identity Provider (IdP) in a SAML 2.0 authentication exchange, containing claims (such as user identity, authentication status, and attributes) that a Service Provider (SP) can trust." ;
                   rdfs:label "SAML2.0Assertion" .
+
+
+###  https://w3id.org/def/didl#SerialNumber
+:SerialNumber rdf:type owl:NamedIndividual ,
+                       :Key ;
+              rdfs:label "SerialNumber" .
 
 
 ###  https://w3id.org/def/didl#SessionIndex
@@ -735,6 +813,12 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
                  :Functional ;
         rdfs:comment "ID used as functional scope of human users"@en ;
         rdfs:label "UserID" .
+
+
+###  https://w3id.org/def/didl#Username
+:Username rdf:type owl:NamedIndividual ,
+                   :Key ;
+          rdfs:label "Username" .
 
 
 ###  https://w3id.org/def/didl#VC

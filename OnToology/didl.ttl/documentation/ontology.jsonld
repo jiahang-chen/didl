@@ -110,6 +110,15 @@
     "@value" : "Active"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/didl#Address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Address"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/didl#ApplicationToken",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -184,6 +193,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "BearerToken"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#BlockchainAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "BlockchainAddress"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#CertificateID",
@@ -262,6 +280,24 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "DN"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#DateOfBirth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DateOfBirth"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#Department",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Department"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#DeviceID",
@@ -354,15 +390,25 @@
     "@value" : "Email"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/didl#EmployeeIdNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EmployeeIdNumber"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/didl#Fingerprint",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#InherenceBasedCredential"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A biometric credential format that captures and encodes a person's unique fingerprint features—typically minutiae points—into a standardized digital representation for authentication or identification, see also IEC 19704-2"
-  }, {
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Fingerprint"
   } ]
 }, {
@@ -399,6 +445,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "GUID"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#Gender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Gender"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#IDToken",
@@ -546,6 +601,15 @@
     "@id" : "https://w3id.org/def/didl#CredentialFormat"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/didl#LastLogin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "LastLogin"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/didl#LastName",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -571,6 +635,15 @@
     "@value" : "MachineID"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/didl#Nationality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Nationality"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/didl#OTP",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -581,6 +654,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "OTP"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Organization"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#OrganizationID",
@@ -597,13 +679,31 @@
   "@id" : "https://w3id.org/def/didl#Password",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Password"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#PasswordCredential",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#KnowledgeBasedCredential"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This refers to password credentials, always combined with a username"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Password"
+    "@value" : "PasswordCredential"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#PhoneNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PhoneNumber"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#PossessionBasedCredential",
@@ -659,6 +759,15 @@
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://w3id.org/security#Proof"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#PublicKey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PublicKey"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#RFC1035",
@@ -756,6 +865,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "SAML2.0Assertion"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#SerialNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SerialNumber"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#SessionIndex",
@@ -913,6 +1031,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "UserID"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#Username",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Username"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#VC",
