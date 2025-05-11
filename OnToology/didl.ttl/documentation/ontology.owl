@@ -263,8 +263,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/didl#relatesTo">
-        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Assertion"/>
-        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Credential"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/didl#Identity"/>
         <rdfs:range rdf:resource="https://w3id.org/def/didl#Identifier"/>
         <rdfs:comment xml:lang="en">Indicates that an assertion or a credential relates to an identifier of an entity</rdfs:comment>
         <rdfs:label xml:lang="en">relatesTo</rdfs:label>
@@ -1180,6 +1179,17 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
         <rdf:type rdf:resource="https://w3id.org/def/didl#Key"/>
         <rdfs:comment>This individual represents session index.</rdfs:comment>
         <rdfs:label>SessionIndex</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/didl#SessionKey -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/didl#SessionKey">
+        <rdf:type rdf:resource="https://w3id.org/def/didl#PossessionBasedCredential"/>
+        <rdfs:comment xml:lang="en">A session-based key as a credential used for temporary authentication</rdfs:comment>
+        <rdfs:label>SessionKey</rdfs:label>
     </owl:NamedIndividual>
     
 

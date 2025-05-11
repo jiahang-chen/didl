@@ -166,8 +166,7 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
 ###  https://w3id.org/def/didl#relatesTo
 :relatesTo rdf:type owl:ObjectProperty ;
-           rdfs:domain :Assertion ,
-                       :Credential ;
+           rdfs:domain :Identity ;
            rdfs:range :Identifier ;
            rdfs:comment "Indicates that an assertion or a credential relates to an identifier of an entity"@en ;
            rdfs:label "relatesTo"@en .
@@ -736,6 +735,13 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
                        :Key ;
               rdfs:comment "This individual represents session index." ;
               rdfs:label "SessionIndex" .
+
+
+###  https://w3id.org/def/didl#SessionKey
+:SessionKey rdf:type owl:NamedIndividual ,
+                     :PossessionBasedCredential ;
+            rdfs:comment "A session-based key as a credential used for temporary authentication"@en ;
+            rdfs:label "SessionKey" .
 
 
 ###  https://w3id.org/def/didl#Signature

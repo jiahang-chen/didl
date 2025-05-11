@@ -92,7 +92,6 @@ This section provides details for each class and property defined by Digital Ide
             <a href="#https://w3id.org/def/didl#assertedAttribute" title="https://w3id.org/def/didl#assertedAttribute">assertedAttribute</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#assertionFormat" title="https://w3id.org/def/didl#assertionFormat">assertionFormat</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#proof" title="https://w3id.org/def/didl#proof">proof</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#relatesTo" title="https://w3id.org/def/didl#relatesTo">relatesTo</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -233,7 +232,6 @@ This section provides details for each class and property defined by Digital Ide
          <dd>
             <a href="#https://w3id.org/def/didl#credentialAttribute" title="https://w3id.org/def/didl#credentialAttribute">credentialAttribute</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#credentialFormat" title="https://w3id.org/def/didl#credentialFormat">credentialFormat</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#relatesTo" title="https://w3id.org/def/didl#relatesTo">relatesTo</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -403,7 +401,8 @@ This section provides details for each class and property defined by Digital Ide
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#issueDate" title="https://w3id.org/def/didl#issueDate">issueDate</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/def/didl#issuer" title="https://w3id.org/def/didl#issuer">issuer</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/def/didl#profile" title="https://w3id.org/def/didl#profile">profile</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/def/didl#status" title="https://w3id.org/def/didl#status">status</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/def/didl#relatesTo" title="https://w3id.org/def/didl#relatesTo">relatesTo</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#status" title="https://w3id.org/def/didl#status">status</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/def/didl#uid" title="https://w3id.org/def/didl#uid">uid</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/def/didl#validFrom" title="https://w3id.org/def/didl#validFrom">valid from</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/def/didl#validTo" title="https://w3id.org/def/didl#validTo">valid to</a>
@@ -549,7 +548,8 @@ This section provides details for each class and property defined by Digital Ide
          </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#https://w3id.org/def/didl#Signature" title="https://w3id.org/def/didl#Signature">Signature</a>
+            <a href="#https://w3id.org/def/didl#SessionKey" title="https://w3id.org/def/didl#SessionKey">SessionKey</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#Signature" title="https://w3id.org/def/didl#Signature">Signature</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/def/didl#SmartCard" title="https://w3id.org/def/didl#SmartCard">SmartCard</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
@@ -1068,11 +1068,7 @@ This section provides details for each class and property defined by Digital Ide
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://w3id.org/def/didl#Assertion" title="https://w3id.org/def/didl#Assertion">Assertion</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#https://w3id.org/def/didl#Credential" title="https://w3id.org/def/didl#Credential">Credential</a>
+               <a href="#https://w3id.org/def/didl#Identity" title="https://w3id.org/def/didl#Identity">Identity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1532,6 +1528,9 @@ This section provides details for each class and property defined by Digital Ide
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#SessionIndex" title="https://w3id.org/def/didl#SessionIndex">SessionIndex</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/didl#SessionKey" title="https://w3id.org/def/didl#SessionKey">SessionKey</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/didl#Signature" title="https://w3id.org/def/didl#Signature">Signature</a>
@@ -2460,6 +2459,25 @@ This section provides details for each class and property defined by Digital Ide
          <dt>belongs to</dt>
          <dd>
             <a href="#https://w3id.org/def/didl#Key" title="https://w3id.org/def/didl#Key">Key</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/def/didl#SessionKey">
+      <h3>SessionKey<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/didl#SessionKey</p>
+      <div class="comment">
+         <span class="markdown">A session-based key as a credential used for temporary authentication</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/def/didl#PossessionBasedCredential"
+               title="https://w3id.org/def/didl#PossessionBasedCredential">PossesionBasedCredential</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

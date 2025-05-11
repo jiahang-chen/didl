@@ -285,7 +285,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_didl:relatesTo9" source="nid_didl:Assertion" target="nid_didl:Identifier">
+    <edge id="eid_didl:relatesTo9" source="nid_didl:Identity" target="nid_didl:Identifier">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
