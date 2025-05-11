@@ -180,8 +180,7 @@ didl:proof rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/def/didl#relatesTo
 didl:relatesTo rdf:type owl:ObjectProperty ;
-               rdfs:domain didl:Assertion ,
-                           didl:Credential ;
+               rdfs:domain didl:Identity ;
                rdfs:range didl:Identifier ;
                rdfs:comment "Indicates that an assertion or a credential relates to an identifier of an entity"@en ;
                rdfs:label "relatesTo"@en .
@@ -750,6 +749,13 @@ didl:SessionIndex rdf:type owl:NamedIndividual ,
                            didl:Key ;
                   rdfs:comment "This individual represents session index." ;
                   rdfs:label "SessionIndex" .
+
+
+###  https://w3id.org/def/didl#SessionKey
+didl:SessionKey rdf:type owl:NamedIndividual ,
+                         didl:PossessionBasedCredential ;
+                rdfs:comment "A session-based key as a credential used for temporary authentication"@en ;
+                rdfs:label "SessionKey" .
 
 
 ###  https://w3id.org/def/didl#Signature
