@@ -146,8 +146,7 @@
 # 
 # https://w3id.org/def/didl#relatesTo
 <https://w3id.org/def/didl#relatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/didl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Assertion> .
-<https://w3id.org/def/didl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Credential> .
+<https://w3id.org/def/didl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identity> .
 <https://w3id.org/def/didl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Identifier> .
 <https://w3id.org/def/didl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an assertion or a credential relates to an identifier of an entity"@en .
 <https://w3id.org/def/didl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#label> "relatesTo"@en .
@@ -650,6 +649,12 @@
 <https://w3id.org/def/didl#SessionIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
 <https://w3id.org/def/didl#SessionIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents session index." .
 <https://w3id.org/def/didl#SessionIndex> <http://www.w3.org/2000/01/rdf-schema#label> "SessionIndex" .
+# 
+# https://w3id.org/def/didl#SessionKey
+<https://w3id.org/def/didl#SessionKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#SessionKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#PossessionBasedCredential> .
+<https://w3id.org/def/didl#SessionKey> <http://www.w3.org/2000/01/rdf-schema#comment> "A session-based key as a credential used for temporary authentication"@en .
+<https://w3id.org/def/didl#SessionKey> <http://www.w3.org/2000/01/rdf-schema#label> "SessionKey" .
 # 
 # https://w3id.org/def/didl#Signature
 <https://w3id.org/def/didl#Signature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
