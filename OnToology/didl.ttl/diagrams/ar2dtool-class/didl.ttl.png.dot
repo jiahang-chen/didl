@@ -11,7 +11,7 @@ node [shape = rectangle, color="orange"]; "didl:Attribute" "didl:CompositeIdenti
 	"didl:Identity" -> "didl:Status" [ label = "didl:status" ];
 	"didl:Attribute" -> "didl:Value" [ label = "didl:value" ];
 	"didl:IdentitySubject" -> "didl:Identifier" [ label = "didl:identifier" ];
-	"didl:Assertion" -> "didl:Identifier" [ label = "didl:relatesTo" ];
+	"didl:Identity" -> "didl:Identifier" [ label = "didl:relatesTo" ];
 	"didl:Attribute" -> "didl:Key" [ label = "didl:key" ];
 	"didl:CompositeIdentifier" -> "xsd:string" [ label = "didl:namespace" ];
 	"didl:Identity" -> "xsd:anyURI" [ label = "didl:profile" ];

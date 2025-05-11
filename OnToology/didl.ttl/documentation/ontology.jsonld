@@ -888,6 +888,19 @@
     "@value" : "SessionIndex"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/didl#SessionKey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#PossessionBasedCredential"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A session-based key as a credential used for temporary authentication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SessionKey"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/didl#Signature",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1411,9 +1424,7 @@
     "@value" : "Indicates that an assertion or a credential relates to an identifier of an entity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/didl#Assertion"
-  }, {
-    "@id" : "https://w3id.org/def/didl#Credential"
+    "@id" : "https://w3id.org/def/didl#Identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
