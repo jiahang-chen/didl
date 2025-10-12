@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "didl:KnowledgeBasedCredential" "didl:CompositeIdentifier" "didl:PossessionBasedCredential" "didl:Assertion" "didl:Identity" "didl:Credential" "didl:CredentialFormat" "didl:InherenceBasedCredential" "didl:Proof" "didl:AssertionCollection" "didl:Identifier" ; /*classes style*/
+node [shape = rectangle, color="black"]; "didl:KnowledgeBasedCredential" "didl:CompositeIdentifier" "didl:PossessionBasedCredential" "didl:Assertion" "didl:Identity" "didl:CredentialFormat" "didl:Credential" "didl:InherenceBasedCredential" "didl:AssertionCollection" "didl:Identifier" ; /*classes style*/
 	"didl:KnowledgeBasedCredential" -> "didl:CredentialFormat" [ label = "rdfs:subClassOf" ];
 	"didl:InherenceBasedCredential" -> "didl:CredentialFormat" [ label = "rdfs:subClassOf" ];
 	"didl:PossessionBasedCredential" -> "didl:CredentialFormat" [ label = "rdfs:subClassOf" ];
@@ -10,6 +10,5 @@ node [shape = rectangle, color="black"]; "didl:KnowledgeBasedCredential" "didl:C
 	"didl:CompositeIdentifier" -> "didl:Identifier" [ label = "rdfs:subClassOf" ];
 	"didl:Assertion" -> "didl:Identity" [ label = "rdfs:subClassOf" ];
 	"didl:AssertionCollection" -> "didl:Assertion" [ label = "rdfs:subClassOf" ];
-	"didl:Proof" -> "didl:Credential" [ label = "rdfs:subClassOf" ];
 
 }

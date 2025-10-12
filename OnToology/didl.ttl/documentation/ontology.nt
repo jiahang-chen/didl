@@ -44,6 +44,19 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/def/didl#identifier> .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "This property represents an unambiguous reference to a resource within a given context."@en .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
+# 
+# https://w3id.org/def/didl#accessCapability
+<https://w3id.org/def/didl#accessCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/didl#accessCapability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#accessCapability> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#AccessCapability> .
+<https://w3id.org/def/didl#accessCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an assertion has associated access capabilities"@en .
+<https://w3id.org/def/didl#accessCapability> <http://www.w3.org/2000/01/rdf-schema#label> "accessCapability"@en .
+# 
 # https://w3id.org/def/didl#assertedAttribute
 <https://w3id.org/def/didl#assertedAttribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#assertedAttribute> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Assertion> .
@@ -55,8 +68,8 @@
 <https://w3id.org/def/didl#assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#assertion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#IdentitySubject> .
 <https://w3id.org/def/didl#assertion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Assertion> .
-<https://w3id.org/def/didl#assertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identity subject (i.e., entity) has assertion(s)" .
-<https://w3id.org/def/didl#assertion> <http://www.w3.org/2000/01/rdf-schema#label> "assertion" .
+<https://w3id.org/def/didl#assertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identity subject (i.e., entity) has assertion(s)"@en .
+<https://w3id.org/def/didl#assertion> <http://www.w3.org/2000/01/rdf-schema#label> "assertion"@en .
 # 
 # https://w3id.org/def/didl#assertionFormat
 <https://w3id.org/def/didl#assertionFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -67,25 +80,25 @@
 # 
 # https://w3id.org/def/didl#controlledBy
 <https://w3id.org/def/didl#controlledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/didl#controlledBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/didl#controlls> .
+<https://w3id.org/def/didl#controlledBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/didl#controls> .
 <https://w3id.org/def/didl#controlledBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identity> .
 <https://w3id.org/def/didl#controlledBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#IdentitySubject> .
 <https://w3id.org/def/didl#controlledBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an identity is controlled by an identity subject (i.e., entity)"@en .
 <https://w3id.org/def/didl#controlledBy> <http://www.w3.org/2000/01/rdf-schema#label> "controlledBy"@en .
 # 
-# https://w3id.org/def/didl#controlls
-<https://w3id.org/def/didl#controlls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/didl#controlls> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#IdentitySubject> .
-<https://w3id.org/def/didl#controlls> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Identity> .
-<https://w3id.org/def/didl#controlls> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identity subject (i.e., entity) controlls an identity"@en .
-<https://w3id.org/def/didl#controlls> <http://www.w3.org/2000/01/rdf-schema#label> "controlls" .
+# https://w3id.org/def/didl#controls
+<https://w3id.org/def/didl#controls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/didl#controls> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#IdentitySubject> .
+<https://w3id.org/def/didl#controls> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Identity> .
+<https://w3id.org/def/didl#controls> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identity subject (i.e., entity) controlls an identity"@en .
+<https://w3id.org/def/didl#controls> <http://www.w3.org/2000/01/rdf-schema#label> "controls"@en .
 # 
 # https://w3id.org/def/didl#credential
 <https://w3id.org/def/didl#credential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#credential> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#IdentitySubject> .
 <https://w3id.org/def/didl#credential> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Credential> .
 <https://w3id.org/def/didl#credential> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identity subject (i.e., entity) has credential(s)."@en .
-<https://w3id.org/def/didl#credential> <http://www.w3.org/2000/01/rdf-schema#label> "credential" .
+<https://w3id.org/def/didl#credential> <http://www.w3.org/2000/01/rdf-schema#label> "credential"@en .
 # 
 # https://w3id.org/def/didl#credentialAttribute
 <https://w3id.org/def/didl#credentialAttribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -105,48 +118,63 @@
 # https://w3id.org/def/didl#functional
 <https://w3id.org/def/didl#functional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#functional> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identifier> .
-<https://w3id.org/def/didl#functional> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Functional> .
+<https://w3id.org/def/didl#functional> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#IdentifierFunctional> .
 <https://w3id.org/def/didl#functional> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identifier has its own application-specific use"@en .
-<https://w3id.org/def/didl#functional> <http://www.w3.org/2000/01/rdf-schema#label> "functional" .
+<https://w3id.org/def/didl#functional> <http://www.w3.org/2000/01/rdf-schema#label> "functional"@en .
 # 
 # https://w3id.org/def/didl#identifier
 <https://w3id.org/def/didl#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#IdentitySubject> .
 <https://w3id.org/def/didl#identifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Identifier> .
 <https://w3id.org/def/didl#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identity subject (i.e., entity) has identifier(s)"@en .
-<https://w3id.org/def/didl#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+<https://w3id.org/def/didl#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
 # 
 # https://w3id.org/def/didl#identifierFormat
 <https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identifier> .
 <https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#IdentifierFormat> .
 <https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an identifier has its specific format"@en .
-<https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/2000/01/rdf-schema#label> "format" .
+<https://w3id.org/def/didl#identifierFormat> <http://www.w3.org/2000/01/rdf-schema#label> "identifierFormat"@en .
+# 
+# https://w3id.org/def/didl#includesAssertion
+<https://w3id.org/def/didl#includesAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/didl#includesAssertion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#AssertionCollection> .
+<https://w3id.org/def/didl#includesAssertion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Assertion> .
+<https://w3id.org/def/didl#includesAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the constituent assertion of an assertion collection"@en .
+<https://w3id.org/def/didl#includesAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "includesAssertion"@en .
+# 
+# https://w3id.org/def/didl#includesIdentifier
+<https://w3id.org/def/didl#includesIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/didl#includesIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#CompositeIdentifier> .
+<https://w3id.org/def/didl#includesIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Identifier> .
+<https://w3id.org/def/didl#includesIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the local part of a composite identifier"@en .
+<https://w3id.org/def/didl#includesIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "includesIdentifier"@en .
 # 
 # https://w3id.org/def/didl#key
 <https://w3id.org/def/didl#key> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#key> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Attribute> .
 <https://w3id.org/def/didl#key> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Key> .
 <https://w3id.org/def/didl#key> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a key of an attribute"@en .
-<https://w3id.org/def/didl#key> <http://www.w3.org/2000/01/rdf-schema#label> "key" .
-# 
-# https://w3id.org/def/didl#localPart
-<https://w3id.org/def/didl#localPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/didl#localPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#CompositeIdentifier> .
-<https://w3id.org/def/didl#localPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Identifier> .
-<https://w3id.org/def/didl#localPart> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the local part of a composite identifier"@en .
-<https://w3id.org/def/didl#localPart> <http://www.w3.org/2000/01/rdf-schema#label> "localPart" .
+<https://w3id.org/def/didl#key> <http://www.w3.org/2000/01/rdf-schema#label> "key"@en .
 # 
 # https://w3id.org/def/didl#proof
 <https://w3id.org/def/didl#proof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#proof> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Assertion> .
-<https://w3id.org/def/didl#proof> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Proof> .
-<https://w3id.org/def/didl#proof> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a proof of an assertion, which ensures the integrity and authenticy of the assertion"@en .
-<https://w3id.org/def/didl#proof> <http://www.w3.org/2000/01/rdf-schema#label> "proof" .
+<https://w3id.org/def/didl#proof> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/security#Proof> .
+<https://w3id.org/def/didl#proof> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a proof of an assertion, which ensures the integrity and authenticity of the assertion"@en .
+<https://w3id.org/def/didl#proof> <http://www.w3.org/2000/01/rdf-schema#label> "proof"@en .
 # 
 # https://w3id.org/def/didl#relatesTo
 <https://w3id.org/def/didl#relatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/didl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identity> .
+<https://w3id.org/def/didl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/didl#Credential> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/didl#Assertion> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/didl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Identifier> .
 <https://w3id.org/def/didl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an assertion or a credential relates to an identifier of an entity"@en .
 <https://w3id.org/def/didl#relatesTo> <http://www.w3.org/2000/01/rdf-schema#label> "relatesTo"@en .
@@ -156,21 +184,28 @@
 <https://w3id.org/def/didl#status> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identity> .
 <https://w3id.org/def/didl#status> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Status> .
 <https://w3id.org/def/didl#status> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the current status of an identity"@en .
-<https://w3id.org/def/didl#status> <http://www.w3.org/2000/01/rdf-schema#label> "status" .
+<https://w3id.org/def/didl#status> <http://www.w3.org/2000/01/rdf-schema#label> "status"@en .
 # 
-# https://w3id.org/def/didl#subAssertion
-<https://w3id.org/def/didl#subAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/didl#subAssertion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#AssertionCollection> .
-<https://w3id.org/def/didl#subAssertion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Assertion> .
-<https://w3id.org/def/didl#subAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the consisting assertion of an assertion collection"@en .
-<https://w3id.org/def/didl#subAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "sub assertion" .
+# https://w3id.org/def/didl#supportedAction
+<https://w3id.org/def/didl#supportedAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/didl#supportedAction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#AccessCapability> .
+<https://w3id.org/def/didl#supportedAction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/dedl#Action> .
+<https://w3id.org/def/didl#supportedAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the actions supported by an access capability"@en .
+<https://w3id.org/def/didl#supportedAction> <http://www.w3.org/2000/01/rdf-schema#label> "supportedAction"@en .
+# 
+# https://w3id.org/def/didl#supportedResource
+<https://w3id.org/def/didl#supportedResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/didl#supportedResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#AccessCapability> .
+<https://w3id.org/def/didl#supportedResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/dedl#Resource> .
+<https://w3id.org/def/didl#supportedResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the resources supported by an access capability"@en .
+<https://w3id.org/def/didl#supportedResource> <http://www.w3.org/2000/01/rdf-schema#label> "supportedResource"@en .
 # 
 # https://w3id.org/def/didl#value
 <https://w3id.org/def/didl#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/didl#value> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Attribute> .
 <https://w3id.org/def/didl#value> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/didl#Value> .
 <https://w3id.org/def/didl#value> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a value of an attribute"@en .
-<https://w3id.org/def/didl#value> <http://www.w3.org/2000/01/rdf-schema#label> "value" .
+<https://w3id.org/def/didl#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
 # 
 # 
 # 
@@ -183,53 +218,84 @@
 # 
 # https://w3id.org/def/didl#issueDate
 <https://w3id.org/def/didl#issueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/didl#issueDate> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3.org/ns/credentials#issuanceDate> .
 <https://w3id.org/def/didl#issueDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identity> .
 <https://w3id.org/def/didl#issueDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/def/didl#issueDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the issue date of an identity."@en .
+<https://w3id.org/def/didl#issueDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the issue date of an identity"@en .
 <https://w3id.org/def/didl#issueDate> <http://www.w3.org/2000/01/rdf-schema#label> "issueDate"@en .
 # 
 # https://w3id.org/def/didl#issuer
 <https://w3id.org/def/didl#issuer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/didl#issuer> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3.org/ns/credentials#issuer> .
 <https://w3id.org/def/didl#issuer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identity> .
 <https://w3id.org/def/didl#issuer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/def/didl#issuer> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an issuer of an identity"@en .
+<https://w3id.org/def/didl#issuer> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the issuer of an identity"@en .
 <https://w3id.org/def/didl#issuer> <http://www.w3.org/2000/01/rdf-schema#label> "issuer"@en .
 # 
 # https://w3id.org/def/didl#namespace
 <https://w3id.org/def/didl#namespace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/didl#namespace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#CompositeIdentifier> .
+<https://w3id.org/def/didl#namespace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identifier> .
 <https://w3id.org/def/didl#namespace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/didl#namespace> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a namespace of a composite identifier, representing its functional scope"@en .
-<https://w3id.org/def/didl#namespace> <http://www.w3.org/2000/01/rdf-schema#label> "namespace" .
+<https://w3id.org/def/didl#namespace> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a namespace of an identifier, representing its definition scope"@en .
+<https://w3id.org/def/didl#namespace> <http://www.w3.org/2000/01/rdf-schema#label> "namespace"@en .
 # 
 # https://w3id.org/def/didl#profile
 <https://w3id.org/def/didl#profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/didl#profile> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <https://w3id.org/def/didl#profile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identity> .
 <https://w3id.org/def/didl#profile> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/def/didl#profile> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an identifier of an DIDL Profile that the identity conforms to."@en .
-<https://w3id.org/def/didl#profile> <http://www.w3.org/2000/01/rdf-schema#label> "profile" .
+<https://w3id.org/def/didl#profile> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an identifier of a DIDL Profile that the identity conforms to"@en .
+<https://w3id.org/def/didl#profile> <http://www.w3.org/2000/01/rdf-schema#label> "profile"@en .
+# 
+# https://w3id.org/def/didl#renewableTill
+<https://w3id.org/def/didl#renewableTill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/didl#renewableTill> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identity> .
+<https://w3id.org/def/didl#renewableTill> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/def/didl#renewableTill> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the identity can be renewed until the given time"@en .
+<https://w3id.org/def/didl#renewableTill> <http://www.w3.org/2000/01/rdf-schema#label> "renewableTill"@en .
 # 
 # https://w3id.org/def/didl#uid
 <https://w3id.org/def/didl#uid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/didl#uid> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identity> .
 <https://w3id.org/def/didl#uid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/def/didl#uid> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the id of an identity itself, e.g., an ID of a verifiable credential"@en .
-<https://w3id.org/def/didl#uid> <http://www.w3.org/2000/01/rdf-schema#label> "uid" .
+<https://w3id.org/def/didl#uid> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the unique identifier of an identity itself, e.g., an ID of a verifiable credential"@en .
+<https://w3id.org/def/didl#uid> <http://www.w3.org/2000/01/rdf-schema#label> "uid"@en .
 # 
 # https://w3id.org/def/didl#validFrom
 <https://w3id.org/def/didl#validFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/didl#validFrom> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3.org/ns/credentials#validFrom> .
 <https://w3id.org/def/didl#validFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identity> .
 <https://w3id.org/def/didl#validFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/def/didl#validFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the data from which an identity is valid"@en .
-<https://w3id.org/def/didl#validFrom> <http://www.w3.org/2000/01/rdf-schema#label> "valid from" .
+<https://w3id.org/def/didl#validFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the date from which an identity is valid"@en .
+<https://w3id.org/def/didl#validFrom> <http://www.w3.org/2000/01/rdf-schema#label> "validFrom"@en .
 # 
 # https://w3id.org/def/didl#validTo
 <https://w3id.org/def/didl#validTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/didl#validTo> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3.org/ns/credentials#validTo> .
 <https://w3id.org/def/didl#validTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/didl#Identity> .
 <https://w3id.org/def/didl#validTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/def/didl#validTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the data until which an identity is valid"@en .
-<https://w3id.org/def/didl#validTo> <http://www.w3.org/2000/01/rdf-schema#label> "valid to" .
+<https://w3id.org/def/didl#validTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the date until which an identity is valid"@en .
+<https://w3id.org/def/didl#validTo> <http://www.w3.org/2000/01/rdf-schema#label> "validTo"@en .
+# 
+# https://www.w3.org/ns/credentials#issuanceDate
+<https://www.w3.org/ns/credentials#issuanceDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3.org/ns/credentials#issuanceDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time when the credential was issued"@en .
+<https://www.w3.org/ns/credentials#issuanceDate> <http://www.w3.org/2000/01/rdf-schema#label> "issuanceDate"@en .
+# 
+# https://www.w3.org/ns/credentials#issuer
+<https://www.w3.org/ns/credentials#issuer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3.org/ns/credentials#issuer> <http://www.w3.org/2000/01/rdf-schema#comment> "The entity that issued the credential"@en .
+<https://www.w3.org/ns/credentials#issuer> <http://www.w3.org/2000/01/rdf-schema#label> "issuer"@en .
+# 
+# https://www.w3.org/ns/credentials#validFrom
+<https://www.w3.org/ns/credentials#validFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3.org/ns/credentials#validFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time from which the credential is valid"@en .
+<https://www.w3.org/ns/credentials#validFrom> <http://www.w3.org/2000/01/rdf-schema#label> "validFrom"@en .
+# 
+# https://www.w3.org/ns/credentials#validTo
+<https://www.w3.org/ns/credentials#validTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3.org/ns/credentials#validTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time until which the credential is valid"@en .
+<https://www.w3.org/ns/credentials#validTo> <http://www.w3.org/2000/01/rdf-schema#label> "validTo"@en .
 # 
 # 
 # 
@@ -240,9 +306,32 @@
 # #################################################################
 # 
 # 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/def/didl#IdentitySubject> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent is an entity that can perform actions"@en .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
+# 
+# https://w3id.org/def/dedl#Action
+<https://w3id.org/def/dedl#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/dedl#Action> <http://www.w3.org/2000/01/rdf-schema#comment> "An action that can be performed on a resource"@en .
+<https://w3id.org/def/dedl#Action> <http://www.w3.org/2000/01/rdf-schema#label> "Action"@en .
+# 
+# https://w3id.org/def/dedl#Resource
+<https://w3id.org/def/dedl#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/dedl#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource that can be accessed or manipulated"@en .
+<https://w3id.org/def/dedl#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource"@en .
+# 
+# https://w3id.org/def/didl#AccessCapability
+<https://w3id.org/def/didl#AccessCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/didl#AccessCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "A capability that defines what actions can be performed on which resources"@en .
+<https://w3id.org/def/didl#AccessCapability> <http://www.w3.org/2000/01/rdf-schema#label> "AccessCapability"@en .
+# 
 # https://w3id.org/def/didl#Assertion
 <https://w3id.org/def/didl#Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/didl#Assertion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#Identity> .
+<https://w3id.org/def/didl#Assertion> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/didl#Credential> .
+<https://w3id.org/def/didl#Assertion> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/didl#Identifier> .
 <https://w3id.org/def/didl#Assertion> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of identity-related attributes asserted by a trusted party"@en .
 <https://w3id.org/def/didl#Assertion> <http://www.w3.org/2000/01/rdf-schema#label> "Assertion"@en .
 # 
@@ -254,6 +343,8 @@
 # 
 # https://w3id.org/def/didl#AssertionFormat
 <https://w3id.org/def/didl#AssertionFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/didl#AssertionFormat> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/didl#CredentialFormat> .
+<https://w3id.org/def/didl#AssertionFormat> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/didl#IdentifierFormat> .
 <https://w3id.org/def/didl#AssertionFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "An assertion format that is specified by a standard or a protocol"@en .
 <https://w3id.org/def/didl#AssertionFormat> <http://www.w3.org/2000/01/rdf-schema#label> "AssertionFormat"@en .
 # 
@@ -265,35 +356,37 @@
 # https://w3id.org/def/didl#CompositeIdentifier
 <https://w3id.org/def/didl#CompositeIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/didl#CompositeIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#Identifier> .
-<https://w3id.org/def/didl#CompositeIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A composite identifier that a hierarchical structure"@en .
+<https://w3id.org/def/didl#CompositeIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A composite identifier that has a hierarchical structure"@en .
 <https://w3id.org/def/didl#CompositeIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "CompositeIdentifier"@en .
 # 
 # https://w3id.org/def/didl#Credential
 <https://w3id.org/def/didl#Credential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/didl#Credential> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#Identity> .
+<https://w3id.org/def/didl#Credential> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/didl#Identifier> .
 <https://w3id.org/def/didl#Credential> <http://www.w3.org/2000/01/rdf-schema#comment> "A proof of an entity's identity"@en .
 <https://w3id.org/def/didl#Credential> <http://www.w3.org/2000/01/rdf-schema#label> "Credential"@en .
 # 
 # https://w3id.org/def/didl#CredentialFormat
 <https://w3id.org/def/didl#CredentialFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/didl#CredentialFormat> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/didl#IdentifierFormat> .
 <https://w3id.org/def/didl#CredentialFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "A credential format that is specified by a standard or a protocol"@en .
 <https://w3id.org/def/didl#CredentialFormat> <http://www.w3.org/2000/01/rdf-schema#label> "CredentialFormat"@en .
-# 
-# https://w3id.org/def/didl#Functional
-<https://w3id.org/def/didl#Functional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/didl#Functional> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept that represents the use of  an identifier"@en .
-<https://w3id.org/def/didl#Functional> <http://www.w3.org/2000/01/rdf-schema#label> "Functional"@en .
 # 
 # https://w3id.org/def/didl#Identifier
 <https://w3id.org/def/didl#Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/didl#Identifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#Identity> .
 <https://w3id.org/def/didl#Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique reference to distinguish one entity from another"@en .
-<https://w3id.org/def/didl#Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier" .
+<https://w3id.org/def/didl#Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier"@en .
 # 
 # https://w3id.org/def/didl#IdentifierFormat
 <https://w3id.org/def/didl#IdentifierFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/didl#IdentifierFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier format that is specified by a standard or a protocol"@en .
 <https://w3id.org/def/didl#IdentifierFormat> <http://www.w3.org/2000/01/rdf-schema#label> "IdentifierFormat"@en .
+# 
+# https://w3id.org/def/didl#IdentifierFunctional
+<https://w3id.org/def/didl#IdentifierFunctional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/didl#IdentifierFunctional> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept that represents the use of  an identifier"@en .
+<https://w3id.org/def/didl#IdentifierFunctional> <http://www.w3.org/2000/01/rdf-schema#label> "IdentifierFunctional"@en .
 # 
 # https://w3id.org/def/didl#Identity
 <https://w3id.org/def/didl#Identity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -308,7 +401,7 @@
 # https://w3id.org/def/didl#InherenceBasedCredential
 <https://w3id.org/def/didl#InherenceBasedCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/didl#InherenceBasedCredential> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#CredentialFormat> .
-<https://w3id.org/def/didl#InherenceBasedCredential> <http://www.w3.org/2000/01/rdf-schema#comment> "A credential that indicates something you inherently has"@en .
+<https://w3id.org/def/didl#InherenceBasedCredential> <http://www.w3.org/2000/01/rdf-schema#comment> "A credential that indicates something you inherently have"@en .
 <https://w3id.org/def/didl#InherenceBasedCredential> <http://www.w3.org/2000/01/rdf-schema#label> "InherenceBasedCredential"@en .
 # 
 # https://w3id.org/def/didl#Key
@@ -325,15 +418,8 @@
 # https://w3id.org/def/didl#PossessionBasedCredential
 <https://w3id.org/def/didl#PossessionBasedCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/didl#PossessionBasedCredential> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#CredentialFormat> .
-<https://w3id.org/def/didl#PossessionBasedCredential> <http://www.w3.org/2000/01/rdf-schema#comment> "A credential that indicates something you has"@en .
-<https://w3id.org/def/didl#PossessionBasedCredential> <http://www.w3.org/2000/01/rdf-schema#label> "PossesionBasedCredential"@en .
-# 
-# https://w3id.org/def/didl#Proof
-<https://w3id.org/def/didl#Proof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/didl#Proof> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/security#Proof> .
-<https://w3id.org/def/didl#Proof> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/didl#Credential> .
-<https://w3id.org/def/didl#Proof> <http://www.w3.org/2000/01/rdf-schema#comment> "A possession-based credential that uses cryptograhpic method"@en .
-<https://w3id.org/def/didl#Proof> <http://www.w3.org/2000/01/rdf-schema#label> "Proof"@en .
+<https://w3id.org/def/didl#PossessionBasedCredential> <http://www.w3.org/2000/01/rdf-schema#comment> "A credential that indicates something you have"@en .
+<https://w3id.org/def/didl#PossessionBasedCredential> <http://www.w3.org/2000/01/rdf-schema#label> "PossessionBasedCredential"@en .
 # 
 # https://w3id.org/def/didl#Status
 <https://w3id.org/def/didl#Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -347,6 +433,12 @@
 # 
 # https://w3id.org/security#Proof
 <https://w3id.org/security#Proof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://www.w3.org/ns/credentials#VerifiableCredential
+<https://www.w3.org/ns/credentials#VerifiableCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://www.w3.org/ns/credentials#VerifiablePresentation
+<https://www.w3.org/ns/credentials#VerifiablePresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # 
 # 
@@ -372,7 +464,8 @@
 # https://w3id.org/def/didl#Address
 <https://w3id.org/def/didl#Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#Address> <http://www.w3.org/2000/01/rdf-schema#label> "Address" .
+<https://w3id.org/def/didl#Address> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing an address attribute"@en .
+<https://w3id.org/def/didl#Address> <http://www.w3.org/2000/01/rdf-schema#label> "Address"@en .
 # 
 # https://w3id.org/def/didl#ApplicationToken
 <https://w3id.org/def/didl#ApplicationToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -386,16 +479,17 @@
 <https://w3id.org/def/didl#BearerToken> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of access token that allows access to a resource simply by presenting the token, without requiring additional proof of identity—\"whoever bears it, can use it.\""@en .
 <https://w3id.org/def/didl#BearerToken> <http://www.w3.org/2000/01/rdf-schema#label> "BearerToken" .
 # 
-# https://w3id.org/def/didl#BlockchainAddress
-<https://w3id.org/def/didl#BlockchainAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#BlockchainAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#BlockchainAddress> <http://www.w3.org/2000/01/rdf-schema#label> "BlockchainAddress" .
-# 
 # https://w3id.org/def/didl#CertificateID
 <https://w3id.org/def/didl#CertificateID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#CertificateID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
+<https://w3id.org/def/didl#CertificateID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFunctional> .
 <https://w3id.org/def/didl#CertificateID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used in the functional scope of certificates"@en .
 <https://w3id.org/def/didl#CertificateID> <http://www.w3.org/2000/01/rdf-schema#label> "CertificateID" .
+# 
+# https://w3id.org/def/didl#ContractID
+<https://w3id.org/def/didl#ContractID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#ContractID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFunctional> .
+<https://w3id.org/def/didl#ContractID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used in the functional scope of contracts"@en .
+<https://w3id.org/def/didl#ContractID> <http://www.w3.org/2000/01/rdf-schema#label> "ContractID"@en .
 # 
 # https://w3id.org/def/didl#DID
 <https://w3id.org/def/didl#DID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -412,22 +506,24 @@
 # https://w3id.org/def/didl#DateOfBirth
 <https://w3id.org/def/didl#DateOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#DateOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#DateOfBirth> <http://www.w3.org/2000/01/rdf-schema#label> "DateOfBirth" .
+<https://w3id.org/def/didl#DateOfBirth> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a date of birth attribute"@en .
+<https://w3id.org/def/didl#DateOfBirth> <http://www.w3.org/2000/01/rdf-schema#label> "DateOfBirth"@en .
 # 
 # https://w3id.org/def/didl#Department
 <https://w3id.org/def/didl#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department" .
+<https://w3id.org/def/didl#Department> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a department attribute"@en .
+<https://w3id.org/def/didl#Department> <http://www.w3.org/2000/01/rdf-schema#label> "Department"@en .
 # 
 # https://w3id.org/def/didl#DeviceID
 <https://w3id.org/def/didl#DeviceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#DeviceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
+<https://w3id.org/def/didl#DeviceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFunctional> .
 <https://w3id.org/def/didl#DeviceID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used in the functional scope of devices"@en .
 <https://w3id.org/def/didl#DeviceID> <http://www.w3.org/2000/01/rdf-schema#label> "DeviceID" .
 # 
 # https://w3id.org/def/didl#DocumentID
 <https://w3id.org/def/didl#DocumentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#DocumentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
+<https://w3id.org/def/didl#DocumentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFunctional> .
 <https://w3id.org/def/didl#DocumentID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used in the functional scope of documents"@en .
 <https://w3id.org/def/didl#DocumentID> <http://www.w3.org/2000/01/rdf-schema#label> "DocumentID" .
 # 
@@ -452,19 +548,14 @@
 # https://w3id.org/def/didl#EUI-64
 <https://w3id.org/def/didl#EUI-64> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#EUI-64> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#EUI-64> <http://www.w3.org/2000/01/rdf-schema#comment> "A 64-bit globally unique identifier used to identify hardware or devices, often derived from a 48-bit MAC address and used in protocols like IPv6 for interface identifiers." .
-<https://w3id.org/def/didl#EUI-64> <http://www.w3.org/2000/01/rdf-schema#label> "EUI-64" .
+<https://w3id.org/def/didl#EUI-64> <http://www.w3.org/2000/01/rdf-schema#comment> "A 64-bit globally unique identifier used to identify hardware or devices, often derived from a 48-bit MAC address and used in protocols like IPv6 for interface identifiers."@en .
+<https://w3id.org/def/didl#EUI-64> <http://www.w3.org/2000/01/rdf-schema#label> "EUI-64"@en .
 # 
 # https://w3id.org/def/didl#Email
 <https://w3id.org/def/didl#Email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
 <https://w3id.org/def/didl#Email> <http://www.w3.org/2000/01/rdf-schema#comment> "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain, see also RFC 5322 and RFC 6531"@en .
 <https://w3id.org/def/didl#Email> <http://www.w3.org/2000/01/rdf-schema#label> "Email" .
-# 
-# https://w3id.org/def/didl#EmployeeIdNumber
-<https://w3id.org/def/didl#EmployeeIdNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#EmployeeIdNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#EmployeeIdNumber> <http://www.w3.org/2000/01/rdf-schema#label> "EmployeeIdNumber" .
 # 
 # https://w3id.org/def/didl#Fingerprint
 <https://w3id.org/def/didl#Fingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -475,121 +566,134 @@
 # https://w3id.org/def/didl#FirstName
 <https://w3id.org/def/didl#FirstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#FirstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#FirstName> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents first name." .
-<https://w3id.org/def/didl#FirstName> <http://www.w3.org/2000/01/rdf-schema#label> "FirstName" .
+<https://w3id.org/def/didl#FirstName> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a first name attribute"@en .
+<https://w3id.org/def/didl#FirstName> <http://www.w3.org/2000/01/rdf-schema#label> "FirstName"@en .
 # 
 # https://w3id.org/def/didl#GUID
 <https://w3id.org/def/didl#GUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#GUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#GUID> <http://www.w3.org/2000/01/rdf-schema#comment> "A 128-bit value generated using specific algorithms to ensure uniqueness across time and space, commonly used to identify objects, records, or resources in software systems." .
-<https://w3id.org/def/didl#GUID> <http://www.w3.org/2000/01/rdf-schema#label> "GUID" .
+<https://w3id.org/def/didl#GUID> <http://www.w3.org/2000/01/rdf-schema#comment> "A 128-bit value generated using specific algorithms to ensure uniqueness across time and space, commonly used to identify objects, records, or resources in software systems."@en .
+<https://w3id.org/def/didl#GUID> <http://www.w3.org/2000/01/rdf-schema#label> "GUID"@en .
 # 
 # https://w3id.org/def/didl#Gender
 <https://w3id.org/def/didl#Gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#Gender> <http://www.w3.org/2000/01/rdf-schema#label> "Gender" .
+<https://w3id.org/def/didl#Gender> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a gender attribute"@en .
+<https://w3id.org/def/didl#Gender> <http://www.w3.org/2000/01/rdf-schema#label> "Gender"@en .
 # 
 # https://w3id.org/def/didl#IDToken
 <https://w3id.org/def/didl#IDToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#IDToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
-<https://w3id.org/def/didl#IDToken> <http://www.w3.org/2000/01/rdf-schema#comment> "A security token issued by an OpenID Connect Provider that contains claims about the authentication of an end-user and possibly their identity attributes, typically formatted as a signed JWT." .
-<https://w3id.org/def/didl#IDToken> <http://www.w3.org/2000/01/rdf-schema#label> "IDToken" .
+<https://w3id.org/def/didl#IDToken> <http://www.w3.org/2000/01/rdf-schema#comment> "A security token issued by an OpenID Connect Provider that contains claims about the authentication of an end-user and possibly their identity attributes, typically formatted as a signed JWT."@en .
+<https://w3id.org/def/didl#IDToken> <http://www.w3.org/2000/01/rdf-schema#label> "IDToken"@en .
 # 
 # https://w3id.org/def/didl#IRI
 <https://w3id.org/def/didl#IRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#IRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#IRI> <http://www.w3.org/2000/01/rdf-schema#comment> "An extended version of a URI that allows the use of Unicode characters from the Universal Character Set (UCS), enabling identifiers in languages beyond ASCII." .
-<https://w3id.org/def/didl#IRI> <http://www.w3.org/2000/01/rdf-schema#label> "IRI" .
+<https://w3id.org/def/didl#IRI> <http://www.w3.org/2000/01/rdf-schema#comment> "An extended version of a URI that allows the use of Unicode characters from the Universal Character Set (UCS), enabling identifiers in languages beyond ASCII."@en .
+<https://w3id.org/def/didl#IRI> <http://www.w3.org/2000/01/rdf-schema#label> "IRI"@en .
+# 
+# https://w3id.org/def/didl#InContract
+<https://w3id.org/def/didl#InContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#InContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#InContract> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing an in-contract attribute"@en .
+<https://w3id.org/def/didl#InContract> <http://www.w3.org/2000/01/rdf-schema#label> "InContract"@en .
+# 
+# https://w3id.org/def/didl#InOrganization
+<https://w3id.org/def/didl#InOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#InOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#InOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing an in-organization attribute"@en .
+<https://w3id.org/def/didl#InOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "InOrganization"@en .
 # 
 # https://w3id.org/def/didl#Inactive
 <https://w3id.org/def/didl#Inactive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Inactive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Status> .
-<https://w3id.org/def/didl#Inactive> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents inactive." .
-<https://w3id.org/def/didl#Inactive> <http://www.w3.org/2000/01/rdf-schema#label> "Inactive" .
+<https://w3id.org/def/didl#Inactive> <http://www.w3.org/2000/01/rdf-schema#comment> "Inactive status of an identity"@en .
+<https://w3id.org/def/didl#Inactive> <http://www.w3.org/2000/01/rdf-schema#label> "Inactive"@en .
 # 
 # https://w3id.org/def/didl#JsonWebToken
 <https://w3id.org/def/didl#JsonWebToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#JsonWebToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
-<https://w3id.org/def/didl#JsonWebToken> <http://www.w3.org/2000/01/rdf-schema#comment> "A compact, URL-safe token format that represents claims between parties using a JSON object, digitally signed (and optionally encrypted) for secure transmission and verification." .
-<https://w3id.org/def/didl#JsonWebToken> <http://www.w3.org/2000/01/rdf-schema#label> "JsonWebToken" .
+<https://w3id.org/def/didl#JsonWebToken> <http://www.w3.org/2000/01/rdf-schema#comment> "A compact, URL-safe token format that represents claims between parties using a JSON object, digitally signed (and optionally encrypted) for secure transmission and verification."@en .
+<https://w3id.org/def/didl#JsonWebToken> <http://www.w3.org/2000/01/rdf-schema#label> "JsonWebToken"@en .
 # 
 # https://w3id.org/def/didl#KerberosTicket
 <https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
-<https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/2000/01/rdf-schema#comment> "A time-limited, encrypted credential issued by a Kerberos Key Distribution Center (KDC) that allows a client to authenticate to services without repeatedly sending passwords." .
-<https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/2000/01/rdf-schema#label> "KerberosTicket" .
+<https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/2000/01/rdf-schema#comment> "A time-limited, encrypted credential issued by a Kerberos Key Distribution Center (KDC) that allows a client to authenticate to services without repeatedly sending passwords."@en .
+<https://w3id.org/def/didl#KerberosTicket> <http://www.w3.org/2000/01/rdf-schema#label> "KerberosTicket"@en .
 # 
 # https://w3id.org/def/didl#LastLogin
 <https://w3id.org/def/didl#LastLogin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#LastLogin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#LastLogin> <http://www.w3.org/2000/01/rdf-schema#label> "LastLogin" .
+<https://w3id.org/def/didl#LastLogin> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a last login attribute"@en .
+<https://w3id.org/def/didl#LastLogin> <http://www.w3.org/2000/01/rdf-schema#label> "LastLogin"@en .
 # 
 # https://w3id.org/def/didl#LastName
 <https://w3id.org/def/didl#LastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#LastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#LastName> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents last name." .
-<https://w3id.org/def/didl#LastName> <http://www.w3.org/2000/01/rdf-schema#label> "LastName" .
+<https://w3id.org/def/didl#LastName> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a last name attribute"@en .
+<https://w3id.org/def/didl#LastName> <http://www.w3.org/2000/01/rdf-schema#label> "LastName"@en .
 # 
 # https://w3id.org/def/didl#MachineID
 <https://w3id.org/def/didl#MachineID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#MachineID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
+<https://w3id.org/def/didl#MachineID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFunctional> .
 <https://w3id.org/def/didl#MachineID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of machines"@en .
-<https://w3id.org/def/didl#MachineID> <http://www.w3.org/2000/01/rdf-schema#label> "MachineID" .
+<https://w3id.org/def/didl#MachineID> <http://www.w3.org/2000/01/rdf-schema#label> "MachineID"@en .
 # 
 # https://w3id.org/def/didl#Nationality
 <https://w3id.org/def/didl#Nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#Nationality> <http://www.w3.org/2000/01/rdf-schema#label> "Nationality" .
+<https://w3id.org/def/didl#Nationality> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a nationality attribute"@en .
+<https://w3id.org/def/didl#Nationality> <http://www.w3.org/2000/01/rdf-schema#label> "Nationality"@en .
 # 
-# https://w3id.org/def/didl#OTP
-<https://w3id.org/def/didl#OTP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#OTP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#KnowledgeBasedCredential> .
-<https://w3id.org/def/didl#OTP> <http://www.w3.org/2000/01/rdf-schema#comment> "A password that is valid for only one login session or transaction, typically generated dynamically and used to enhance security by preventing replay attacks." .
-<https://w3id.org/def/didl#OTP> <http://www.w3.org/2000/01/rdf-schema#label> "OTP" .
-# 
-# https://w3id.org/def/didl#Organization
-<https://w3id.org/def/didl#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+# https://w3id.org/def/didl#OneTimePassword
+<https://w3id.org/def/didl#OneTimePassword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#OneTimePassword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#KnowledgeBasedCredential> .
+<https://w3id.org/def/didl#OneTimePassword> <http://www.w3.org/2000/01/rdf-schema#comment> "A password that is valid for only one login session or transaction, typically generated dynamically and used to enhance security by preventing replay attacks."@en .
+<https://w3id.org/def/didl#OneTimePassword> <http://www.w3.org/2000/01/rdf-schema#label> "OneTimePassword"@en .
 # 
 # https://w3id.org/def/didl#OrganizationID
 <https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
-<https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of organizations" .
-<https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/2000/01/rdf-schema#comment> "OrganizationID" .
+<https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFunctional> .
+<https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of organizations"@en .
+<https://w3id.org/def/didl#OrganizationID> <http://www.w3.org/2000/01/rdf-schema#label> "OrganizationID"@en .
 # 
 # https://w3id.org/def/didl#Password
 <https://w3id.org/def/didl#Password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#Password> <http://www.w3.org/2000/01/rdf-schema#label> "Password" .
+<https://w3id.org/def/didl#Password> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a password attribute"@en .
+<https://w3id.org/def/didl#Password> <http://www.w3.org/2000/01/rdf-schema#label> "Password"@en .
 # 
 # https://w3id.org/def/didl#PasswordCredential
 <https://w3id.org/def/didl#PasswordCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#PasswordCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#KnowledgeBasedCredential> .
-<https://w3id.org/def/didl#PasswordCredential> <http://www.w3.org/2000/01/rdf-schema#comment> "This refers to password credentials, always combined with a username" .
-<https://w3id.org/def/didl#PasswordCredential> <http://www.w3.org/2000/01/rdf-schema#label> "PasswordCredential" .
+<https://w3id.org/def/didl#PasswordCredential> <http://www.w3.org/2000/01/rdf-schema#comment> "This refers to password credentials, always combined with a username"@en .
+<https://w3id.org/def/didl#PasswordCredential> <http://www.w3.org/2000/01/rdf-schema#label> "PasswordCredential"@en .
 # 
 # https://w3id.org/def/didl#PhoneNumber
 <https://w3id.org/def/didl#PhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#PhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#PhoneNumber> <http://www.w3.org/2000/01/rdf-schema#label> "PhoneNumber" .
+<https://w3id.org/def/didl#PhoneNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a phone number attribute"@en .
+<https://w3id.org/def/didl#PhoneNumber> <http://www.w3.org/2000/01/rdf-schema#label> "PhoneNumber"@en .
 # 
 # https://w3id.org/def/didl#ProcessID
 <https://w3id.org/def/didl#ProcessID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#ProcessID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
-<https://w3id.org/def/didl#ProcessID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of a process" .
-<https://w3id.org/def/didl#ProcessID> <http://www.w3.org/2000/01/rdf-schema#label> "ProcessID" .
+<https://w3id.org/def/didl#ProcessID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFunctional> .
+<https://w3id.org/def/didl#ProcessID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of a process"@en .
+<https://w3id.org/def/didl#ProcessID> <http://www.w3.org/2000/01/rdf-schema#label> "ProcessID"@en .
 # 
 # https://w3id.org/def/didl#ProductID
 <https://w3id.org/def/didl#ProductID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#ProductID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
-<https://w3id.org/def/didl#ProductID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of a product" .
-<https://w3id.org/def/didl#ProductID> <http://www.w3.org/2000/01/rdf-schema#label> "ProductID" .
+<https://w3id.org/def/didl#ProductID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFunctional> .
+<https://w3id.org/def/didl#ProductID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of a product"@en .
+<https://w3id.org/def/didl#ProductID> <http://www.w3.org/2000/01/rdf-schema#label> "ProductID"@en .
 # 
 # https://w3id.org/def/didl#PublicKey
 <https://w3id.org/def/didl#PublicKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#PublicKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#PublicKey> <http://www.w3.org/2000/01/rdf-schema#label> "PublicKey" .
+<https://w3id.org/def/didl#PublicKey> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a public key attribute"@en .
+<https://w3id.org/def/didl#PublicKey> <http://www.w3.org/2000/01/rdf-schema#label> "PublicKey"@en .
 # 
 # https://w3id.org/def/didl#RFC1035
 <https://w3id.org/def/didl#RFC1035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -600,156 +704,160 @@
 # https://w3id.org/def/didl#RFC5322
 <https://w3id.org/def/didl#RFC5322> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#RFC5322> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#RFC5322> <http://www.w3.org/2000/01/rdf-schema#comment> "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain" .
-<https://w3id.org/def/didl#RFC5322> <http://www.w3.org/2000/01/rdf-schema#label> "RFC5322" .
+<https://w3id.org/def/didl#RFC5322> <http://www.w3.org/2000/01/rdf-schema#comment> "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain"@en .
+<https://w3id.org/def/didl#RFC5322> <http://www.w3.org/2000/01/rdf-schema#label> "RFC5322"@en .
 # 
 # https://w3id.org/def/didl#RFC7613
 <https://w3id.org/def/didl#RFC7613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#RFC7613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#RFC7613> <http://www.w3.org/2000/01/rdf-schema#comment> "A standard that defines rules for the precise comparison of internationalized usernames and passwords, specifying string preparation, normalization, and case-mapping to avoid ambiguities and spoofing in authentication systems." .
-<https://w3id.org/def/didl#RFC7613> <http://www.w3.org/2000/01/rdf-schema#label> "RFC7613" .
+<https://w3id.org/def/didl#RFC7613> <http://www.w3.org/2000/01/rdf-schema#comment> "A standard that defines rules for the precise comparison of internationalized usernames and passwords, specifying string preparation, normalization, and case-mapping to avoid ambiguities and spoofing in authentication systems."@en .
+<https://w3id.org/def/didl#RFC7613> <http://www.w3.org/2000/01/rdf-schema#label> "RFC7613"@en .
 # 
 # https://w3id.org/def/didl#RefreshToken
 <https://w3id.org/def/didl#RefreshToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#RefreshToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
-<https://w3id.org/def/didl#RefreshToken> <http://www.w3.org/2000/01/rdf-schema#comment> "A credential issued by an authorization server that allows a client to obtain a new access token without requiring the user to reauthenticate, typically used in long-lived sessions." .
-<https://w3id.org/def/didl#RefreshToken> <http://www.w3.org/2000/01/rdf-schema#label> "RefreshToken" .
+<https://w3id.org/def/didl#RefreshToken> <http://www.w3.org/2000/01/rdf-schema#comment> "A credential issued by an authorization server that allows a client to obtain a new access token without requiring the user to reauthenticate, typically used in long-lived sessions."@en .
+<https://w3id.org/def/didl#RefreshToken> <http://www.w3.org/2000/01/rdf-schema#label> "RefreshToken"@en .
 # 
 # https://w3id.org/def/didl#ResourceID
 <https://w3id.org/def/didl#ResourceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#ResourceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
-<https://w3id.org/def/didl#ResourceID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of resources" .
-<https://w3id.org/def/didl#ResourceID> <http://www.w3.org/2000/01/rdf-schema#label> "ResourceID" .
+<https://w3id.org/def/didl#ResourceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFunctional> .
+<https://w3id.org/def/didl#ResourceID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of resources"@en .
+<https://w3id.org/def/didl#ResourceID> <http://www.w3.org/2000/01/rdf-schema#label> "ResourceID"@en .
 # 
 # https://w3id.org/def/didl#Revoked
 <https://w3id.org/def/didl#Revoked> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Revoked> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Status> .
-<https://w3id.org/def/didl#Revoked> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents revoked." .
-<https://w3id.org/def/didl#Revoked> <http://www.w3.org/2000/01/rdf-schema#label> "Revoked" .
+<https://w3id.org/def/didl#Revoked> <http://www.w3.org/2000/01/rdf-schema#comment> "Revoked status of an identity"@en .
+<https://w3id.org/def/didl#Revoked> <http://www.w3.org/2000/01/rdf-schema#label> "Revoked"@en .
 # 
 # https://w3id.org/def/didl#Role
 <https://w3id.org/def/didl#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents role." .
-<https://w3id.org/def/didl#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role" .
+<https://w3id.org/def/didl#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a role attribute"@en .
+<https://w3id.org/def/didl#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role"@en .
 # 
 # https://w3id.org/def/didl#SAML2.0Assertion
 <https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
-<https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured XML statement issued by an Identity Provider (IdP) in a SAML 2.0 authentication exchange, containing claims (such as user identity, authentication status, and attributes) that a Service Provider (SP) can trust." .
-<https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/2000/01/rdf-schema#label> "SAML2.0Assertion" .
+<https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured XML statement issued by an Identity Provider (IdP) in a SAML 2.0 authentication exchange, containing claims (such as user identity, authentication status, and attributes) that a Service Provider (SP) can trust."@en .
+<https://w3id.org/def/didl#SAML2.0Assertion> <http://www.w3.org/2000/01/rdf-schema#label> "SAML2.0Assertion"@en .
 # 
 # https://w3id.org/def/didl#SerialNumber
 <https://w3id.org/def/didl#SerialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#SerialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#SerialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "SerialNumber" .
-# 
-# https://w3id.org/def/didl#SessionIndex
-<https://w3id.org/def/didl#SessionIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#SessionIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#SessionIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "This individual represents session index." .
-<https://w3id.org/def/didl#SessionIndex> <http://www.w3.org/2000/01/rdf-schema#label> "SessionIndex" .
+<https://w3id.org/def/didl#SerialNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a serial number attribute"@en .
+<https://w3id.org/def/didl#SerialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "SerialNumber"@en .
 # 
 # https://w3id.org/def/didl#SessionKey
 <https://w3id.org/def/didl#SessionKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#SessionKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#PossessionBasedCredential> .
 <https://w3id.org/def/didl#SessionKey> <http://www.w3.org/2000/01/rdf-schema#comment> "A session-based key as a credential used for temporary authentication"@en .
-<https://w3id.org/def/didl#SessionKey> <http://www.w3.org/2000/01/rdf-schema#label> "SessionKey" .
+<https://w3id.org/def/didl#SessionKey> <http://www.w3.org/2000/01/rdf-schema#label> "SessionKey"@en .
 # 
 # https://w3id.org/def/didl#Signature
 <https://w3id.org/def/didl#Signature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Signature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#PossessionBasedCredential> .
 <https://w3id.org/def/didl#Signature> <http://www.w3.org/2000/01/rdf-schema#comment> "A cryptographic proof—typically a digital signature—used to validate the authenticity and integrity of a credential or assertion, often embedded in formats like JWTs, SAML assertions, or verifiable credentials."@en .
-<https://w3id.org/def/didl#Signature> <http://www.w3.org/2000/01/rdf-schema#label> "Signature" .
+<https://w3id.org/def/didl#Signature> <http://www.w3.org/2000/01/rdf-schema#label> "Signature"@en .
 # 
 # https://w3id.org/def/didl#SmartCard
 <https://w3id.org/def/didl#SmartCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#SmartCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#PossessionBasedCredential> .
-<https://w3id.org/def/didl#SmartCard> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical card with embedded integrated circuits capable of securely storing and processing data—often used for authentication, digital signatures, and secure credential storage in identity systems." .
-<https://w3id.org/def/didl#SmartCard> <http://www.w3.org/2000/01/rdf-schema#label> "SmartCard" .
+<https://w3id.org/def/didl#SmartCard> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical card with embedded integrated circuits capable of securely storing and processing data—often used for authentication, digital signatures, and secure credential storage in identity systems."@en .
+<https://w3id.org/def/didl#SmartCard> <http://www.w3.org/2000/01/rdf-schema#label> "SmartCard"@en .
+# 
+# https://w3id.org/def/didl#Title
+<https://w3id.org/def/didl#Title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#Title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
+<https://w3id.org/def/didl#Title> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a title attribute"@en .
+<https://w3id.org/def/didl#Title> <http://www.w3.org/2000/01/rdf-schema#label> "Title"@en .
 # 
 # https://w3id.org/def/didl#URI
 <https://w3id.org/def/didl#URI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#URI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#URI> <http://www.w3.org/2000/01/rdf-schema#comment> "A standardized string used to uniquely identify a resource on the Internet or a private network, encompassing both URLs and URNs." .
-<https://w3id.org/def/didl#URI> <http://www.w3.org/2000/01/rdf-schema#label> "URI" .
+<https://w3id.org/def/didl#URI> <http://www.w3.org/2000/01/rdf-schema#comment> "A standardized string used to uniquely identify a resource on the Internet or a private network, encompassing both URLs and URNs."@en .
+<https://w3id.org/def/didl#URI> <http://www.w3.org/2000/01/rdf-schema#label> "URI"@en .
 # 
 # https://w3id.org/def/didl#URL
 <https://w3id.org/def/didl#URL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#URL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#URL> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of URI that not only identifies a resource but also provides a means of locating it by describing its access mechanism (e.g., https, ftp) and network location." .
-<https://w3id.org/def/didl#URL> <http://www.w3.org/2000/01/rdf-schema#label> "URL" .
+<https://w3id.org/def/didl#URL> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of URI that not only identifies a resource but also provides a means of locating it by describing its access mechanism (e.g., https, ftp) and network location."@en .
+<https://w3id.org/def/didl#URL> <http://www.w3.org/2000/01/rdf-schema#label> "URL"@en .
 # 
 # https://w3id.org/def/didl#URN
 <https://w3id.org/def/didl#URN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#URN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#URN> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of URI intended to serve as a persistent, location-independent resource identifier, often used to name resources in a globally unique and stable way (e.g., urn:isbn:0451450523)." .
-<https://w3id.org/def/didl#URN> <http://www.w3.org/2000/01/rdf-schema#label> "URN" .
+<https://w3id.org/def/didl#URN> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of URI intended to serve as a persistent, location-independent resource identifier, often used to name resources in a globally unique and stable way (e.g., urn:isbn:0451450523)."@en .
+<https://w3id.org/def/didl#URN> <http://www.w3.org/2000/01/rdf-schema#label> "URN"@en .
 # 
 # https://w3id.org/def/didl#UUIDv1
 <https://w3id.org/def/didl#UUIDv1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#UUIDv1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#UUIDv1> <http://www.w3.org/2000/01/rdf-schema#comment> "Time-based UUID" .
-<https://w3id.org/def/didl#UUIDv1> <http://www.w3.org/2000/01/rdf-schema#label> "UUIDv1" .
+<https://w3id.org/def/didl#UUIDv1> <http://www.w3.org/2000/01/rdf-schema#comment> "Time-based UUID"@en .
+<https://w3id.org/def/didl#UUIDv1> <http://www.w3.org/2000/01/rdf-schema#label> "UUIDv1"@en .
 # 
 # https://w3id.org/def/didl#UUIDv2
 <https://w3id.org/def/didl#UUIDv2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#UUIDv2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#UUIDv2> <http://www.w3.org/2000/01/rdf-schema#comment> "Distributed Computing Environment (DCE) Security UUID" .
-<https://w3id.org/def/didl#UUIDv2> <http://www.w3.org/2000/01/rdf-schema#label> "UUIDv2" .
+<https://w3id.org/def/didl#UUIDv2> <http://www.w3.org/2000/01/rdf-schema#comment> "Distributed Computing Environment (DCE) Security UUID"@en .
+<https://w3id.org/def/didl#UUIDv2> <http://www.w3.org/2000/01/rdf-schema#label> "UUIDv2"@en .
 # 
 # https://w3id.org/def/didl#UUIDv3
 <https://w3id.org/def/didl#UUIDv3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#UUIDv3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#UUIDv3> <http://www.w3.org/2000/01/rdf-schema#comment> "Name-based UUIID using MD5" .
-<https://w3id.org/def/didl#UUIDv3> <http://www.w3.org/2000/01/rdf-schema#label> "UUIDv3" .
+<https://w3id.org/def/didl#UUIDv3> <http://www.w3.org/2000/01/rdf-schema#comment> "Name-based UUID using MD5"@en .
+<https://w3id.org/def/didl#UUIDv3> <http://www.w3.org/2000/01/rdf-schema#label> "UUIDv3"@en .
 # 
 # https://w3id.org/def/didl#UUIDv4
 <https://w3id.org/def/didl#UUIDv4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#UUIDv4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#UUIDv4> <http://www.w3.org/2000/01/rdf-schema#comment> "Random UUID with no embedded metadata, offering a high degree of uniqueness" .
-<https://w3id.org/def/didl#UUIDv4> <http://www.w3.org/2000/01/rdf-schema#label> "UUIDv4" .
+<https://w3id.org/def/didl#UUIDv4> <http://www.w3.org/2000/01/rdf-schema#comment> "Random UUID with no embedded metadata, offering a high degree of uniqueness"@en .
+<https://w3id.org/def/didl#UUIDv4> <http://www.w3.org/2000/01/rdf-schema#label> "UUIDv4"@en .
 # 
 # https://w3id.org/def/didl#UUIDv5
 <https://w3id.org/def/didl#UUIDv5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#UUIDv5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFormat> .
-<https://w3id.org/def/didl#UUIDv5> <http://www.w3.org/2000/01/rdf-schema#comment> "Name-based UUID using SHA-1" .
-<https://w3id.org/def/didl#UUIDv5> <http://www.w3.org/2000/01/rdf-schema#label> "UUIDv5" .
+<https://w3id.org/def/didl#UUIDv5> <http://www.w3.org/2000/01/rdf-schema#comment> "Name-based UUID using SHA-1"@en .
+<https://w3id.org/def/didl#UUIDv5> <http://www.w3.org/2000/01/rdf-schema#label> "UUIDv5"@en .
 # 
 # https://w3id.org/def/didl#UserID
 <https://w3id.org/def/didl#UserID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#UserID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Functional> .
+<https://w3id.org/def/didl#UserID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#IdentifierFunctional> .
 <https://w3id.org/def/didl#UserID> <http://www.w3.org/2000/01/rdf-schema#comment> "ID used as functional scope of human users"@en .
-<https://w3id.org/def/didl#UserID> <http://www.w3.org/2000/01/rdf-schema#label> "UserID" .
+<https://w3id.org/def/didl#UserID> <http://www.w3.org/2000/01/rdf-schema#label> "UserID"@en .
 # 
 # https://w3id.org/def/didl#Username
 <https://w3id.org/def/didl#Username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#Key> .
-<https://w3id.org/def/didl#Username> <http://www.w3.org/2000/01/rdf-schema#label> "Username" .
+<https://w3id.org/def/didl#Username> <http://www.w3.org/2000/01/rdf-schema#comment> "A key representing a username attribute"@en .
+<https://w3id.org/def/didl#Username> <http://www.w3.org/2000/01/rdf-schema#label> "Username"@en .
 # 
-# https://w3id.org/def/didl#VC
-<https://w3id.org/def/didl#VC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#VC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
-<https://w3id.org/def/didl#VC> <http://www.w3.org/2000/01/rdf-schema#comment> "A tamper-evident digital credential containing claims about a subject, cryptographically signed by an issuer, and compliant with a standard format for decentralized identity ecosystems." .
-<https://w3id.org/def/didl#VC> <http://www.w3.org/2000/01/rdf-schema#label> "VC" .
+# https://w3id.org/def/didl#VerifiableCredential
+<https://w3id.org/def/didl#VerifiableCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#VerifiableCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
+<https://w3id.org/def/didl#VerifiableCredential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/ns/credentials#VerifiableCredential> .
+<https://w3id.org/def/didl#VerifiableCredential> <http://www.w3.org/2000/01/rdf-schema#comment> "A tamper-evident digital credential containing claims about a subject, cryptographically signed by an issuer, and compliant with a standard format for decentralized identity ecosystems."@en .
+<https://w3id.org/def/didl#VerifiableCredential> <http://www.w3.org/2000/01/rdf-schema#label> "VerifiableCredential"@en .
 # 
-# https://w3id.org/def/didl#VP
-<https://w3id.org/def/didl#VP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/def/didl#VP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
-<https://w3id.org/def/didl#VP> <http://www.w3.org/2000/01/rdf-schema#comment> "A packaged set of one or more Verifiable Credentials shared by a holder with a verifier, optionally including selective disclosure and proofs of authenticity." .
-<https://w3id.org/def/didl#VP> <http://www.w3.org/2000/01/rdf-schema#label> "VP" .
+# https://w3id.org/def/didl#VerifiablePresentation
+<https://w3id.org/def/didl#VerifiablePresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/didl#VerifiablePresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
+<https://w3id.org/def/didl#VerifiablePresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/ns/credentials#VerifiablePresentation> .
+<https://w3id.org/def/didl#VerifiablePresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "A packaged set of one or more Verifiable Credentials shared by a holder with a verifier, optionally including selective disclosure and proofs of authenticity."@en .
+<https://w3id.org/def/didl#VerifiablePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "VerifiablePresentation"@en .
 # 
 # https://w3id.org/def/didl#Voice
 <https://w3id.org/def/didl#Voice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#Voice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#InherenceBasedCredential> .
-<https://w3id.org/def/didl#Voice> <http://www.w3.org/2000/01/rdf-schema#comment> "A biometric credential format that encodes the unique vocal characteristics of a person—such as pitch, tone, and rhythm—into a digital template for speaker verification or identification." .
-<https://w3id.org/def/didl#Voice> <http://www.w3.org/2000/01/rdf-schema#label> "Voice" .
+<https://w3id.org/def/didl#Voice> <http://www.w3.org/2000/01/rdf-schema#comment> "A biometric credential format that encodes the unique vocal characteristics of a person—such as pitch, tone, and rhythm—into a digital template for speaker verification or identification."@en .
+<https://w3id.org/def/didl#Voice> <http://www.w3.org/2000/01/rdf-schema#label> "Voice"@en .
 # 
 # https://w3id.org/def/didl#X.509Certificate
 <https://w3id.org/def/didl#X.509Certificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/didl#X.509Certificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/didl#AssertionFormat> .
-<https://w3id.org/def/didl#X.509Certificate> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital certificate that uses the X.509 public key infrastructure (PKI) standard to bind a subject's identity to a public key, and is signed by a trusted Certificate Authority (CA)." .
-<https://w3id.org/def/didl#X.509Certificate> <http://www.w3.org/2000/01/rdf-schema#label> "X.509Certificate" .
+<https://w3id.org/def/didl#X.509Certificate> <http://www.w3.org/2000/01/rdf-schema#comment> "A digital certificate that uses the X.509 public key infrastructure (PKI) standard to bind a subject's identity to a public key, and is signed by a trusted Certificate Authority (CA)."@en .
+<https://w3id.org/def/didl#X.509Certificate> <http://www.w3.org/2000/01/rdf-schema#label> "X.509Certificate"@en .
 # 
 # 
 # 

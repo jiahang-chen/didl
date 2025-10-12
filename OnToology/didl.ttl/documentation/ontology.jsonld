@@ -1,4 +1,14 @@
 [ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/def/didl#Assertion"
+    }, {
+      "@id" : "https://w3id.org/def/didl#Credential"
+    } ]
+  } ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -15,6 +25,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "description"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property represents an unambiguous reference to a resource within a given context."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "identifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://w3id.org/def/didl#identifier"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
@@ -45,6 +69,42 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "license"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An agent is an entity that can perform actions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Agent"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/def/didl#IdentitySubject"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/dedl#Action",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An action that can be performed on a resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Action"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/dedl#Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A resource that can be accessed or manipulated"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Resource"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl",
@@ -84,6 +144,17 @@
     "@value" : "0.1"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/didl#AccessCapability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A capability that defines what actions can be performed on which resources"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AccessCapability"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/didl#AccessToken",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -115,7 +186,12 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing an address attribute"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Address"
   } ]
 }, {
@@ -144,6 +220,11 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/didl#Identity"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/def/didl#Credential"
+  }, {
+    "@id" : "https://w3id.org/def/didl#Identifier"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#AssertionCollection",
@@ -169,6 +250,11 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "AssertionFormat"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/def/didl#CredentialFormat"
+  }, {
+    "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Attribute",
@@ -195,19 +281,10 @@
     "@value" : "BearerToken"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/didl#BlockchainAddress",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Key"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "BlockchainAddress"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/didl#CertificateID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Functional"
+    "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -221,7 +298,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A composite identifier that a hierarchical structure"
+    "@value" : "A composite identifier that has a hierarchical structure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -229,6 +306,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/didl#Identifier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#ContractID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ID used in the functional scope of contracts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ContractID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Credential",
@@ -243,6 +334,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/didl#Identity"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/def/didl#Identifier"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#CredentialFormat",
@@ -254,6 +348,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "CredentialFormat"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#DID",
@@ -287,7 +384,12 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing a date of birth attribute"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "DateOfBirth"
   } ]
 }, {
@@ -296,14 +398,19 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing a department attribute"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Department"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#DeviceID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Functional"
+    "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -316,7 +423,7 @@
   "@id" : "https://w3id.org/def/didl#DocumentID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Functional"
+    "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -371,9 +478,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A 64-bit globally unique identifier used to identify hardware or devices, often derived from a 48-bit MAC address and used in protocols like IPv6 for interface identifiers."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "EUI-64"
   } ]
 }, {
@@ -388,15 +497,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Email"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/didl#EmployeeIdNumber",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Key"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "EmployeeIdNumber"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Fingerprint",
@@ -418,21 +518,12 @@
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents first name."
+    "@language" : "en",
+    "@value" : "A key representing a first name attribute"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "FirstName"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/didl#Functional",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A concept that represents the use of  an identifier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Functional"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#GUID",
@@ -441,9 +532,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A 128-bit value generated using specific algorithms to ensure uniqueness across time and space, commonly used to identify objects, records, or resources in software systems."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "GUID"
   } ]
 }, {
@@ -452,7 +545,12 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing a gender attribute"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Gender"
   } ]
 }, {
@@ -462,9 +560,11 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A security token issued by an OpenID Connect Provider that contains claims about the authentication of an end-user and possibly their identity attributes, typically formatted as a signed JWT."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "IDToken"
   } ]
 }, {
@@ -474,9 +574,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "An extended version of a URI that allows the use of Unicode characters from the Universal Character Set (UCS), enabling identifiers in languages beyond ASCII."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "IRI"
   } ]
 }, {
@@ -487,6 +589,7 @@
     "@value" : "A unique reference to distinguish one entity from another"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Identifier"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -502,6 +605,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "IdentifierFormat"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#IdentifierFunctional",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A concept that represents the use of  an identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "IdentifierFunctional"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Identity",
@@ -526,15 +640,45 @@
     "@value" : "IdentitySubject"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/didl#InContract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing an in-contract attribute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "InContract"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#InOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing an in-organization attribute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "InOrganization"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/didl#Inactive",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Status"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents inactive."
+    "@language" : "en",
+    "@value" : "Inactive status of an identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Inactive"
   } ]
 }, {
@@ -542,7 +686,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A credential that indicates something you inherently has"
+    "@value" : "A credential that indicates something you inherently have"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -558,9 +702,11 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A compact, URL-safe token format that represents claims between parties using a JSON object, digitally signed (and optionally encrypted) for secure transmission and verification."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "JsonWebToken"
   } ]
 }, {
@@ -570,9 +716,11 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A time-limited, encrypted credential issued by a Kerberos Key Distribution Center (KDC) that allows a client to authenticate to services without repeatedly sending passwords."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "KerberosTicket"
   } ]
 }, {
@@ -606,7 +754,12 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing a last login attribute"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "LastLogin"
   } ]
 }, {
@@ -616,22 +769,25 @@
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents last name."
+    "@language" : "en",
+    "@value" : "A key representing a last name attribute"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "LastName"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#MachineID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Functional"
+    "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "ID used as functional scope of machines"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "MachineID"
   } ]
 }, {
@@ -640,39 +796,40 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing a nationality attribute"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Nationality"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/didl#OTP",
+  "@id" : "https://w3id.org/def/didl#OneTimePassword",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#KnowledgeBasedCredential"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A password that is valid for only one login session or transaction, typically generated dynamically and used to enhance security by preventing replay attacks."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "OTP"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/didl#Organization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Key"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Organization"
+    "@language" : "en",
+    "@value" : "OneTimePassword"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#OrganizationID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Functional"
+    "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "ID used as functional scope of organizations"
-  }, {
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "OrganizationID"
   } ]
 }, {
@@ -681,7 +838,12 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing a password attribute"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Password"
   } ]
 }, {
@@ -691,9 +853,11 @@
     "@id" : "https://w3id.org/def/didl#KnowledgeBasedCredential"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "This refers to password credentials, always combined with a username"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "PasswordCredential"
   } ]
 }, {
@@ -702,7 +866,12 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing a phone number attribute"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "PhoneNumber"
   } ]
 }, {
@@ -710,11 +879,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A credential that indicates something you has"
+    "@value" : "A credential that indicates something you have"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "PossesionBasedCredential"
+    "@value" : "PossessionBasedCredential"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/didl#CredentialFormat"
@@ -723,42 +892,29 @@
   "@id" : "https://w3id.org/def/didl#ProcessID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Functional"
+    "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "ID used as functional scope of a process"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "ProcessID"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#ProductID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Functional"
+    "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "ID used as functional scope of a product"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "ProductID"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/didl#Proof",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A possession-based credential that uses cryptograhpic method"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Proof"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/def/didl#Credential"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/security#Proof"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#PublicKey",
@@ -766,7 +922,12 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing a public key attribute"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "PublicKey"
   } ]
 }, {
@@ -789,9 +950,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "RFC5322"
   } ]
 }, {
@@ -801,9 +964,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A standard that defines rules for the precise comparison of internationalized usernames and passwords, specifying string preparation, normalization, and case-mapping to avoid ambiguities and spoofing in authentication systems."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "RFC7613"
   } ]
 }, {
@@ -813,21 +978,25 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A credential issued by an authorization server that allows a client to obtain a new access token without requiring the user to reauthenticate, typically used in long-lived sessions."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "RefreshToken"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#ResourceID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Functional"
+    "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "ID used as functional scope of resources"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "ResourceID"
   } ]
 }, {
@@ -837,9 +1006,11 @@
     "@id" : "https://w3id.org/def/didl#Status"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents revoked."
+    "@language" : "en",
+    "@value" : "Revoked status of an identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Revoked"
   } ]
 }, {
@@ -849,9 +1020,11 @@
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents role."
+    "@language" : "en",
+    "@value" : "A key representing a role attribute"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Role"
   } ]
 }, {
@@ -861,9 +1034,11 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A structured XML statement issued by an Identity Provider (IdP) in a SAML 2.0 authentication exchange, containing claims (such as user identity, authentication status, and attributes) that a Service Provider (SP) can trust."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "SAML2.0Assertion"
   } ]
 }, {
@@ -872,20 +1047,13 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "SerialNumber"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/didl#SessionIndex",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Key"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This individual represents session index."
+    "@language" : "en",
+    "@value" : "A key representing a serial number attribute"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "SessionIndex"
+    "@language" : "en",
+    "@value" : "SerialNumber"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#SessionKey",
@@ -898,6 +1066,7 @@
     "@value" : "A session-based key as a credential used for temporary authentication"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "SessionKey"
   } ]
 }, {
@@ -911,6 +1080,7 @@
     "@value" : "A cryptographic proof—typically a digital signature—used to validate the authenticity and integrity of a credential or assertion, often embedded in formats like JWTs, SAML assertions, or verifiable credentials."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Signature"
   } ]
 }, {
@@ -920,9 +1090,11 @@
     "@id" : "https://w3id.org/def/didl#PossessionBasedCredential"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A physical card with embedded integrated circuits capable of securely storing and processing data—often used for authentication, digital signatures, and secure credential storage in identity systems."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "SmartCard"
   } ]
 }, {
@@ -937,15 +1109,31 @@
     "@value" : "Status"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/didl#Title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#Key"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing a title attribute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Title"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/didl#URI",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A standardized string used to uniquely identify a resource on the Internet or a private network, encompassing both URLs and URNs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "URI"
   } ]
 }, {
@@ -955,9 +1143,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A type of URI that not only identifies a resource but also provides a means of locating it by describing its access mechanism (e.g., https, ftp) and network location."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "URL"
   } ]
 }, {
@@ -967,9 +1157,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A type of URI intended to serve as a persistent, location-independent resource identifier, often used to name resources in a globally unique and stable way (e.g., urn:isbn:0451450523)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "URN"
   } ]
 }, {
@@ -979,9 +1171,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "Time-based UUID"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "UUIDv1"
   } ]
 }, {
@@ -991,9 +1185,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "Distributed Computing Environment (DCE) Security UUID"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "UUIDv2"
   } ]
 }, {
@@ -1003,9 +1199,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Name-based UUIID using MD5"
+    "@language" : "en",
+    "@value" : "Name-based UUID using MD5"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "UUIDv3"
   } ]
 }, {
@@ -1015,9 +1213,11 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "Random UUID with no embedded metadata, offering a high degree of uniqueness"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "UUIDv4"
   } ]
 }, {
@@ -1027,22 +1227,25 @@
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "Name-based UUID using SHA-1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "UUIDv5"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#UserID",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#Functional"
+    "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "ID used as functional scope of human users"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "UserID"
   } ]
 }, {
@@ -1051,32 +1254,13 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A key representing a username attribute"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Username"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/didl#VC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#AssertionFormat"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A tamper-evident digital credential containing claims about a subject, cryptographically signed by an issuer, and compliant with a standard format for decentralized identity ecosystems."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "VC"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/didl#VP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/def/didl#AssertionFormat"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A packaged set of one or more Verifiable Credentials shared by a holder with a verifier, optionally including selective disclosure and proofs of authenticity."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "VP"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#Value",
@@ -1090,15 +1274,49 @@
     "@value" : "Value"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/didl#VerifiableCredential",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#AssertionFormat"
+  }, {
+    "@id" : "https://www.w3.org/ns/credentials#VerifiableCredential"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A tamper-evident digital credential containing claims about a subject, cryptographically signed by an issuer, and compliant with a standard format for decentralized identity ecosystems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "VerifiableCredential"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#VerifiablePresentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/didl#AssertionFormat"
+  }, {
+    "@id" : "https://www.w3.org/ns/credentials#VerifiablePresentation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A packaged set of one or more Verifiable Credentials shared by a holder with a verifier, optionally including selective disclosure and proofs of authenticity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "VerifiablePresentation"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/didl#Voice",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/def/didl#InherenceBasedCredential"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A biometric credential format that encodes the unique vocal characteristics of a person—such as pitch, tone, and rhythm—into a digital template for speaker verification or identification."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Voice"
   } ]
 }, {
@@ -1108,10 +1326,29 @@
     "@id" : "https://w3id.org/def/didl#AssertionFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A digital certificate that uses the X.509 public key infrastructure (PKI) standard to bind a subject's identity to a public key, and is signed by a trusted Certificate Authority (CA)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "X.509Certificate"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#accessCapability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that an assertion has associated access capabilities"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/didl#Assertion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "accessCapability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/didl#AccessCapability"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#assertedAttribute",
@@ -1134,12 +1371,14 @@
   "@id" : "https://w3id.org/def/didl#assertion",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "Indicates that an identity subject (i.e., entity) has assertion(s)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/didl#IdentitySubject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "assertion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -1180,10 +1419,10 @@
     "@id" : "https://w3id.org/def/didl#IdentitySubject"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/def/didl#controlls"
+    "@id" : "https://w3id.org/def/didl#controls"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/didl#controlls",
+  "@id" : "https://w3id.org/def/didl#controls",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1193,7 +1432,8 @@
     "@id" : "https://w3id.org/def/didl#IdentitySubject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "controlls"
+    "@language" : "en",
+    "@value" : "controls"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/didl#Identity"
@@ -1209,6 +1449,7 @@
     "@id" : "https://w3id.org/def/didl#IdentitySubject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "credential"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -1262,10 +1503,11 @@
     "@id" : "https://w3id.org/def/didl#Identifier"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "functional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/def/didl#Functional"
+    "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#identifier",
@@ -1278,6 +1520,7 @@
     "@id" : "https://w3id.org/def/didl#IdentitySubject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "identifier"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -1294,17 +1537,52 @@
     "@id" : "https://w3id.org/def/didl#Identifier"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "format"
+    "@language" : "en",
+    "@value" : "identifierFormat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/didl#IdentifierFormat"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#includesAssertion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the constituent assertion of an assertion collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/didl#AssertionCollection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "includesAssertion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/didl#Assertion"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#includesIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the local part of a composite identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/didl#CompositeIdentifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "includesIdentifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/didl#Identifier"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#issueDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the issue date of an identity."
+    "@value" : "Indicates the issue date of an identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/didl#Identity"
@@ -1315,13 +1593,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3.org/ns/credentials#issuanceDate"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#issuer",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates an issuer of an identity"
+    "@value" : "Indicates the issuer of an identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/didl#Identity"
@@ -1332,6 +1613,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3.org/ns/credentials#issuer"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#key",
@@ -1344,38 +1628,24 @@
     "@id" : "https://w3id.org/def/didl#Attribute"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "key"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/didl#Key"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/didl#localPart",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Indicates the local part of a composite identifier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/didl#CompositeIdentifier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "localPart"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/def/didl#Identifier"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/didl#namespace",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates a namespace of a composite identifier, representing its functional scope"
+    "@value" : "Indicates a namespace of an identifier, representing its definition scope"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/didl#CompositeIdentifier"
+    "@id" : "https://w3id.org/def/didl#Identifier"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "namespace"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -1386,12 +1656,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates an identifier of an DIDL Profile that the identity conforms to."
+    "@value" : "Indicates an identifier of a DIDL Profile that the identity conforms to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/didl#Identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "profile"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -1405,16 +1676,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates a proof of an assertion, which ensures the integrity and authenticy of the assertion"
+    "@value" : "Indicates a proof of an assertion, which ensures the integrity and authenticity of the assertion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/didl#Assertion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "proof"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/def/didl#Proof"
+    "@id" : "https://w3id.org/security#Proof"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#relatesTo",
@@ -1424,7 +1696,7 @@
     "@value" : "Indicates that an assertion or a credential relates to an identifier of an entity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/didl#Identity"
+    "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1432,6 +1704,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/didl#Identifier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#renewableTill",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that the identity can be renewed until the given time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/didl#Identity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "renewableTill"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#status",
@@ -1444,38 +1733,58 @@
     "@id" : "https://w3id.org/def/didl#Identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "status"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/didl#Status"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/didl#subAssertion",
+  "@id" : "https://w3id.org/def/didl#supportedAction",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the consisting assertion of an assertion collection"
+    "@value" : "Indicates the actions supported by an access capability"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/def/didl#AssertionCollection"
+    "@id" : "https://w3id.org/def/didl#AccessCapability"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "sub assertion"
+    "@language" : "en",
+    "@value" : "supportedAction"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/def/didl#Assertion"
+    "@id" : "https://w3id.org/def/dedl#Action"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/didl#supportedResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the resources supported by an access capability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/didl#AccessCapability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "supportedResource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/dedl#Resource"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#uid",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the id of an identity itself, e.g., an ID of a verifiable credential"
+    "@value" : "Indicates the unique identifier of an identity itself, e.g., an ID of a verifiable credential"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/didl#Identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "uid"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -1486,32 +1795,40 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the data from which an identity is valid"
+    "@value" : "Indicates the date from which an identity is valid"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/didl#Identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "valid from"
+    "@language" : "en",
+    "@value" : "validFrom"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3.org/ns/credentials#validFrom"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#validTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates the data until which an identity is valid"
+    "@value" : "Indicates the date until which an identity is valid"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/def/didl#Identity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "valid to"
+    "@language" : "en",
+    "@value" : "validTo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3.org/ns/credentials#validTo"
   } ]
 }, {
   "@id" : "https://w3id.org/def/didl#value",
@@ -1524,6 +1841,7 @@
     "@id" : "https://w3id.org/def/didl#Attribute"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -1532,4 +1850,54 @@
 }, {
   "@id" : "https://w3id.org/security#Proof",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/ns/credentials#VerifiableCredential",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/ns/credentials#VerifiablePresentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3.org/ns/credentials#issuanceDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The date and time when the credential was issued"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "issuanceDate"
+  } ]
+}, {
+  "@id" : "https://www.w3.org/ns/credentials#issuer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The entity that issued the credential"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "issuer"
+  } ]
+}, {
+  "@id" : "https://www.w3.org/ns/credentials#validFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The date and time from which the credential is valid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "validFrom"
+  } ]
+}, {
+  "@id" : "https://www.w3.org/ns/credentials#validTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The date and time until which the credential is valid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "validTo"
+  } ]
 } ]

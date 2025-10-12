@@ -1,5 +1,8 @@
 {
   "@context" : {
+    "IdentifierFunctional" : {
+      "@id" : "https://w3id.org/def/didl#IdentifierFunctional"
+    },
     "abstract" : {
       "@id" : "http://purl.org/dc/terms/abstract"
     },
@@ -7,8 +10,14 @@
       "@id" : "https://w3id.org/def/didl#relatesTo",
       "@type" : "@id"
     },
+    "issuanceDate" : {
+      "@id" : "https://www.w3.org/ns/credentials#issuanceDate"
+    },
     "Proof" : {
-      "@id" : "https://w3id.org/def/didl#Proof"
+      "@id" : "https://w3id.org/security#Proof"
+    },
+    "AccessCapability" : {
+      "@id" : "https://w3id.org/def/didl#AccessCapability"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
@@ -46,14 +55,6 @@
     "PossessionBasedCredential" : {
       "@id" : "https://w3id.org/def/didl#PossessionBasedCredential"
     },
-    "subAssertion" : {
-      "@id" : "https://w3id.org/def/didl#subAssertion",
-      "@type" : "@id"
-    },
-    "localPart" : {
-      "@id" : "https://w3id.org/def/didl#localPart",
-      "@type" : "@id"
-    },
     "issuer" : {
       "@id" : "https://w3id.org/def/didl#issuer",
       "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -63,6 +64,10 @@
     },
     "key" : {
       "@id" : "https://w3id.org/def/didl#key",
+      "@type" : "@id"
+    },
+    "includesAssertion" : {
+      "@id" : "https://w3id.org/def/didl#includesAssertion",
       "@type" : "@id"
     },
     "assertedAttribute" : {
@@ -79,6 +84,10 @@
     "profile" : {
       "@id" : "https://w3id.org/def/didl#profile",
       "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "accessCapability" : {
+      "@id" : "https://w3id.org/def/didl#accessCapability",
+      "@type" : "@id"
     },
     "IdentifierFormat" : {
       "@id" : "https://w3id.org/def/didl#IdentifierFormat"
@@ -100,15 +109,14 @@
       "@id" : "https://w3id.org/def/didl#credentialFormat",
       "@type" : "@id"
     },
-    "controlls" : {
-      "@id" : "https://w3id.org/def/didl#controlls",
-      "@type" : "@id"
-    },
     "Attribute" : {
       "@id" : "https://w3id.org/def/didl#Attribute"
     },
     "Key" : {
       "@id" : "https://w3id.org/def/didl#Key"
+    },
+    "Agent" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Agent"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
@@ -124,6 +132,9 @@
     "assertionFormat" : {
       "@id" : "https://w3id.org/def/didl#assertionFormat",
       "@type" : "@id"
+    },
+    "VerifiableCredential" : {
+      "@id" : "https://www.w3.org/ns/credentials#VerifiableCredential"
     },
     "proof" : {
       "@id" : "https://w3id.org/def/didl#proof",
@@ -143,6 +154,10 @@
     "KnowledgeBasedCredential" : {
       "@id" : "https://w3id.org/def/didl#KnowledgeBasedCredential"
     },
+    "supportedResource" : {
+      "@id" : "https://w3id.org/def/didl#supportedResource",
+      "@type" : "@id"
+    },
     "Assertion" : {
       "@id" : "https://w3id.org/def/didl#Assertion"
     },
@@ -153,18 +168,35 @@
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
     "validTo" : {
-      "@id" : "https://w3id.org/def/didl#validTo",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@id" : "https://www.w3.org/ns/credentials#validTo"
     },
     "Identity" : {
       "@id" : "https://w3id.org/def/didl#Identity"
+    },
+    "controls" : {
+      "@id" : "https://w3id.org/def/didl#controls",
+      "@type" : "@id"
     },
     "controlledBy" : {
       "@id" : "https://w3id.org/def/didl#controlledBy",
       "@type" : "@id"
     },
+    "VerifiablePresentation" : {
+      "@id" : "https://www.w3.org/ns/credentials#VerifiablePresentation"
+    },
     "functional" : {
       "@id" : "https://w3id.org/def/didl#functional",
+      "@type" : "@id"
+    },
+    "renewableTill" : {
+      "@id" : "https://w3id.org/def/didl#renewableTill",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Resource" : {
+      "@id" : "https://w3id.org/def/dedl#Resource"
+    },
+    "includesIdentifier" : {
+      "@id" : "https://w3id.org/def/didl#includesIdentifier",
       "@type" : "@id"
     },
     "identifierFormat" : {
@@ -182,14 +214,18 @@
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
+    "supportedAction" : {
+      "@id" : "https://w3id.org/def/didl#supportedAction",
+      "@type" : "@id"
+    },
+    "Action" : {
+      "@id" : "https://w3id.org/def/dedl#Action"
+    },
     "Identifier" : {
       "@id" : "https://w3id.org/def/didl#Identifier"
     },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
-    },
-    "Functional" : {
-      "@id" : "https://w3id.org/def/didl#Functional"
     }
   }
 }
