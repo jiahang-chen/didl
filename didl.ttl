@@ -3,9 +3,11 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sec: <https://w3id.org/security#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cred: <https://www.w3.org/ns/credentials#> .
+@prefix dedl: <https://w3id.org/def/dedl#> .
 @prefix didl: <https://w3id.org/def/didl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <https://w3id.org/def/didl#> .
@@ -41,7 +43,7 @@ dc:description rdf:type owl:AnnotationProperty ;
 ###  http://purl.org/dc/elements/1.1/title
 dc:title rdf:type owl:AnnotationProperty ;
          rdfs:comment "This individual represents title." ;
-         rdfs:label "title" .
+         rdfs:label "title".
 
 
 ###  http://purl.org/dc/terms/abstract
@@ -56,13 +58,28 @@ dcterms:created rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty ;
-                rdfs:comment "This individual represents license." ;
-                rdfs:label "license" .
+                rdfs:comment "This individual represents license.";
+                rdfs:label "license".
 
 
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/identifier
+dc:identifier rdf:type owl:ObjectProperty ;
+              owl:equivalentProperty didl:identifier ;
+              rdfs:comment "This property represents an unambiguous reference to a resource within a given context."@en ;
+              rdfs:label "identifier"@en .
+
+
+###  https://w3id.org/def/didl#accessCapability
+didl:accessCapability rdf:type owl:ObjectProperty ;
+                      rdfs:domain didl:Assertion ;
+                      rdfs:range didl:AccessCapability ;
+                      rdfs:comment "Indicates that an assertion has associated access capabilities"@en ;
+                      rdfs:label "accessCapability"@en .
+
 
 ###  https://w3id.org/def/didl#assertedAttribute
 didl:assertedAttribute rdf:type owl:ObjectProperty ;
@@ -76,8 +93,8 @@ didl:assertedAttribute rdf:type owl:ObjectProperty ;
 didl:assertion rdf:type owl:ObjectProperty ;
                rdfs:domain didl:IdentitySubject ;
                rdfs:range didl:Assertion ;
-               rdfs:comment "Indicates that an identity subject (i.e., entity) has assertion(s)" ;
-               rdfs:label "assertion" .
+               rdfs:comment "Indicates that an identity subject (i.e., entity) has assertion(s)"@en ;
+               rdfs:label "assertion"@en .
 
 
 ###  https://w3id.org/def/didl#assertionFormat
@@ -90,19 +107,19 @@ didl:assertionFormat rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/def/didl#controlledBy
 didl:controlledBy rdf:type owl:ObjectProperty ;
-                  owl:inverseOf didl:controlls ;
+                  owl:inverseOf didl:controls ;
                   rdfs:domain didl:Identity ;
                   rdfs:range didl:IdentitySubject ;
                   rdfs:comment "Indicates an identity is controlled by an identity subject (i.e., entity)"@en ;
                   rdfs:label "controlledBy"@en .
 
 
-###  https://w3id.org/def/didl#controlls
-didl:controlls rdf:type owl:ObjectProperty ;
-               rdfs:domain didl:IdentitySubject ;
-               rdfs:range didl:Identity ;
-               rdfs:comment "Indicates that an identity subject (i.e., entity) controlls an identity"@en ;
-               rdfs:label "controlls" .
+###  https://w3id.org/def/didl#controls
+didl:controls rdf:type owl:ObjectProperty ;
+              rdfs:domain didl:IdentitySubject ;
+              rdfs:range didl:Identity ;
+              rdfs:comment "Indicates that an identity subject (i.e., entity) controlls an identity"@en ;
+              rdfs:label "controls"@en .
 
 
 ###  https://w3id.org/def/didl#credential
@@ -110,7 +127,7 @@ didl:credential rdf:type owl:ObjectProperty ;
                 rdfs:domain didl:IdentitySubject ;
                 rdfs:range didl:Credential ;
                 rdfs:comment "Indicates that an identity subject (i.e., entity) has credential(s)."@en ;
-                rdfs:label "credential" .
+                rdfs:label "credential"@en .
 
 
 ###  https://w3id.org/def/didl#credentialAttribute
@@ -133,9 +150,9 @@ didl:credentialFormat rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/def/didl#functional
 didl:functional rdf:type owl:ObjectProperty ;
                 rdfs:domain didl:Identifier ;
-                rdfs:range didl:Functional ;
+                rdfs:range didl:IdentifierFunctional ;
                 rdfs:comment "Indicates that an identifier has its own application-specific use"@en ;
-                rdfs:label "functional" .
+                rdfs:label "functional"@en .
 
 
 ###  https://w3id.org/def/didl#identifier
@@ -143,7 +160,7 @@ didl:identifier rdf:type owl:ObjectProperty ;
                 rdfs:domain didl:IdentitySubject ;
                 rdfs:range didl:Identifier ;
                 rdfs:comment "Indicates that an identity subject (i.e., entity) has identifier(s)"@en ;
-                rdfs:label "identifier" .
+                rdfs:label "identifier"@en .
 
 
 ###  https://w3id.org/def/didl#identifierFormat
@@ -151,7 +168,23 @@ didl:identifierFormat rdf:type owl:ObjectProperty ;
                       rdfs:domain didl:Identifier ;
                       rdfs:range didl:IdentifierFormat ;
                       rdfs:comment "Indicates that an identifier has its specific format"@en ;
-                      rdfs:label "format" .
+                      rdfs:label "identifierFormat"@en .
+
+
+###  https://w3id.org/def/didl#includesAssertion
+didl:includesAssertion rdf:type owl:ObjectProperty ;
+                       rdfs:domain didl:AssertionCollection ;
+                       rdfs:range didl:Assertion ;
+                       rdfs:comment "Indicates the constituent assertion of an assertion collection"@en ;
+                       rdfs:label "includesAssertion"@en .
+
+
+###  https://w3id.org/def/didl#includesIdentifier
+didl:includesIdentifier rdf:type owl:ObjectProperty ;
+                        rdfs:domain didl:CompositeIdentifier ;
+                        rdfs:range didl:Identifier ;
+                        rdfs:comment "Indicates the local part of a composite identifier"@en ;
+                        rdfs:label "includesIdentifier"@en .
 
 
 ###  https://w3id.org/def/didl#key
@@ -159,28 +192,24 @@ didl:key rdf:type owl:ObjectProperty ;
          rdfs:domain didl:Attribute ;
          rdfs:range didl:Key ;
          rdfs:comment "Represents a key of an attribute"@en ;
-         rdfs:label "key" .
-
-
-###  https://w3id.org/def/didl#localPart
-didl:localPart rdf:type owl:ObjectProperty ;
-               rdfs:domain didl:CompositeIdentifier ;
-               rdfs:range didl:Identifier ;
-               rdfs:comment "Indicates the local part of a composite identifier"@en ;
-               rdfs:label "localPart" .
+         rdfs:label "key"@en .
 
 
 ###  https://w3id.org/def/didl#proof
 didl:proof rdf:type owl:ObjectProperty ;
            rdfs:domain didl:Assertion ;
-           rdfs:range didl:Proof ;
-           rdfs:comment "Indicates a proof of an assertion, which ensures the integrity and authenticy of the assertion"@en ;
-           rdfs:label "proof" .
+           rdfs:range sec:Proof ;
+           rdfs:comment "Indicates a proof of an assertion, which ensures the integrity and authenticity of the assertion"@en ;
+           rdfs:label "proof"@en .
 
 
 ###  https://w3id.org/def/didl#relatesTo
 didl:relatesTo rdf:type owl:ObjectProperty ;
-               rdfs:domain didl:Identity ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( didl:Assertion
+                                           didl:Credential
+                                         )
+                           ] ;
                rdfs:range didl:Identifier ;
                rdfs:comment "Indicates that an assertion or a credential relates to an identifier of an entity"@en ;
                rdfs:label "relatesTo"@en .
@@ -191,15 +220,23 @@ didl:status rdf:type owl:ObjectProperty ;
             rdfs:domain didl:Identity ;
             rdfs:range didl:Status ;
             rdfs:comment "Indicates the current status of an identity"@en ;
-            rdfs:label "status" .
+            rdfs:label "status"@en .
 
 
-###  https://w3id.org/def/didl#subAssertion
-didl:subAssertion rdf:type owl:ObjectProperty ;
-                  rdfs:domain didl:AssertionCollection ;
-                  rdfs:range didl:Assertion ;
-                  rdfs:comment "Indicates the consisting assertion of an assertion collection"@en ;
-                  rdfs:label "sub assertion" .
+###  https://w3id.org/def/didl#supportedAction
+didl:supportedAction rdf:type owl:ObjectProperty ;
+                     rdfs:domain didl:AccessCapability ;
+                     rdfs:range dedl:Action ;
+                     rdfs:comment "Indicates the actions supported by an access capability"@en ;
+                     rdfs:label "supportedAction"@en .
+
+
+###  https://w3id.org/def/didl#supportedResource
+didl:supportedResource rdf:type owl:ObjectProperty ;
+                       rdfs:domain didl:AccessCapability ;
+                       rdfs:range dedl:Resource ;
+                       rdfs:comment "Indicates the resources supported by an access capability"@en ;
+                       rdfs:label "supportedResource"@en .
 
 
 ###  https://w3id.org/def/didl#value
@@ -207,7 +244,7 @@ didl:value rdf:type owl:ObjectProperty ;
            rdfs:domain didl:Attribute ;
            rdfs:range didl:Value ;
            rdfs:comment "Represents a value of an attribute"@en ;
-           rdfs:label "value" .
+           rdfs:label "value"@en .
 
 
 #################################################################
@@ -216,26 +253,28 @@ didl:value rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/def/didl#issueDate
 didl:issueDate rdf:type owl:DatatypeProperty ;
+               owl:equivalentProperty cred:issuanceDate ;
                rdfs:domain didl:Identity ;
                rdfs:range xsd:dateTime ;
-               rdfs:comment "Indicates the issue date of an identity."@en ;
+               rdfs:comment "Indicates the issue date of an identity"@en ;
                rdfs:label "issueDate"@en .
 
 
 ###  https://w3id.org/def/didl#issuer
 didl:issuer rdf:type owl:DatatypeProperty ;
+            owl:equivalentProperty cred:issuer ;
             rdfs:domain didl:Identity ;
             rdfs:range xsd:anyURI ;
-            rdfs:comment "Indicates an issuer of an identity"@en ;
+            rdfs:comment "Indicates the issuer of an identity"@en ;
             rdfs:label "issuer"@en .
 
 
 ###  https://w3id.org/def/didl#namespace
 didl:namespace rdf:type owl:DatatypeProperty ;
-               rdfs:domain didl:CompositeIdentifier ;
+               rdfs:domain didl:Identifier ;
                rdfs:range xsd:string ;
-               rdfs:comment "Indicates a namespace of a composite identifier, representing its functional scope"@en ;
-               rdfs:label "namespace" .
+               rdfs:comment "Indicates a namespace of an identifier, representing its definition scope"@en ;
+               rdfs:label "namespace"@en .
 
 
 ###  https://w3id.org/def/didl#profile
@@ -243,41 +282,102 @@ didl:profile rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:domain didl:Identity ;
              rdfs:range xsd:anyURI ;
-             rdfs:comment "Indicates an identifier of an DIDL Profile that the identity conforms to."@en ;
-             rdfs:label "profile" .
+             rdfs:comment "Indicates an identifier of a DIDL Profile that the identity conforms to"@en ;
+             rdfs:label "profile"@en .
+
+
+###  https://w3id.org/def/didl#renewableTill
+didl:renewableTill rdf:type owl:DatatypeProperty ;
+                   rdfs:domain didl:Identity ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:comment "Indicates that the identity can be renewed until the given time"@en ;
+                   rdfs:label "renewableTill"@en .
 
 
 ###  https://w3id.org/def/didl#uid
 didl:uid rdf:type owl:DatatypeProperty ;
          rdfs:domain didl:Identity ;
          rdfs:range xsd:anyURI ;
-         rdfs:comment "Indicates the id of an identity itself, e.g., an ID of a verifiable credential"@en ;
-         rdfs:label "uid" .
+         rdfs:comment "Indicates the unique identifier of an identity itself, e.g., an ID of a verifiable credential"@en ;
+         rdfs:label "uid"@en .
 
 
 ###  https://w3id.org/def/didl#validFrom
 didl:validFrom rdf:type owl:DatatypeProperty ;
+               owl:equivalentProperty cred:validFrom ;
                rdfs:domain didl:Identity ;
                rdfs:range xsd:dateTime ;
-               rdfs:comment "Indicates the data from which an identity is valid"@en ;
-               rdfs:label "valid from" .
+               rdfs:comment "Indicates the date from which an identity is valid"@en ;
+               rdfs:label "validFrom"@en .
 
 
 ###  https://w3id.org/def/didl#validTo
 didl:validTo rdf:type owl:DatatypeProperty ;
+             owl:equivalentProperty cred:validTo ;
              rdfs:domain didl:Identity ;
              rdfs:range xsd:dateTime ;
-             rdfs:comment "Indicates the data until which an identity is valid"@en ;
-             rdfs:label "valid to" .
+             rdfs:comment "Indicates the date until which an identity is valid"@en ;
+             rdfs:label "validTo"@en .
+
+
+###  https://www.w3.org/ns/credentials#issuanceDate
+cred:issuanceDate rdf:type owl:DatatypeProperty ;
+                rdfs:comment "The date and time when the credential was issued"@en ;
+                rdfs:label "issuanceDate"@en .
+
+
+###  https://www.w3.org/ns/credentials#issuer
+cred:issuer rdf:type owl:DatatypeProperty ;
+            rdfs:comment "The entity that issued the credential"@en ;
+            rdfs:label "issuer"@en .
+
+
+###  https://www.w3.org/ns/credentials#validFrom
+cred:validFrom rdf:type owl:DatatypeProperty ;
+                rdfs:comment "The date and time from which the credential is valid"@en ;
+                rdfs:label "validFrom"@en .
+
+
+###  https://www.w3.org/ns/credentials#validTo
+cred:validTo rdf:type owl:DatatypeProperty ;
+              rdfs:comment "The date and time until which the credential is valid"@en ;
+              rdfs:label "validTo"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
 
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class ;
+           owl:equivalentClass didl:IdentitySubject ;
+           rdfs:comment "An agent is an entity that can perform actions"@en ;
+           rdfs:label "Agent"@en .
+
+
+###  https://w3id.org/def/dedl#Action
+dedl:Action rdf:type owl:Class ;
+            rdfs:comment "An action that can be performed on a resource"@en ;
+            rdfs:label "Action"@en .
+
+
+###  https://w3id.org/def/dedl#Resource
+dedl:Resource rdf:type owl:Class ;
+              rdfs:comment "A resource that can be accessed or manipulated"@en ;
+              rdfs:label "Resource"@en .
+
+
+###  https://w3id.org/def/didl#AccessCapability
+didl:AccessCapability rdf:type owl:Class ;
+                      rdfs:comment "A capability that defines what actions can be performed on which resources"@en ;
+                      rdfs:label "AccessCapability"@en .
+
+
 ###  https://w3id.org/def/didl#Assertion
 didl:Assertion rdf:type owl:Class ;
                rdfs:subClassOf didl:Identity ;
+               owl:disjointWith didl:Credential ,
+                                didl:Identifier ;
                rdfs:comment "A collection of identity-related attributes asserted by a trusted party"@en ;
                rdfs:label "Assertion"@en .
 
@@ -291,6 +391,8 @@ didl:AssertionCollection rdf:type owl:Class ;
 
 ###  https://w3id.org/def/didl#AssertionFormat
 didl:AssertionFormat rdf:type owl:Class ;
+                     owl:disjointWith didl:CredentialFormat ,
+                                      didl:IdentifierFormat ;
                      rdfs:comment "An assertion format that is specified by a standard or a protocol"@en ;
                      rdfs:label "AssertionFormat"@en .
 
@@ -304,40 +406,42 @@ didl:Attribute rdf:type owl:Class ;
 ###  https://w3id.org/def/didl#CompositeIdentifier
 didl:CompositeIdentifier rdf:type owl:Class ;
                          rdfs:subClassOf didl:Identifier ;
-                         rdfs:comment "A composite identifier that a hierarchical structure"@en ;
+                         rdfs:comment "A composite identifier that has a hierarchical structure"@en ;
                          rdfs:label "CompositeIdentifier"@en .
 
 
 ###  https://w3id.org/def/didl#Credential
 didl:Credential rdf:type owl:Class ;
                 rdfs:subClassOf didl:Identity ;
+                owl:disjointWith didl:Identifier ;
                 rdfs:comment "A proof of an entity's identity"@en ;
                 rdfs:label "Credential"@en .
 
 
 ###  https://w3id.org/def/didl#CredentialFormat
 didl:CredentialFormat rdf:type owl:Class ;
+                      owl:disjointWith didl:IdentifierFormat ;
                       rdfs:comment "A credential format that is specified by a standard or a protocol"@en ;
                       rdfs:label "CredentialFormat"@en .
-
-
-###  https://w3id.org/def/didl#Functional
-didl:Functional rdf:type owl:Class ;
-                rdfs:comment "A concept that represents the use of  an identifier"@en ;
-                rdfs:label "Functional"@en .
 
 
 ###  https://w3id.org/def/didl#Identifier
 didl:Identifier rdf:type owl:Class ;
                 rdfs:subClassOf didl:Identity ;
                 rdfs:comment "A unique reference to distinguish one entity from another"@en ;
-                rdfs:label "Identifier" .
+                rdfs:label "Identifier"@en .
 
 
 ###  https://w3id.org/def/didl#IdentifierFormat
 didl:IdentifierFormat rdf:type owl:Class ;
                       rdfs:comment "An identifier format that is specified by a standard or a protocol"@en ;
                       rdfs:label "IdentifierFormat"@en .
+
+
+###  https://w3id.org/def/didl#IdentifierFunctional
+didl:IdentifierFunctional rdf:type owl:Class ;
+                          rdfs:comment "A concept that represents the use of  an identifier"@en ;
+                          rdfs:label "IdentifierFunctional"@en .
 
 
 ###  https://w3id.org/def/didl#Identity
@@ -355,7 +459,7 @@ didl:IdentitySubject rdf:type owl:Class ;
 ###  https://w3id.org/def/didl#InherenceBasedCredential
 didl:InherenceBasedCredential rdf:type owl:Class ;
                               rdfs:subClassOf didl:CredentialFormat ;
-                              rdfs:comment "A credential that indicates something you inherently has"@en ;
+                              rdfs:comment "A credential that indicates something you inherently have"@en ;
                               rdfs:label "InherenceBasedCredential"@en .
 
 
@@ -375,16 +479,8 @@ didl:KnowledgeBasedCredential rdf:type owl:Class ;
 ###  https://w3id.org/def/didl#PossessionBasedCredential
 didl:PossessionBasedCredential rdf:type owl:Class ;
                                rdfs:subClassOf didl:CredentialFormat ;
-                               rdfs:comment "A credential that indicates something you has"@en ;
-                               rdfs:label "PossesionBasedCredential"@en .
-
-
-###  https://w3id.org/def/didl#Proof
-didl:Proof rdf:type owl:Class ;
-           owl:equivalentClass sec:Proof ;
-           rdfs:subClassOf didl:Credential ;
-           rdfs:comment "A possession-based credential that uses cryptograhpic method"@en ;
-           rdfs:label "Proof"@en .
+                               rdfs:comment "A credential that indicates something you have"@en ;
+                               rdfs:label "PossessionBasedCredential"@en .
 
 
 ###  https://w3id.org/def/didl#Status
@@ -401,6 +497,14 @@ didl:Value rdf:type owl:Class ;
 
 ###  https://w3id.org/security#Proof
 sec:Proof rdf:type owl:Class .
+
+
+###  https://www.w3.org/ns/credentials#VerifiableCredential
+cred:VerifiableCredential rdf:type owl:Class .
+
+
+###  https://www.w3.org/ns/credentials#VerifiablePresentation
+cred:VerifiablePresentation rdf:type owl:Class .
 
 
 #################################################################
@@ -424,7 +528,8 @@ didl:Active rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/def/didl#Address
 didl:Address rdf:type owl:NamedIndividual ,
                       didl:Key ;
-             rdfs:label "Address" .
+             rdfs:comment "A key representing an address attribute"@en ;
+             rdfs:label "Address"@en .
 
 
 ###  https://w3id.org/def/didl#ApplicationToken
@@ -441,17 +546,18 @@ didl:BearerToken rdf:type owl:NamedIndividual ,
                  rdfs:label "BearerToken" .
 
 
-###  https://w3id.org/def/didl#BlockchainAddress
-didl:BlockchainAddress rdf:type owl:NamedIndividual ,
-                                didl:Key ;
-                       rdfs:label "BlockchainAddress" .
-
-
 ###  https://w3id.org/def/didl#CertificateID
 didl:CertificateID rdf:type owl:NamedIndividual ,
-                            didl:Functional ;
+                            didl:IdentifierFunctional ;
                    rdfs:comment "ID used in the functional scope of certificates"@en ;
                    rdfs:label "CertificateID" .
+
+
+###  https://w3id.org/def/didl#ContractID
+didl:ContractID rdf:type owl:NamedIndividual ,
+                         didl:IdentifierFunctional ;
+                rdfs:comment "ID used in the functional scope of contracts"@en ;
+                rdfs:label "ContractID"@en .
 
 
 ###  https://w3id.org/def/didl#DID
@@ -471,25 +577,27 @@ didl:DN rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/def/didl#DateOfBirth
 didl:DateOfBirth rdf:type owl:NamedIndividual ,
                           didl:Key ;
-                 rdfs:label "DateOfBirth" .
+                 rdfs:comment "A key representing a date of birth attribute"@en ;
+                 rdfs:label "DateOfBirth"@en .
 
 
 ###  https://w3id.org/def/didl#Department
 didl:Department rdf:type owl:NamedIndividual ,
                          didl:Key ;
-                rdfs:label "Department" .
+                rdfs:comment "A key representing a department attribute"@en ;
+                rdfs:label "Department"@en .
 
 
 ###  https://w3id.org/def/didl#DeviceID
 didl:DeviceID rdf:type owl:NamedIndividual ,
-                       didl:Functional ;
+                       didl:IdentifierFunctional ;
               rdfs:comment "ID used in the functional scope of devices"@en ;
               rdfs:label "DeviceID" .
 
 
 ###  https://w3id.org/def/didl#DocumentID
 didl:DocumentID rdf:type owl:NamedIndividual ,
-                         didl:Functional ;
+                         didl:IdentifierFunctional ;
                 rdfs:comment "ID used in the functional scope of documents"@en ;
                 rdfs:label "DocumentID" .
 
@@ -518,8 +626,8 @@ didl:EUI-48 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/def/didl#EUI-64
 didl:EUI-64 rdf:type owl:NamedIndividual ,
                      didl:IdentifierFormat ;
-            rdfs:comment "A 64-bit globally unique identifier used to identify hardware or devices, often derived from a 48-bit MAC address and used in protocols like IPv6 for interface identifiers." ;
-            rdfs:label "EUI-64" .
+            rdfs:comment "A 64-bit globally unique identifier used to identify hardware or devices, often derived from a 48-bit MAC address and used in protocols like IPv6 for interface identifiers."@en ;
+            rdfs:label "EUI-64"@en .
 
 
 ###  https://w3id.org/def/didl#Email
@@ -527,12 +635,6 @@ didl:Email rdf:type owl:NamedIndividual ,
                     didl:Key ;
            rdfs:comment "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain, see also RFC 5322 and RFC 6531"@en ;
            rdfs:label "Email" .
-
-
-###  https://w3id.org/def/didl#EmployeeIdNumber
-didl:EmployeeIdNumber rdf:type owl:NamedIndividual ,
-                               didl:Key ;
-                      rdfs:label "EmployeeIdNumber" .
 
 
 ###  https://w3id.org/def/didl#Fingerprint
@@ -545,141 +647,155 @@ didl:Fingerprint rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/def/didl#FirstName
 didl:FirstName rdf:type owl:NamedIndividual ,
                         didl:Key ;
-               rdfs:comment "This individual represents first name." ;
-               rdfs:label "FirstName" .
+               rdfs:comment "A key representing a first name attribute"@en ;
+               rdfs:label "FirstName"@en .
 
 
 ###  https://w3id.org/def/didl#GUID
 didl:GUID rdf:type owl:NamedIndividual ,
                    didl:IdentifierFormat ;
-          rdfs:comment "A 128-bit value generated using specific algorithms to ensure uniqueness across time and space, commonly used to identify objects, records, or resources in software systems." ;
-          rdfs:label "GUID" .
+          rdfs:comment "A 128-bit value generated using specific algorithms to ensure uniqueness across time and space, commonly used to identify objects, records, or resources in software systems."@en ;
+          rdfs:label "GUID"@en .
 
 
 ###  https://w3id.org/def/didl#Gender
 didl:Gender rdf:type owl:NamedIndividual ,
                      didl:Key ;
-            rdfs:label "Gender" .
+            rdfs:comment "A key representing a gender attribute"@en ;
+            rdfs:label "Gender"@en .
 
 
 ###  https://w3id.org/def/didl#IDToken
 didl:IDToken rdf:type owl:NamedIndividual ,
                       didl:AssertionFormat ;
-             rdfs:comment "A security token issued by an OpenID Connect Provider that contains claims about the authentication of an end-user and possibly their identity attributes, typically formatted as a signed JWT." ;
-             rdfs:label "IDToken" .
+             rdfs:comment "A security token issued by an OpenID Connect Provider that contains claims about the authentication of an end-user and possibly their identity attributes, typically formatted as a signed JWT."@en ;
+             rdfs:label "IDToken"@en .
 
 
 ###  https://w3id.org/def/didl#IRI
 didl:IRI rdf:type owl:NamedIndividual ,
                   didl:IdentifierFormat ;
-         rdfs:comment "An extended version of a URI that allows the use of Unicode characters from the Universal Character Set (UCS), enabling identifiers in languages beyond ASCII." ;
-         rdfs:label "IRI" .
+         rdfs:comment "An extended version of a URI that allows the use of Unicode characters from the Universal Character Set (UCS), enabling identifiers in languages beyond ASCII."@en ;
+         rdfs:label "IRI"@en .
+
+
+###  https://w3id.org/def/didl#InContract
+didl:InContract rdf:type owl:NamedIndividual ,
+                         didl:Key ;
+                rdfs:comment "A key representing an in-contract attribute"@en ;
+                rdfs:label "InContract"@en .
+
+
+###  https://w3id.org/def/didl#InOrganization
+didl:InOrganization rdf:type owl:NamedIndividual ,
+                             didl:Key ;
+                    rdfs:comment "A key representing an in-organization attribute"@en ;
+                    rdfs:label "InOrganization"@en .
 
 
 ###  https://w3id.org/def/didl#Inactive
 didl:Inactive rdf:type owl:NamedIndividual ,
                        didl:Status ;
-              rdfs:comment "This individual represents inactive." ;
-              rdfs:label "Inactive" .
+              rdfs:comment "Inactive status of an identity"@en ;
+              rdfs:label "Inactive"@en .
 
 
 ###  https://w3id.org/def/didl#JsonWebToken
 didl:JsonWebToken rdf:type owl:NamedIndividual ,
                            didl:AssertionFormat ;
-                  rdfs:comment "A compact, URL-safe token format that represents claims between parties using a JSON object, digitally signed (and optionally encrypted) for secure transmission and verification." ;
-                  rdfs:label "JsonWebToken" .
+                  rdfs:comment "A compact, URL-safe token format that represents claims between parties using a JSON object, digitally signed (and optionally encrypted) for secure transmission and verification."@en ;
+                  rdfs:label "JsonWebToken"@en .
 
 
 ###  https://w3id.org/def/didl#KerberosTicket
 didl:KerberosTicket rdf:type owl:NamedIndividual ,
                              didl:AssertionFormat ;
-                    rdfs:comment "A time-limited, encrypted credential issued by a Kerberos Key Distribution Center (KDC) that allows a client to authenticate to services without repeatedly sending passwords." ;
-                    rdfs:label "KerberosTicket" .
+                    rdfs:comment "A time-limited, encrypted credential issued by a Kerberos Key Distribution Center (KDC) that allows a client to authenticate to services without repeatedly sending passwords."@en ;
+                    rdfs:label "KerberosTicket"@en .
 
 
 ###  https://w3id.org/def/didl#LastLogin
 didl:LastLogin rdf:type owl:NamedIndividual ,
                         didl:Key ;
-               rdfs:label "LastLogin" .
+               rdfs:comment "A key representing a last login attribute"@en ;
+               rdfs:label "LastLogin"@en .
 
 
 ###  https://w3id.org/def/didl#LastName
 didl:LastName rdf:type owl:NamedIndividual ,
                        didl:Key ;
-              rdfs:comment "This individual represents last name." ;
-              rdfs:label "LastName" .
+              rdfs:comment "A key representing a last name attribute"@en ;
+              rdfs:label "LastName"@en .
 
 
 ###  https://w3id.org/def/didl#MachineID
 didl:MachineID rdf:type owl:NamedIndividual ,
-                        didl:Functional ;
+                        didl:IdentifierFunctional ;
                rdfs:comment "ID used as functional scope of machines"@en ;
-               rdfs:label "MachineID" .
+               rdfs:label "MachineID"@en .
 
 
 ###  https://w3id.org/def/didl#Nationality
 didl:Nationality rdf:type owl:NamedIndividual ,
                           didl:Key ;
-                 rdfs:label "Nationality" .
+                 rdfs:comment "A key representing a nationality attribute"@en ;
+                 rdfs:label "Nationality"@en .
 
 
-###  https://w3id.org/def/didl#OTP
-didl:OTP rdf:type owl:NamedIndividual ,
-                  didl:KnowledgeBasedCredential ;
-         rdfs:comment "A password that is valid for only one login session or transaction, typically generated dynamically and used to enhance security by preventing replay attacks." ;
-         rdfs:label "OTP" .
-
-
-###  https://w3id.org/def/didl#Organization
-didl:Organization rdf:type owl:NamedIndividual ,
-                           didl:Key ;
-                  rdfs:label "Organization" .
+###  https://w3id.org/def/didl#OneTimePassword
+didl:OneTimePassword rdf:type owl:NamedIndividual ,
+                              didl:KnowledgeBasedCredential ;
+                     rdfs:comment "A password that is valid for only one login session or transaction, typically generated dynamically and used to enhance security by preventing replay attacks."@en ;
+                     rdfs:label "OneTimePassword"@en .
 
 
 ###  https://w3id.org/def/didl#OrganizationID
 didl:OrganizationID rdf:type owl:NamedIndividual ,
-                             didl:Functional ;
-                    rdfs:comment "ID used as functional scope of organizations" ,
-                                 "OrganizationID" .
+                             didl:IdentifierFunctional ;
+                    rdfs:comment "ID used as functional scope of organizations"@en ;
+                    rdfs:label "OrganizationID"@en .
 
 
 ###  https://w3id.org/def/didl#Password
 didl:Password rdf:type owl:NamedIndividual ,
                        didl:Key ;
-              rdfs:label "Password" .
+              rdfs:comment "A key representing a password attribute"@en ;
+              rdfs:label "Password"@en .
 
 
 ###  https://w3id.org/def/didl#PasswordCredential
 didl:PasswordCredential rdf:type owl:NamedIndividual ,
                                  didl:KnowledgeBasedCredential ;
-                        rdfs:comment "This refers to password credentials, always combined with a username" ;
-                        rdfs:label "PasswordCredential" .
+                        rdfs:comment "This refers to password credentials, always combined with a username"@en ;
+                        rdfs:label "PasswordCredential"@en .
 
 
 ###  https://w3id.org/def/didl#PhoneNumber
 didl:PhoneNumber rdf:type owl:NamedIndividual ,
                           didl:Key ;
-                 rdfs:label "PhoneNumber" .
+                 rdfs:comment "A key representing a phone number attribute"@en ;
+                 rdfs:label "PhoneNumber"@en .
 
 
 ###  https://w3id.org/def/didl#ProcessID
 didl:ProcessID rdf:type owl:NamedIndividual ,
-                        didl:Functional ;
-               rdfs:comment "ID used as functional scope of a process" ;
-               rdfs:label "ProcessID" .
+                        didl:IdentifierFunctional ;
+               rdfs:comment "ID used as functional scope of a process"@en ;
+               rdfs:label "ProcessID"@en .
 
 
 ###  https://w3id.org/def/didl#ProductID
 didl:ProductID rdf:type owl:NamedIndividual ,
-                        didl:Functional ;
-               rdfs:comment "ID used as functional scope of a product" ;
-               rdfs:label "ProductID" .
+                        didl:IdentifierFunctional ;
+               rdfs:comment "ID used as functional scope of a product"@en ;
+               rdfs:label "ProductID"@en .
 
 
 ###  https://w3id.org/def/didl#PublicKey
 didl:PublicKey rdf:type owl:NamedIndividual ,
                         didl:Key ;
-               rdfs:label "PublicKey" .
+               rdfs:comment "A key representing a public key attribute"@en ;
+               rdfs:label "PublicKey"@en .
 
 
 ###  https://w3id.org/def/didl#RFC1035
@@ -692,181 +808,185 @@ didl:RFC1035 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/def/didl#RFC5322
 didl:RFC5322 rdf:type owl:NamedIndividual ,
                       didl:IdentifierFormat ;
-             rdfs:comment "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain" ;
-             rdfs:label "RFC5322" .
+             rdfs:comment "A standardized structure for identifying electronic mailboxes, typically in the form local-part@domain"@en ;
+             rdfs:label "RFC5322"@en .
 
 
 ###  https://w3id.org/def/didl#RFC7613
 didl:RFC7613 rdf:type owl:NamedIndividual ,
                       didl:IdentifierFormat ;
-             rdfs:comment "A standard that defines rules for the precise comparison of internationalized usernames and passwords, specifying string preparation, normalization, and case-mapping to avoid ambiguities and spoofing in authentication systems." ;
-             rdfs:label "RFC7613" .
+             rdfs:comment "A standard that defines rules for the precise comparison of internationalized usernames and passwords, specifying string preparation, normalization, and case-mapping to avoid ambiguities and spoofing in authentication systems."@en ;
+             rdfs:label "RFC7613"@en .
 
 
 ###  https://w3id.org/def/didl#RefreshToken
 didl:RefreshToken rdf:type owl:NamedIndividual ,
                            didl:AssertionFormat ;
-                  rdfs:comment "A credential issued by an authorization server that allows a client to obtain a new access token without requiring the user to reauthenticate, typically used in long-lived sessions." ;
-                  rdfs:label "RefreshToken" .
+                  rdfs:comment "A credential issued by an authorization server that allows a client to obtain a new access token without requiring the user to reauthenticate, typically used in long-lived sessions."@en ;
+                  rdfs:label "RefreshToken"@en .
 
 
 ###  https://w3id.org/def/didl#ResourceID
 didl:ResourceID rdf:type owl:NamedIndividual ,
-                         didl:Functional ;
-                rdfs:comment "ID used as functional scope of resources" ;
-                rdfs:label "ResourceID" .
+                         didl:IdentifierFunctional ;
+                rdfs:comment "ID used as functional scope of resources"@en ;
+                rdfs:label "ResourceID"@en .
 
 
 ###  https://w3id.org/def/didl#Revoked
 didl:Revoked rdf:type owl:NamedIndividual ,
                       didl:Status ;
-             rdfs:comment "This individual represents revoked." ;
-             rdfs:label "Revoked" .
+             rdfs:comment "Revoked status of an identity"@en ;
+             rdfs:label "Revoked"@en .
 
 
 ###  https://w3id.org/def/didl#Role
 didl:Role rdf:type owl:NamedIndividual ,
                    didl:Key ;
-          rdfs:comment "This individual represents role." ;
-          rdfs:label "Role" .
+          rdfs:comment "A key representing a role attribute"@en ;
+          rdfs:label "Role"@en .
 
 
 ###  https://w3id.org/def/didl#SAML2.0Assertion
 didl:SAML2.0Assertion rdf:type owl:NamedIndividual ,
                                didl:AssertionFormat ;
-                      rdfs:comment "A structured XML statement issued by an Identity Provider (IdP) in a SAML 2.0 authentication exchange, containing claims (such as user identity, authentication status, and attributes) that a Service Provider (SP) can trust." ;
-                      rdfs:label "SAML2.0Assertion" .
+                      rdfs:comment "A structured XML statement issued by an Identity Provider (IdP) in a SAML 2.0 authentication exchange, containing claims (such as user identity, authentication status, and attributes) that a Service Provider (SP) can trust."@en ;
+                      rdfs:label "SAML2.0Assertion"@en .
 
 
 ###  https://w3id.org/def/didl#SerialNumber
 didl:SerialNumber rdf:type owl:NamedIndividual ,
                            didl:Key ;
-                  rdfs:label "SerialNumber" .
-
-
-###  https://w3id.org/def/didl#SessionIndex
-didl:SessionIndex rdf:type owl:NamedIndividual ,
-                           didl:Key ;
-                  rdfs:comment "This individual represents session index." ;
-                  rdfs:label "SessionIndex" .
+                  rdfs:comment "A key representing a serial number attribute"@en ;
+                  rdfs:label "SerialNumber"@en .
 
 
 ###  https://w3id.org/def/didl#SessionKey
 didl:SessionKey rdf:type owl:NamedIndividual ,
                          didl:PossessionBasedCredential ;
                 rdfs:comment "A session-based key as a credential used for temporary authentication"@en ;
-                rdfs:label "SessionKey" .
+                rdfs:label "SessionKey"@en .
 
 
 ###  https://w3id.org/def/didl#Signature
 didl:Signature rdf:type owl:NamedIndividual ,
                         didl:PossessionBasedCredential ;
                rdfs:comment "A cryptographic proof—typically a digital signature—used to validate the authenticity and integrity of a credential or assertion, often embedded in formats like JWTs, SAML assertions, or verifiable credentials."@en ;
-               rdfs:label "Signature" .
+               rdfs:label "Signature"@en .
 
 
 ###  https://w3id.org/def/didl#SmartCard
 didl:SmartCard rdf:type owl:NamedIndividual ,
                         didl:PossessionBasedCredential ;
-               rdfs:comment "A physical card with embedded integrated circuits capable of securely storing and processing data—often used for authentication, digital signatures, and secure credential storage in identity systems." ;
-               rdfs:label "SmartCard" .
+               rdfs:comment "A physical card with embedded integrated circuits capable of securely storing and processing data—often used for authentication, digital signatures, and secure credential storage in identity systems."@en ;
+               rdfs:label "SmartCard"@en .
+
+
+###  https://w3id.org/def/didl#Title
+didl:Title rdf:type owl:NamedIndividual ,
+                    didl:Key ;
+           rdfs:comment "A key representing a title attribute"@en ;
+           rdfs:label "Title"@en .
 
 
 ###  https://w3id.org/def/didl#URI
 didl:URI rdf:type owl:NamedIndividual ,
                   didl:IdentifierFormat ;
-         rdfs:comment "A standardized string used to uniquely identify a resource on the Internet or a private network, encompassing both URLs and URNs." ;
-         rdfs:label "URI" .
+         rdfs:comment "A standardized string used to uniquely identify a resource on the Internet or a private network, encompassing both URLs and URNs."@en ;
+         rdfs:label "URI"@en .
 
 
 ###  https://w3id.org/def/didl#URL
 didl:URL rdf:type owl:NamedIndividual ,
                   didl:IdentifierFormat ;
-         rdfs:comment "A type of URI that not only identifies a resource but also provides a means of locating it by describing its access mechanism (e.g., https, ftp) and network location." ;
-         rdfs:label "URL" .
+         rdfs:comment "A type of URI that not only identifies a resource but also provides a means of locating it by describing its access mechanism (e.g., https, ftp) and network location."@en ;
+         rdfs:label "URL"@en .
 
 
 ###  https://w3id.org/def/didl#URN
 didl:URN rdf:type owl:NamedIndividual ,
                   didl:IdentifierFormat ;
-         rdfs:comment "A type of URI intended to serve as a persistent, location-independent resource identifier, often used to name resources in a globally unique and stable way (e.g., urn:isbn:0451450523)." ;
-         rdfs:label "URN" .
+         rdfs:comment "A type of URI intended to serve as a persistent, location-independent resource identifier, often used to name resources in a globally unique and stable way (e.g., urn:isbn:0451450523)."@en ;
+         rdfs:label "URN"@en .
 
 
 ###  https://w3id.org/def/didl#UUIDv1
 didl:UUIDv1 rdf:type owl:NamedIndividual ,
                      didl:IdentifierFormat ;
-            rdfs:comment "Time-based UUID" ;
-            rdfs:label "UUIDv1" .
+            rdfs:comment "Time-based UUID"@en ;
+            rdfs:label "UUIDv1"@en .
 
 
 ###  https://w3id.org/def/didl#UUIDv2
 didl:UUIDv2 rdf:type owl:NamedIndividual ,
                      didl:IdentifierFormat ;
-            rdfs:comment "Distributed Computing Environment (DCE) Security UUID" ;
-            rdfs:label "UUIDv2" .
+            rdfs:comment "Distributed Computing Environment (DCE) Security UUID"@en ;
+            rdfs:label "UUIDv2"@en .
 
 
 ###  https://w3id.org/def/didl#UUIDv3
 didl:UUIDv3 rdf:type owl:NamedIndividual ,
                      didl:IdentifierFormat ;
-            rdfs:comment "Name-based UUIID using MD5" ;
-            rdfs:label "UUIDv3" .
+            rdfs:comment "Name-based UUID using MD5"@en ;
+            rdfs:label "UUIDv3"@en .
 
 
 ###  https://w3id.org/def/didl#UUIDv4
 didl:UUIDv4 rdf:type owl:NamedIndividual ,
                      didl:IdentifierFormat ;
-            rdfs:comment "Random UUID with no embedded metadata, offering a high degree of uniqueness" ;
-            rdfs:label "UUIDv4" .
+            rdfs:comment "Random UUID with no embedded metadata, offering a high degree of uniqueness"@en ;
+            rdfs:label "UUIDv4"@en .
 
 
 ###  https://w3id.org/def/didl#UUIDv5
 didl:UUIDv5 rdf:type owl:NamedIndividual ,
                      didl:IdentifierFormat ;
-            rdfs:comment "Name-based UUID using SHA-1" ;
-            rdfs:label "UUIDv5" .
+            rdfs:comment "Name-based UUID using SHA-1"@en ;
+            rdfs:label "UUIDv5"@en .
 
 
 ###  https://w3id.org/def/didl#UserID
 didl:UserID rdf:type owl:NamedIndividual ,
-                     didl:Functional ;
+                     didl:IdentifierFunctional ;
             rdfs:comment "ID used as functional scope of human users"@en ;
-            rdfs:label "UserID" .
+            rdfs:label "UserID"@en .
 
 
 ###  https://w3id.org/def/didl#Username
 didl:Username rdf:type owl:NamedIndividual ,
                        didl:Key ;
-              rdfs:label "Username" .
+              rdfs:comment "A key representing a username attribute"@en ;
+              rdfs:label "Username"@en .
 
 
-###  https://w3id.org/def/didl#VC
-didl:VC rdf:type owl:NamedIndividual ,
-                 didl:AssertionFormat ;
-        rdfs:comment "A tamper-evident digital credential containing claims about a subject, cryptographically signed by an issuer, and compliant with a standard format for decentralized identity ecosystems." ;
-        rdfs:label "VC" .
+###  https://w3id.org/def/didl#VerifiableCredential
+didl:VerifiableCredential rdf:type owl:NamedIndividual ,
+                                   didl:AssertionFormat ,
+                                   cred:VerifiableCredential ;
+                          rdfs:comment "A tamper-evident digital credential containing claims about a subject, cryptographically signed by an issuer, and compliant with a standard format for decentralized identity ecosystems."@en ;
+                          rdfs:label "VerifiableCredential"@en .
 
 
-###  https://w3id.org/def/didl#VP
-didl:VP rdf:type owl:NamedIndividual ,
-                 didl:AssertionFormat ;
-        rdfs:comment "A packaged set of one or more Verifiable Credentials shared by a holder with a verifier, optionally including selective disclosure and proofs of authenticity." ;
-        rdfs:label "VP" .
+###  https://w3id.org/def/didl#VerifiablePresentation
+didl:VerifiablePresentation rdf:type owl:NamedIndividual ,
+                                     didl:AssertionFormat ,
+                                     cred:VerifiablePresentation ;
+                            rdfs:comment "A packaged set of one or more Verifiable Credentials shared by a holder with a verifier, optionally including selective disclosure and proofs of authenticity."@en ;
+                            rdfs:label "VerifiablePresentation"@en .
 
 
 ###  https://w3id.org/def/didl#Voice
 didl:Voice rdf:type owl:NamedIndividual ,
                     didl:InherenceBasedCredential ;
-           rdfs:comment "A biometric credential format that encodes the unique vocal characteristics of a person—such as pitch, tone, and rhythm—into a digital template for speaker verification or identification." ;
-           rdfs:label "Voice" .
+           rdfs:comment "A biometric credential format that encodes the unique vocal characteristics of a person—such as pitch, tone, and rhythm—into a digital template for speaker verification or identification."@en ;
+           rdfs:label "Voice"@en .
 
 
 ###  https://w3id.org/def/didl#X.509Certificate
 didl:X.509Certificate rdf:type owl:NamedIndividual ,
                                didl:AssertionFormat ;
-                      rdfs:comment "A digital certificate that uses the X.509 public key infrastructure (PKI) standard to bind a subject's identity to a public key, and is signed by a trusted Certificate Authority (CA)." ;
-                      rdfs:label "X.509Certificate" .
+                      rdfs:comment "A digital certificate that uses the X.509 public key infrastructure (PKI) standard to bind a subject's identity to a public key, and is signed by a trusted Certificate Authority (CA)."@en ;
+                      rdfs:label "X.509Certificate"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
