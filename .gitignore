@@ -8,3 +8,8 @@ dist/*
 *.pyd
 *.pyw
 *.pyz
+
+ldproof/*
+tests/*
+summary
+examples/*
