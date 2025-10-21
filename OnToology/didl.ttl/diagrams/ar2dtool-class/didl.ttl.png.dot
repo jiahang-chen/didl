@@ -1,34 +1,54 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "didl:Attribute" "didl:CompositeIdentifier" "didl:AssertionFormat" "didl:Status" "sec:Proof" "didl:IdentifierFormat" "didl:Assertion" "didl:Key" "didl:Identity" "didl:Credential" "didl:CredentialFormat" "didl:IdentitySubject" "didl:Functional" "didl:Value" "didl:Proof" "didl:AssertionCollection" "didl:Identifier" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "didl:Attribute" "didl:CompositeIdentifier" "didl:AssertionFormat" "didl:Status" "sec:Proof" "foaf:Agent" "didl:IdentifierFunctional" "didl:IdentifierFormat" "didl:Assertion" "didl:Key" "didl:Identity" "dedl:Resource" "dedl:Action" "didl:AccessCapability" "didl:CredentialFormat" "didl:Credential" "didl:IdentitySubject" "didl:Value" "didl:AssertionCollection" "e161055ae7d0f33d2a8aca17dc1bfc53" "didl:Identifier" ; /*classes style*/
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "didl:Credential" [ label = "rdf:first" ];
+	"NULL" -> "16d21606:199d806b8ce:-7ffc" [ label = "owl:unionOf" ];
+	"NULL" -> "16d21606:199d806b8ce:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "didl:Assertion" [ label = "rdf:first" ];
+	"didl:Credential" -> "didl:Identifier" [ label = "owl:disjointWith" ];
+	"didl:validTo" -> "cred:validTo" [ label = "owl:equivalentProperty" ];
+	"didl:validFrom" -> "cred:validFrom" [ label = "owl:equivalentProperty" ];
 	"didl:credentialFormat" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
-	"didl:Proof" -> "sec:Proof" [ label = "owl:equivalentClass" ];
+	"didl:issueDate" -> "cred:issuanceDate" [ label = "owl:equivalentProperty" ];
+	"didl:AssertionFormat" -> "didl:IdentifierFormat" [ label = "owl:disjointWith" ];
+	"didl:AssertionFormat" -> "didl:CredentialFormat" [ label = "owl:disjointWith" ];
+	"didl:CredentialFormat" -> "didl:IdentifierFormat" [ label = "owl:disjointWith" ];
+	"foaf:Agent" -> "didl:IdentitySubject" [ label = "owl:equivalentClass" ];
+	"dc:identifier" -> "didl:identifier" [ label = "owl:equivalentProperty" ];
+	"didl:issuer" -> "cred:issuer" [ label = "owl:equivalentProperty" ];
+	"didl:Assertion" -> "didl:Identifier" [ label = "owl:disjointWith" ];
+	"didl:Assertion" -> "didl:Credential" [ label = "owl:disjointWith" ];
 	"didl:profile" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
 	"didl:Assertion" -> "didl:Attribute" [ label = "didl:assertedAttribute" ];
-	"didl:AssertionCollection" -> "didl:Assertion" [ label = "didl:subAssertion" ];
 	"didl:Identity" -> "xsd:dateTime" [ label = "didl:validTo" ];
+	"didl:CompositeIdentifier" -> "didl:Identifier" [ label = "didl:includesIdentifier" ];
 	"didl:Identity" -> "didl:Status" [ label = "didl:status" ];
 	"didl:Attribute" -> "didl:Value" [ label = "didl:value" ];
 	"didl:IdentitySubject" -> "didl:Identifier" [ label = "didl:identifier" ];
-	"didl:Identity" -> "didl:Identifier" [ label = "didl:relatesTo" ];
+	"e161055ae7d0f33d2a8aca17dc1bfc53" -> "didl:Identifier" [ label = "didl:relatesTo" ];
 	"didl:Attribute" -> "didl:Key" [ label = "didl:key" ];
-	"didl:CompositeIdentifier" -> "xsd:string" [ label = "didl:namespace" ];
+	"didl:Identifier" -> "xsd:string" [ label = "didl:namespace" ];
 	"didl:Identity" -> "xsd:anyURI" [ label = "didl:profile" ];
 	"didl:Identifier" -> "didl:IdentifierFormat" [ label = "didl:identifierFormat" ];
 	"didl:Credential" -> "didl:Attribute" [ label = "didl:credentialAttribute" ];
 	"didl:Identity" -> "xsd:dateTime" [ label = "didl:validFrom" ];
-	"didl:Identifier" -> "didl:Functional" [ label = "didl:functional" ];
+	"didl:Assertion" -> "didl:AccessCapability" [ label = "didl:accessCapability" ];
+	"didl:Identifier" -> "didl:IdentifierFunctional" [ label = "didl:functional" ];
 	"didl:Assertion" -> "didl:AssertionFormat" [ label = "didl:assertionFormat" ];
+	"didl:IdentitySubject" -> "didl:Identity" [ label = "didl:controls" ];
+	"didl:AssertionCollection" -> "didl:Assertion" [ label = "didl:includesAssertion" ];
 	"didl:Identity" -> "xsd:dateTime" [ label = "didl:issueDate" ];
 	"didl:Identity" -> "xsd:anyURI" [ label = "didl:issuer" ];
-	"didl:IdentitySubject" -> "didl:Identity" [ label = "didl:controlls" ];
 	"didl:IdentitySubject" -> "didl:Assertion" [ label = "didl:assertion" ];
 	"didl:Credential" -> "didl:CredentialFormat" [ label = "didl:credentialFormat" ];
 	"didl:Identity" -> "didl:IdentitySubject" [ label = "didl:controlledBy" ];
-	"didl:CompositeIdentifier" -> "didl:Identifier" [ label = "didl:localPart" ];
+	"didl:Identity" -> "xsd:dateTime" [ label = "didl:renewableTill" ];
+	"didl:AccessCapability" -> "dedl:Resource" [ label = "didl:supportedResource" ];
 	"didl:IdentitySubject" -> "didl:Credential" [ label = "didl:credential" ];
-	"didl:Assertion" -> "didl:Proof" [ label = "didl:proof" ];
+	"didl:Assertion" -> "sec:Proof" [ label = "didl:proof" ];
 	"didl:Identity" -> "xsd:anyURI" [ label = "didl:uid" ];
+	"didl:AccessCapability" -> "dedl:Action" [ label = "didl:supportedAction" ];
 
 }
