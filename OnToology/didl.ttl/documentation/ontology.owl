@@ -7,19 +7,24 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/def/didl">
         <dc:creator xml:lang="en">Jiahang Chen</dc:creator>
-        <dc:description xml:lang="en">The Digital Identity Description Language (DIDL) is an abstract language to describe identity concepts used in data ecosystems. The core component, identity, is specialized into identifiers, credentials, and assertions in this language, contributing to authentication and authorization.</dc:description>
         <dc:title xml:lang="en">DIDL Vocabulary &amp; Expression 0.1</dc:title>
-        <terms:abstract xml:lang="en">The DIDL is a description language to represent diverse identity con-
-cepts, ensuring technical and semantic compatibility across different data ecosystems.</terms:abstract>
+        <terms:abstract xml:lang="en">The Digital Identity Description Language (DIDL) is an abstract language to describe identity concepts used in data ecosystems. The core component, identity, is specialized into identifiers, credentials, and assertions, utilized in the process of authentication and authorization.</terms:abstract>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-29T00:00:00</terms:created>
         <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
-        <rdfs:comment xml:lang="en">This is a vocabulary for DIDL Version 0.1</rdfs:comment>
         <rdfs:label>DIDL</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+        <schema:creator rdf:nodeID="genid1"/>
     </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <schema:affiliation>MMI, RWTH Aachen University</schema:affiliation>
+        <schema:email>chen@mmi.rwth-aachen.de</schema:email>
+        <schema:name>Jiahang Chen</schema:name>
+    </rdf:Description>
     
 
 
@@ -45,7 +50,10 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <!-- http://purl.org/dc/elements/1.1/description -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:comment>This individual represents description.</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -74,6 +82,34 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- https://schema.org/affiliation -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/affiliation"/>
+    
+
+
+    <!-- https://schema.org/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/creator"/>
+    
+
+
+    <!-- https://schema.org/email -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/email"/>
+    
+
+
+    <!-- https://schema.org/name -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/name"/>
     
 
 
@@ -534,6 +570,13 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
         <rdfs:comment xml:lang="en">An agent is an entity that can perform actions</rdfs:comment>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+
+    <owl:Class rdf:about="https://schema.org/Person"/>
     
 
 
@@ -1556,10 +1599,6 @@ cepts, ensuring technical and semantic compatibility across different data ecosy
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
         <rdfs:comment>This individual represents creator.</rdfs:comment>
         <rdfs:label>creator</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
-        <rdfs:comment>This individual represents description.</rdfs:comment>
-        <rdfs:label>description</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
         <rdfs:comment>This individual represents title.</rdfs:comment>
