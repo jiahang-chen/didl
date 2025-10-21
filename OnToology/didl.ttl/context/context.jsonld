@@ -105,6 +105,9 @@
     "AssertionCollection" : {
       "@id" : "https://w3id.org/def/didl#AssertionCollection"
     },
+    "Person" : {
+      "@id" : "https://schema.org/Person"
+    },
     "credentialFormat" : {
       "@id" : "https://w3id.org/def/didl#credentialFormat",
       "@type" : "@id"
