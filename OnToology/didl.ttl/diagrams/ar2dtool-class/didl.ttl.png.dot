@@ -1,15 +1,15 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "didl:Attribute" "didl:CompositeIdentifier" "didl:AssertionFormat" "2b1f93919aafd540420405afd4a842df" "didl:Status" "sec:Proof" "foaf:Agent" "didl:IdentifierFunctional" "didl:IdentifierFormat" "didl:Assertion" "didl:Key" "didl:Identity" "dedl:Resource" "dedl:Action" "didl:AccessCapability" "didl:CredentialFormat" "didl:Credential" "didl:IdentitySubject" "didl:Value" "didl:AssertionCollection" "didl:Identifier" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "didl:Attribute" "didl:CompositeIdentifier" "didl:AssertionFormat" "didl:Status" "sec:Proof" "foaf:Agent" "didl:IdentifierFunctional" "didl:IdentifierFormat" "didl:Assertion" "didl:Key" "didl:Identity" "dedl:Resource" "dedl:Action" "ca1e295fbf03ff10f2c25c736cdf2c5c" "didl:AccessCapability" "didl:CredentialFormat" "didl:Credential" "didl:IdentitySubject" "didl:Value" "didl:AssertionCollection" "didl:Identifier" ; /*classes style*/
+	"NULL" -> "-935876b:19a08a147fe:-7ffc" [ label = "owl:unionOf" ];
 	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
 	"NULL" -> "didl:Credential" [ label = "rdf:first" ];
-	"NULL" -> "-31803ee:19a089aa070:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "-935876b:19a08a147fe:-7ffb" [ label = "rdf:rest" ];
 	"NULL" -> "didl:Assertion" [ label = "rdf:first" ];
-	"NULL" -> "-31803ee:19a089aa070:-7ffc" [ label = "owl:unionOf" ];
 	"didl:Credential" -> "didl:Identifier" [ label = "owl:disjointWith" ];
 	"didl:validTo" -> "cred:validTo" [ label = "owl:equivalentProperty" ];
-	"https://w3id.org/def/didl" -> "436eb0b5c0784ca882cd744bc93be666" [ label = "schema:creator" ];
+	"https://w3id.org/def/didl" -> "5779f86b4022d2c44b31f35f816fb1e8" [ label = "schema:creator" ];
 	"didl:validFrom" -> "cred:validFrom" [ label = "owl:equivalentProperty" ];
 	"didl:credentialFormat" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
 	"didl:issueDate" -> "cred:issuanceDate" [ label = "owl:equivalentProperty" ];
@@ -28,7 +28,7 @@ node [shape = rectangle, color="orange"]; "didl:Attribute" "didl:CompositeIdenti
 	"didl:Identity" -> "didl:Status" [ label = "didl:status" ];
 	"didl:Attribute" -> "didl:Value" [ label = "didl:value" ];
 	"didl:IdentitySubject" -> "didl:Identifier" [ label = "didl:identifier" ];
-	"2b1f93919aafd540420405afd4a842df" -> "didl:Identifier" [ label = "didl:relatesTo" ];
+	"ca1e295fbf03ff10f2c25c736cdf2c5c" -> "didl:Identifier" [ label = "didl:relatesTo" ];
 	"didl:Attribute" -> "didl:Key" [ label = "didl:key" ];
 	"didl:Identifier" -> "xsd:string" [ label = "didl:namespace" ];
 	"didl:Identity" -> "xsd:anyURI" [ label = "didl:profile" ];
