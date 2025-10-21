@@ -1,4 +1,3 @@
-@prefix : <https://w3id.org/def/didl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,17 +9,20 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://w3id.org/def/didl#> .
+@prefix schema: <https://schema.org/> .
 
 <https://w3id.org/def/didl> rdf:type owl:Ontology ;
                              dc:creator "Jiahang Chen"@en ;
-                             dc:description "The Digital Identity Description Language (DIDL) is an abstract language to describe identity concepts used in data ecosystems. The core component, identity, is specialized into identifiers, credentials, and assertions in this language, contributing to authentication and authorization."@en ;
+                             schema:creator [
+                                a schema:Person;
+                                schema:name "Jiahang Chen";
+                                schema:email "chen@mmi.rwth-aachen.de"; 
+                                schema:affiliation "MMI, RWTH Aachen University"
+                             ] ;
+                             dcterms:abstract "The Digital Identity Description Language (DIDL) is an abstract language to describe identity concepts used in data ecosystems. The core component, identity, is specialized into identifiers, credentials, and assertions, utilized in the process of authentication and authorization."@en ;
                              dc:title "DIDL Vocabulary & Expression 0.1"@en ;
-                             dcterms:abstract """The DIDL is a description language to represent diverse identity con-
-cepts, ensuring technical and semantic compatibility across different data ecosystems."""@en ;
                              dcterms:created "2025-04-29T00:00:00"^^xsd:dateTime ;
                              dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
-                             rdfs:comment "This is a vocabulary for DIDL Version 0.1"@en ;
                              rdfs:label "DIDL" ;
                              owl:versionInfo 0.1 .
 
