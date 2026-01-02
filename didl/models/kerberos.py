@@ -20,10 +20,8 @@ import os
 KERBEROS_TO_DIDL_MAPPING = {
     # 属性映射 - 这些将作为didl:attribute
     "attributes": {
-        "realm": Key.Realm,
         "client_principal": Key.DelegatingParty,
         "server_principal": Key.TargetedAudience,
-        "session_key": Key.SessionKey,
     },
     
     # 元数据映射 - 这些将作为DIDL的元数据字段

@@ -4,6 +4,7 @@ class Status(Enum):
     ACTIVE = "Active"
     INACTIVE = "Inactive"
     REVOKED = "Revoked"
+    NOTAVAILABLE = "NotAvailable"
 
 class Key(Enum):
     # Personal Information
@@ -17,6 +18,7 @@ class Key(Enum):
     PhoneNumber = "PhoneNumber"
     Title = "Title"
     
+    SessionKey = "SessionKey"
     # Organizational Information
     Organization = "Organization"
     Role = "Role"
@@ -24,11 +26,11 @@ class Key(Enum):
 
     DelegatingParty = "DelegatingParty"
     TargetedAudience = "TargetedAudience"
-
+    
     # Authentication and Authorization
 
     AccessCapability = "AccessCapability"
-    
+    AccessRights = "AccessRights"
 
 class IdentifierFormat(Enum):
      DID = "DID"
