@@ -1,3 +1,269 @@
 <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+
+<div class="section">
+
+<p>
+In the era of digitalization, data ecosystems are evolving to enable data sharing across networks of distributed organizations. 
+Against this backdrop, digital identity management requires a standardized yet flexible approach in cross-organizational environments. 
+</p>
+
+<p>    
+However, digital identity management remains fragmented. 
+This is because identities are diverse, and ensuring identity interoperability is challenging.
+The heterogeneity creates silos that hinder secure cross-organizational interaction. 
+For instance, a system using Security Assertion Markup Language (SAML) may not natively process a JSON Web Token (JWT) as an assertion. 
+Additionally, some specific protocols lack the capability of issuing verifiable assertions, such as Lightweight Directory access Protocol (LDAP). 
+</p>
+
+<p>
+To address the problem of identity interoperability within data ecosystems, we propose DIDL, a description language to syntactically and semantically represent diverse identity concepts, 
+ensuring technical and semantic interoperability across different data ecosystems.
+</p>
+
+<p>
+Figure 1 depicts the core information model underlying the description language. 
+DIDL is structured around the three core elements: identifier (didl:Identifier), credential (didl:Credential), and assertion (didl:Assertion), each enriched with metadata that describes an identity and supports extensibility. 
+The basic class, didl:Identity, is associated with key attributes such as issuer (didl:issuer), issuance data (didl:issueDate), validity period (didl:validFrom and didl:validTo), and status (didl:status).
+Together, the basic class references a subject (didl:IdentitySubject) it identifies. 
+</p>    
+    <style>
+    .figure {
+    margin: 2em auto;
+    text-align: center; 
+    }
+
+    .figure img {
+    max-width: 100%;
+    height: auto;
+    }
+
+    .figure figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 0.5em;
+    }
+    </style>
+  <figure class="figure">
+    <img src="resources/didl.svg"
+         alt="DIDL Information Model"
+         width="800">
+
+    <figcaption>
+      Figure 1: The Digital Identity Description Language (DIDL) core information model, presented in UML format 
+    </figcaption>
+  </figure>
+</div>
+
+
+<h3 id="identifier" class="list">Identifier <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<div class="section">
+
+<p>
+Identifiers are the foundational elements of digital identity, providing unique references to identity subjects. 
+DIDL supports describing both simple identifiers (didl:Identifier) or identifier collection (didl:IdentifierCollection). 
+The former is associated with didl:identifierFormat (representing the basic format standard) and didl:functional (representing its specific use). 
+The latter combines different identities for application-specific identity usage.
+</p>
+  <h4>JSON-LD Example</h4>
+
+  <!-- JSONLD -->
+  <pre class="jsonld-block"><code>{
+  "@context": "https://w3id.org/didl/context.jsonld", 
+  "@type": "Identifier",
+  "uid": "urn:order:123",
+  "identifierFormat": "URN",
+  "namespace": {
+    "@type": "xsd:string",
+    "@value": "urn:order"
+  },
+  "identifierFunctional": "OrderID"
+}</code></pre>
+
+  <!-- Machine-readable JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://w3id.org/didl/context.jsonld",
+  "@type": "Identifier",
+  "@id": "urn:order:123",
+  "identifierFormat": "URN",
+  "namespace": {
+    "@type":"xsd:string",
+    "@value":"urn:order"
+  },
+  "identifierFunctional": "OrderID"
+}
+
+  </script>
+</div>
+
+<h3 id="credential" class="list">Credential <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<div class="section">
+
+<p>
+Credentials (didl:Credential) represent evidence of a subject’s identity, indicating authentication methods using various formats (didl:CredentialFormat). 
+DIDL specifies credentials under three types: knowledge, possession, and inherence. Moreover, credentials are associated with attributes (didl:Attribute) to present additional identity-related information in
+key value pairs, using didl:credentialAttribute.
+</p>
+
+  <h4>JSON-LD Example</h4>
+
+  <!-- JSONLD -->
+  <pre class="jsonld-block"><code>
+{
+  "@context": "https://w3id.org/didl/context.jsonld",
+  "@type": "Credential",
+  "credentialFormat": "PasswordCredential",
+  "credentialAttribute": [
+    {
+        "key": "Username",
+        "value": {"@type": "xsd:string", "@value": "user123"}
+    },
+    {
+        "key": "Password",
+        "value": {"@type": "xsd:string", "@value": "pass123"}
+    }
+  ]
+}
+  </code></pre>
+
+  <!-- Machine-readable JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://w3id.org/didl/context.jsonld",
+  "@type": "Credential",
+  "credentialFormat": "PasswordCredential",
+  "credentialAttribute": [
+    {
+        "key": "Username",
+        "value": {"@type": "xsd:string", "@value": "user123"}
+    },
+    {
+        "key": "Password",
+        "value": {"@type": "xsd:string", "@value": "pass123"}
+    }
+  ]
+}
+  </script>
+</div>
+
+<h3 id="assertion" class="list">Assertion <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<div class="section">
+<p>
+Assertions (didl:Assertion), resulted from an authentication process, are statements that convey verifiable identity attributes used for authorization. 
+These attributes are associated using didl:assertedAttribute. Specifically, assertions can be associated with cryptographic methods using sec:Proof, which ensures
+the validity and integrity of assertions. 
+Thus, they can also be used for authentication.
+DIDL supports both simple assertions and composite assertions (didl:AssertionCollection).
+</p>
+
+  <h4>JSON-LD Example</h4>
+
+  <!-- JSONLD -->
+  <pre class="jsonld-block"><code>
+{
+    "@context": [
+        "https://w3id.org/didl/context.jsonld", 
+        "https://w3id.org/security/suites/ed25519-2020/v1"
+    ],
+    "@type": "Assertion",
+    "uid": "27ea6480-b0c3-446e-88a6-ff3ac7e8cac0", 
+    "issueDate": "2025-01-12T00:00:00",
+    "issuer": "did:key:org-issuer",
+    "profile": http://www.example.com/saw_mill_ldap_profile_1",
+    "validFrom": "2025-01-12T00:00:00",
+    "validTo": "2026-01-12T00:00:00",
+    "status": "Active",
+    "assertionFormat": "JsonWebToken",
+    "assertedAttribute": [
+        {
+            "key": "FirstName",
+            "value": {"@value": "John", "@type": "xsd:string"}
+        },
+        {
+            "key": "LastName",
+            "value": {"@value": "Doe", "@type": "xsd:string"}
+        },
+        {
+            "key": "Organization",
+            "value": {"@value": "forest owner", "@type": "xsd:string"}
+        },
+        {
+            "key": "Role",
+            "value": {"@value": "Product Manager", "@type": "xsd:string"}
+        },
+        {
+            "key": "Email",
+            "value": {"@value": "john.doe@forest-owner.de", "@type": "xsd:string"}
+        }
+    ],
+    "relatesTo": {
+        "uid": "did:key:org-1-4711",
+        "identifierFormat": "DID",
+        "identifierFunctional": "UserID"
+    },
+    "proof": {
+        "@type": "Ed25519Signature2020",
+        "created": "2025-01-12T00:00:00",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:key:org-issuer#key-1",
+        "proofValue": "fr1t7sbWm1VrPLE...IK5vCeBHcD46iQ"
+    }
+}
+  </code></pre>
+
+  <!-- Machine-readable JSON-LD -->
+  <script type="application/ld+json">
+{
+    "@context": [
+        "https://w3id.org/didl/context.jsonld", 
+        "https://w3id.org/security/suites/ed25519-2020/v1"
+    ],
+    "@type": "Assertion",
+    "uid": "27ea6480-b0c3-446e-88a6-ff3ac7e8cac0", 
+    "issueDate": "2025-01-12T00:00:00",
+    "issuer": "did:key:org-issuer",
+    "profile": http://www.example.com/saw_mill_ldap_profile_1",
+    "validFrom": "2025-01-12T00:00:00",
+    "validTo": "2026-01-12T00:00:00",
+    "status": "Active",
+    "assertionFormat": "JsonWebToken",
+    "assertedAttribute": [
+        {
+            "key": "FirstName",
+            "value": {"@value": "John", "@type": "xsd:string"}
+        },
+        {
+            "key": "LastName",
+            "value": {"@value": "Doe", "@type": "xsd:string"}
+        },
+        {
+            "key": "Organization",
+            "value": {"@value": "forest owner", "@type": "xsd:string"}
+        },
+        {
+            "key": "Role",
+            "value": {"@value": "Product Manager", "@type": "xsd:string"}
+        },
+        {
+            "key": "Email",
+            "value": {"@value": "john.doe@forest-owner.de", "@type": "xsd:string"}
+        }
+    ],
+    "relatesTo": {
+        "uid": "did:key:org-1-4711",
+        "identifierFormat": "DID",
+        "identifierFunctional": "UserID"
+    },
+    "proof": {
+        "@type": "Ed25519Signature2020",
+        "created": "2025-01-12T00:00:00",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:key:org-issuer#key-1",
+        "proofValue": "fr1t7sbWm1VrPLE...IK5vCeBHcD46iQ"
+    }
+}
+  </script>
+</div>
